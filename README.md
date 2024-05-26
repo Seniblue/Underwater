@@ -16,11 +16,16 @@ Hellooo
 
 ### Custom checkboxes
 ### Different callout styles
+>[!note] bla
+>oeiroer
+
+>quote
 ### Hover line indicator + current line highlighting
 ### CSSclasses
 | `no-title` | `write ` |
 | removes the inline title of the document | Adds monospace font to current document + bigger first letter of each paragraph |
 | --------- | ---------- |
+
 
 
 
