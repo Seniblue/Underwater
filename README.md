@@ -11,7 +11,7 @@
 | Catpuccin Latte    | Catpuccin Mocha   |
 | Rosé pine dawn     | Rosé pine         |
 |                    | Rosé pine moon    |
-![colorschemes](colorschemes.png)
+![colorschemes|500](colorschemes.png)
 
 # Cssclasses
 - **No-title** : removes inline title
