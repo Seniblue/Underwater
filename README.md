@@ -11,3 +11,24 @@ Hellooo
 |  | - Rosé pine moon |
 |  | - [ ] Dracula |
 
+---
+# Features
+
+### Custom checkboxes
+### Different callout styles
+### Hover line indicator + current line highlighting
+### CSSclasses
+| `no-title` | `write ` |
+| removes the inline title of the document | Adds monospace font to current document + bigger first letter of each paragraph |
+| --------- | ---------- |
+
+
+
+
+---
+# Credits
+- _Minimal_
+- _Border_
+- _Maple_
+- _Anuppucin_
+for inspiration
