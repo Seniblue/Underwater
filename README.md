@@ -1,8 +1,10 @@
 # Screenshot
-![uw](uw.png)
+![uw](thumbnail.png)
 
 > [!WARNING]
 > This theme works best with the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin, which allows you to choose a colorscheme and even to customize **all** the theme colors.
+
+---
 
 # Colorschemes
 
