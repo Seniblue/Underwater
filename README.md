@@ -1,4 +1,3 @@
-# Screenshot
 ![uw](thumbnail.png)
 
 > [!WARNING]
