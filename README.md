@@ -1,7 +1,7 @@
 # Underwater
 Hellooo
 
-![img](uw.png)
+![img](thumbnail.png)
 
 | Light | Dark |
 | ----- | ----- |
