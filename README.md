@@ -34,6 +34,7 @@
 - Cursor color
 - Image slight animation on hover
 - Special window styling on Windows
+- Rounded highlighting style + internal links special style
 
 # Plugins support
 ![plugins](plugins.png)
