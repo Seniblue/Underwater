@@ -235,7 +235,7 @@
   --caret-color: var(--love);
 }
 
-.theme-light{
+.theme-light /*Rosé Pine dawn*/ {
   color-scheme: light;
 
   /*PALETTE*/
@@ -350,7 +350,7 @@
 
 
 
-.theme-dark {
+.theme-dark /*Rosé Pine*/ {
   color-scheme: dark;
 
   /*PALETTE*/
@@ -532,16 +532,10 @@
 
 }
 
-.markdown-preview-section, .cm-s-obsidian, .markdown-preview-view, .cm-s-obsidian,
-.justified .markdown-preview-section,
-.justified .cm-s-obsidian,
-.justified.markdown-preview-view,
-.justified.cm-s-obsidian {
-  text-align: justify;
-}
+
  
 
-/* THE LAYOUT !!!!*/
+/* LAYOUT */
 /* remove for default layout*/
 
 .workspace-tab-container {
@@ -585,19 +579,21 @@
 }
 
 /*Justify text*/
-.markdown-preview-view p,
-.markdown-source-view.mod-cm6 .cm-line {
+.markdown-preview-section, .cm-s-obsidian, .markdown-preview-view, .cm-s-obsidian,
+.justified .markdown-preview-section,
+.justified .cm-s-obsidian,
+.justified.markdown-preview-view,
+.justified.cm-s-obsidian {
   text-align: justify;
   text-justify: inter-word;
 }
 
-/*Highlights*/
+/*Rounded Highlight style*/
 mark {
   border-radius: 10px 5px;
   padding: 0px 4px;
   margin: 0 0px;
 }
-
 .cm-s-obsidian span.cm-highlight,
 .cm-s-obsidian span.cm-highlight {
   border-radius: 10px 5px !important;
@@ -615,7 +611,7 @@ mark {
   border-width: 1px 0px 0px 1px;
 }
 
-/*couleur curseur -> see new css class*/
+/*cursor color -> new css class*/
 .markdown-source-view.mod-cm6 div.cm-editor div {
   caret-color: var(--love);
 }
@@ -625,14 +621,14 @@ mark {
   border-width: 2px;
 }
 
-/*===================couleur de fond icons*=======================*/
+/*===================icons background=======================*/
 .mod-left-split .workspace-tab-header.is-active,
 .mod-right-split .workspace-tab-header.is-active {
   background-color: var(--background-secondary);
   border-radius: 8px;
 }
 
-/*bon margin et gap etc pour les tabs du bord*/
+/*margin and gaps for sidebars tabs*/
 .mod-left-split .workspace-tab-header-container-inner,
 .mod-right-split .workspace-tab-header-container-inner {
   padding: 1px 15px 1px;
@@ -640,20 +636,17 @@ mark {
   gap: 5px;
 }
 
-/*espacement des onglets*/
+/*tabs spacing*/
 .mod-root .workspace-tab-header-container-inner {
   padding: 1px 15px 0;
   gap: 5px;
 }
-
 .workspace .mod-root .workspace-tab-header {
   padding: 0px 2px;
 }
-
 .clickable-icon {
   padding: 7px;
 }
-
 .sidebar-toggle-button {
   padding: 4px 10px;
 }
@@ -661,25 +654,19 @@ mark {
 
 
 
-/*fenêtre et popups, petits stylings*/
+/*popups, windows, styling*/
 .suggestion-highlight {
   color: var(--love);
 }
-
-
 body:not(.is-phone) div:has(>input.prompt-input) {
   border-bottom: 2px solid var(--color-red);
 }
-
 .titlebar-button {
   border-radius: 0px 0px 18px 18px;
 }
-
-
 .community-item {
   background-color: var(--text-selection);
 }
-
 .vertical-tab-header {
   background-color: var(--base);
 }
@@ -714,15 +701,12 @@ body:not(.is-phone) div:has(>input.prompt-input) {
 th:first-child {
   border-top-left-radius: var(--table-border-radius)
 }
-
 th:last-child {
   border-top-right-radius: var(--table-border-radius)
 }
-
 tr:last-child td:first-child {
   border-bottom-left-radius: var(--table-border-radius)
 }
-
 tr:last-child td:last-child {
   border-bottom-right-radius: var(--table-border-radius)
 }
@@ -739,7 +723,7 @@ mjx-container[jax="CHTML"][display="true"] {
   color: var(--pine);
 }
 
-/*LINKS STYLING*/
+/*LINKS STYLING !*/
 /*links fix*/
 a {
   color: var(--external-link-color);
@@ -763,52 +747,47 @@ a {
 
 
 
-/*scrollbar - from BORDER*/
-
-/*Scrollbar styling*/
+/*scrollbar - from BORDER theme*/
 ::-webkit-scrollbar {
   width: 10px !important;
   border-radius: 20px !important;
 }
-
 body:not(.restored-scrollbars) ::-webkit-scrollbar-thumb,
 body:not(.restored-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar-thumb {
   border-width: 3px 3px 3px 3px;
   min-height: 45px
 }
-
 body:not(.restored-scrollbars) .mobile-toolbar-options-container::-webkit-scrollbar {
   width: 0 !important;
   height: 0 !important;
 }
-
 body:not(.restored-scrollbars) ::-webkit-scrollbar-track,
 body:not(.restored-scrollbars) ::-webkit-scrollbar-track-piece,
 body:not(.restored-scrollbars):not(.is-mobile) ::-webkit-scrollbar-thumb {
   background-color: transparent !important;
 }
-
 body:not(.restored-scrollbars):not(.is-mobile) :hover::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-thumb-bg) !important;
 }
-
 body:not(.restored-scrollbars):not(.is-mobile) ::-webkit-scrollbar-thumb:hover,
 body:not(.restored-scrollbars):not(.is-mobile) ::-webkit-scrollbar-thumb:active {
   background-color: var(--scrollbar-active-thumb-bg) !important;
 }
-
 .workspace-leaf-content:is([data-type="surfing-view"], [data-type="graph"], [data-type="localgraph"]) ::-webkit-scrollbar,
 .scrollbar-hide ::-webkit-scrollbar {
   display: none;
 }
 
 
-/*----CUSTOM CALLOUTS HEHEHEHE -----------------------*/
+/*----CUSTOM CALLOUTS -----------------------*/
 .callout[data-callout="signet"] {
   --callout-color: var(--color-pink-rgb);
   --callout-icon: bookmark;
 }
-
+.callout[data-callout="bookmark"] {
+  --callout-color: var(--color-pink-rgb);
+  --callout-icon: bookmark;
+}
 .callout[data-callout="timeline"] {
   --callout-color: var(--color-green-rgb);
   --callout-icon: lucide-arrow-right-square;
@@ -818,22 +797,18 @@ body:not(.restored-scrollbars):not(.is-mobile) ::-webkit-scrollbar-thumb:active 
   --callout-color: var(--color-cyan-rgb);
   --callout-icon: lucide-user-2;
 }
-
 .callout[data-callout="note"] {
   --callout-color: var(--color-blue-rgb);
   --callout-icon: lucide-pencil;
 }
-
 .callout[data-callout="media"] {
   --callout-color: var(--color-yellow-rgb);
   --callout-icon: image;
 }
-
 .callout[data-callout="flashcard"] {
   --callout-color: var(--color-orange-rgb);
   --callout-icon: copy;
 }
-
 .custom-callout .callout[data-callout="custom"] {
   --callout-icon: none;
   --callout-title: center;
@@ -844,20 +819,17 @@ body:not(.restored-scrollbars):not(.is-mobile) ::-webkit-scrollbar-thumb:active 
   border-width: 2px;
   border-style: dotted;
 }
-
 .callout[data-callout="bleu"] {
   --callout-icon: none;
   --callout-color: var(--color-cyan-rgb);
 }
-
 .callout.callout[data-callout="bleu"] .callout-title {
   justify-content: custom;
 }
-
+  /*????*/
 .custom-callout .callout.callout[data-callout="cutom"] .callout-title {
   justify-content: custom;
 }
-
 .callout.callout[data-callout="note"] .callout-title {
   justify-content: left;
 }
@@ -874,7 +846,6 @@ progress::-webkit-progress-bar {
   background-color: var(--overlay) !important;
   border: 1px solid var(--highlight-med);
 }
-
 .markdown-preview-view progress,
 .markdown-rendered progress,
 .markdown-source-view.is-live-preview progress {
@@ -898,7 +869,7 @@ h1 {
 }
 
 
-/*---center et arrondir Images and embeds---*/
+/*---center + radius for img and embeds---*/
 :is(:is(.markdown-source-view.mod-cm6) :is(.cm-content, .cm-line), .markdown-rendered) :is(img, .external-embed, .internal-embed audio, .internal-embed video, .iframe-external-embed) {
   margin-inline: auto !important;
   display: block;
@@ -909,18 +880,17 @@ h1 {
 img {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
 img:hover {
   transform: scale(1.04);
 }
 
 
-/*fil  e explorer : hide vault name*/
+/*File explorer : hide vault name*/
 .nav-folder.mod-root>.nav-folder-title {
   display: none;
 }
 
-/*==========================CSSCLASSES==================================================================================*/
+/*==========================CSSCLASSES=================================*/
 /*no-title*/
 .no-title .inline-title {
   display: none;
@@ -958,7 +928,7 @@ background-size: 20px 20px;
   background-color: transparent !important; /*allows you to have imgs with links
 } 
 
-/* ====== hover indicator :from BORDER THEME ====== */
+/* ====== hover indicator : from BORDER THEME ====== */
 
 body {
   --hover-indicator-color: var(--rose);
@@ -1002,15 +972,12 @@ body {
 
 /*outline pane*/
 /* from https://github.com/subframe7536/obsidian-theme-maple, author:@subframe7536 */
-
 .workspace-leaf-content[data-type=outline] .view-content .collapse-icon::before {
   content: "" !important;
 }
-
 :not(.is-grabbing) .workspace-leaf-content[data-type=outline] .view-content .tree-item {
   position: relative;
 }
-
 .workspace-leaf-content[data-type=outline] .view-content .tree-item-self {
   position: relative;
   margin-bottom: 0;
@@ -1018,7 +985,6 @@ body {
   margin-top: -1px;
   /* fix item gap */
 }
-
 .workspace-leaf-content[data-type=outline] .view-content .tree-item-self .tree-item-inner {
   padding-left: 16px;
   margin-left: -16px;
@@ -1028,7 +994,6 @@ body {
   line-height: calc(var(--nav-item-size) * 1.8);
   position: relative;
 }
-
 .workspace-leaf-content[data-type=outline] .view-content .tree-item-self .tree-item-inner::before {
   content: "";
   width: var(--size-4-1);
@@ -1040,11 +1005,9 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-
 .workspace-leaf-content[data-type=outline] .view-content .tree-item-self .tree-item-icon~.tree-item-inner::before {
   content: none;
 }
-
 :not(.is-grabbing) .workspace-leaf-content[data-type=outline] .view-content .tree-item::after {
   content: "";
   width: 2px;
@@ -1054,14 +1017,12 @@ body {
   left: -9px;
   height: calc(100% - var(--nav-item-size) * 1.8 + var(--size-4-8));
 }
-
 .workspace-leaf-content[data-type=outline] .view-content .tree-item-icon {
   cursor: pointer;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
 }
-
 .workspace-leaf-content[data-type=outline] .view-content .tree-item-icon::before {
   width: var(--size-4-2);
   height: var(--size-4-2);
@@ -1072,28 +1033,22 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-
 .workspace-leaf-content[data-type=outline] .view-content .tree-item-icon svg {
   display: block;
 }
-
 .workspace-leaf-content[data-type=outline] .view-content .tree-item-icon svg path {
   display: none;
 }
-
 .workspace-leaf-content[data-type=outline] .view-content .tree-item:hover>.tree-item-children>.tree-item::after {
   background-color: var(--rose);
 }
-
 .workspace-leaf-content[data-type=outline] .view-content .tree-item:hover>.tree-item-self:hover+.tree-item-children .tree-item::after {
   background-color: transparent;
 }
-
 .workspace-leaf-content[data-type=outline] .view-content .tree-item:hover>.tree-item-children>.tree-item:hover::after,
 .workspace-leaf-content[data-type=outline] .view-content .tree-item:hover>.tree-item-children>.tree-item:hover~.tree-item::after {
   background-color: transparent;
 }
-
 :not(.is-grabbing) .workspace-leaf-content[data-type=outline] .view-content .tree-item:hover>.tree-item-children>.tree-item:hover::before {
   content: "";
   position: absolute;
@@ -1105,7 +1060,6 @@ body {
   border-bottom: 2px solid var(--rose);
   border-left: 2px solid var(--rose);
 }
-
 .workspace-leaf-content[data-type=outline] .view-content :is(.tree-item-children, .tree-item-self .tree-item-self) {
   padding-left: 0;
   margin-left: var(--size-4-5);
@@ -1123,7 +1077,6 @@ li[data-task]:not(li[data-task=" "], li[data-task="x"], li[data-task="/"])>p>inp
 label.task-list-label:has(> input[data-task]:not(input[data-task=" "], input[data-task="x"], input[data-task="/"]):checked) {
   pointer-events: none;
 }
-
 /* small animation */
 input[type=checkbox] {
   transition: background 0.4s, stroke-dashoffset 0.6s;
@@ -1207,7 +1160,6 @@ color: var(--foam);
 mask-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224px%22%20viewBox%3D%220%20-960%20960%20960%22%20width%3D%2224px%22%20fill%3D%22%235f6368%22%3E%3Cpath%20d%3D%22M480-530.52q65.61%200%20112.72-43.59t47.11-108.76v-114.09H320.17v114.09q0%2065.17%2047.11%20108.76T480-530.52ZM181.57-40.09q-25.96%200-43.72-17.76-17.76-17.76-17.76-43.72%200-25.39%2017.76-43.43t43.72-18.04h15.65v-114.09q0-57.44%2021.87-109.37%2021.87-51.93%2062.17-93.5-40.3-41.57-62.17-93.5-21.87-51.93-21.87-109.37v-114.09h-15.65q-25.96%200-43.72-18.04-17.76-18.04-17.76-43.43%200-25.96%2017.76-43.72%2017.76-17.76%2043.72-17.76h596.86q25.96%200%2043.72%2017.76%2017.76%2017.76%2017.76%2043.72%200%2025.39-17.76%2043.43t-43.72%2018.04h-15.65v114.09q0%2057.44-21.58%20109.37-21.59%2051.93-62.46%2093.5%2040.87%2041.57%2062.46%2093.5%2021.58%2051.93%2021.58%20109.37v114.09h15.65q25.96%200%2043.72%2018.04%2017.76%2018.04%2017.76%2043.43%200%2025.96-17.76%2043.72-17.76%2017.76-43.72%2017.76H181.57Z%22%2F%3E%3C%2Fsvg%3E');
 }
 
-
 input[data-task="I"]:checked,
 li[data-task="I"]>input:checked,
 li[data-task="I"]>p>input:checked {
@@ -1226,7 +1178,6 @@ color: var(--color-red);
 mask-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224px%22%20viewBox%3D%220%20-960%20960%20960%22%20width%3D%2224px%22%20fill%3D%22%235f6368%22%3E%3Cpath%20d%3D%22M479.72-58.43q-47.34%200-80.77-33.67-33.43-33.66-33.43-80.93%200-47.27%2033.71-80.82%2033.71-33.54%2081.05-33.54%2047.34%200%2080.77%2033.78%2033.43%2033.78%2033.43%2081.22%200%2047.43-33.71%2080.69-33.71%2033.27-81.05%2033.27Zm.56-312.7q-45.58%200-77.52-31.88-31.93-31.88-31.93-77.29v-306.14q0-46.06%2031.65-77.9%2031.65-31.83%2077.24-31.83%2045.58%200%2077.52%2031.83%2031.93%2031.84%2031.93%2077.9v306.14q0%2045.41-31.65%2077.29-31.65%2031.88-77.24%2031.88Z%22%2F%3E%3C%2Fsvg%3E');
 }
   
-
 input[data-task="b"]:checked,
 li[data-task="b"]>input:checked,
 li[data-task="b"]>p>input:checked {
@@ -1326,7 +1277,6 @@ li[data-task="e"]>p>input:checked {
 
 
 /*unordered list styling
-
 author: sailKite
 source: https://discord.com/channels/686053708261228577/702656734631821413/1140761432082886707
 */
@@ -1345,14 +1295,17 @@ author: sai1494
 source: https://discord.com/channels/686053708261228577/702656734631821413/1052346864055369808
 */
 
+body {
+  --tab-img: url("https://cdn-icons-png.flaticon.com/256/7957/7957556.png");
+}
+
 .empty-state-container {
   max-height: unset;
   opacity: 1 !important;
   
 }
-
 .empty-state-container::before {
-  content: url("https://cdn-icons-png.flaticon.com/256/7957/7957556.png");
+  content: var(--tab-img);
   /*content: url("https://cdn-icons-png.flaticon.com/256/8408/8408730.png");*/
 }
 
@@ -1369,9 +1322,6 @@ source: https://discord.com/channels/686053708261228577/702656734631821413/10523
 .progress-bar-message::before {
   content: "✨ ";
 }
-
-
-
 
 
 
@@ -1664,7 +1614,7 @@ svg.oz-folder-toggle path {
 
 
 
-/*======================================================================PDF STYLING======================================================*/
+/*=============================PDF STYLING=====================================*/
 
 /*headings*/
 .print .inline-title,
@@ -1820,7 +1770,12 @@ svg.oz-folder-toggle path {
 }
 
 
+/*Style settings options*/
+/*Alternative callout styles*/
 
+.callout-simple {
+  --callout-border-width: 0px !important;
+}
 
 
 
@@ -2002,7 +1957,31 @@ settings:
       default-light: '#cecacd'
       default-dark: '#524f67' 
 
-
-
+   - 
+        id: my-info-text
+        title: 🔍 Options
+        type: heading
+        collapsed: true
+        level: 1
+   - 
+      id: callout
+      title: callout-style
+      type: class-select
+      allowEmpty: false
+      default: normal
+      options:
+      - 
+         label: Solid
+         value: normal
+      -
+         label: Classic
+         value: callout-simple
+   - 
+        id: tab-img
+        title: Image for new tab
+        description: Please put a small size image
+        type: variable-text
+        default: url("")
+         
 
 */
