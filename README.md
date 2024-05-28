@@ -29,7 +29,7 @@
 
 - Hover line indicator (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
 - Small scrollbar (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
-- Outline hover indicator ([Maple](https://github.com/subframe7536/obsidian-theme-maple) theme)
+- Outline pane ([Maple](https://github.com/subframe7536/obsidian-theme-maple) theme)
 - Active line coloring
 - Cursor color
 - Image slight animation on hover
