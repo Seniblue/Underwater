@@ -601,7 +601,11 @@ mark {
   margin: 0 0px !important;
 }
 
-
+/*inline title center*/
+.inline-title {
+  text-align: center;    
+}
+/*doesnt work with MakeMd ?/
 
 
 
@@ -1776,6 +1780,7 @@ svg.oz-folder-toggle path {
 .callout-simple {
   --callout-border-width: 0px !important;
 }
+
 
 
 
