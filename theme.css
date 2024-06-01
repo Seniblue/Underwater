@@ -585,7 +585,6 @@
 .justified.markdown-preview-view,
 .justified.cm-s-obsidian {
   text-align: justify;
-  text-justify: inter-word;
 }
 
 /*Rounded Highlight style*/
@@ -1774,14 +1773,25 @@ svg.oz-folder-toggle path {
 }
 
 
-/*Style settings options*/
+/*========================Style settings options==========================*/
 /*Alternative callout styles*/
-
 .callout-simple {
   --callout-border-width: 0px !important;
 }
 
+/*disable hover line indicator*/
+.no-hoverindicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
+.no-hoverindicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .no-hoverindicator .mk-header, .no-hoverindicator :has(.mk-note-footer, .no-hoverindicator .collapse-indicator))::after,
+.no-hoverindicator .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
+.no-hoverindicator .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], .no-hoverindicator :has(.collapse-indicator, .no-hoverindicator .mk-header))::after {
+display: none;
+}
 
+/*Remove h5 centered*/
+.no-h5 .HyperMD-header.HyperMD-header-5,
+.no-h5 h5 {
+  text-align: left !important;
+}
 
 
 /* @settings
@@ -1987,6 +1997,17 @@ settings:
         description: Please put a small size image
         type: variable-text
         default: url("")
-         
+
+   - 
+        id: no-hoverindicator
+        title: Disable hover line indicator (credit to Border theme)
+        type: class-toggle
+        default: false
+   - 
+        id: no-h5
+        title: Disable h5 header centering
+        type: class-toggle
+        default: false
 
 */
+
