@@ -53,7 +53,7 @@
 
   /*--editor--*/
   --text-normal: var(--text);
-  --text-highlight-bg: rgba(var(--gold-rgb), 0.5);
+  --text-highlight-bg: rgba(var(--gold-rgb), 0.3);
   /*parfait*/
   --text-faint: var(--muted);
   --bold-color: var(--love);
@@ -672,6 +672,9 @@ body:not(.is-phone) div:has(>input.prompt-input) {
 }
 .vertical-tab-header {
   background-color: var(--base);
+}
+.community-item .suggestion-highlight {
+  background-color: transparent;
 }
 
 /*Mermaid styling* -- doesnot work really well...*/
@@ -1792,6 +1795,8 @@ display: none;
 .no-h5 h5 {
   text-align: left !important;
 }
+
+
 
 
 /* @settings
