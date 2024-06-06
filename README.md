@@ -20,7 +20,6 @@
 - **No-title** : removes inline title
 - **Notebook** : adds notebook-like background image to current note
 - **Write** : monospace font + bigger first letter for each paragraph
-- **Print** : formats your note so you can export it to pdf properly
 ![cssclasses](cssclasses.png)
 
 # Formatting
