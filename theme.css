@@ -54,7 +54,6 @@
   /*--editor--*/
   --text-normal: var(--text);
   --text-highlight-bg: rgba(var(--gold-rgb), 0.3);
-  /*parfait*/
   --text-faint: var(--muted);
   --bold-color: var(--love);
   --italic-color: var(--foam);
@@ -96,7 +95,6 @@
 
   /*---callouts----*/
   --callout-border-width: 2px 6px 6px 2px;
-  /*add colors to default callouts*/
   --callout-border-opacity: 0.25;
   --callout-radius: 13px;
   --callout-title-size: 1rem;
@@ -223,10 +221,11 @@
 
   /*properties*/
   --metadata-display-reading: none;
-  /*--metadata-background: var(--overlay);
+  /*properties visible even with notebook css class*/
+  --metadata-background: var(--background-secondary);
   --metadata-padding: 0px 5px;
-  --metadata-border-radius: 10px;
-  --metadata-divider-color: var(--base);
+  --metadata-border-radius: 12px;
+  /*--metadata-divider-color: var(--base);
   --metadata-divider-width: 2px;*/
 
   --color-accent-1: var(--rose);
