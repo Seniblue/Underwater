@@ -1800,6 +1800,14 @@ display: none;
   text-align: left !important;
 }
 
+/*remove hover image animation*/
+.no-animation img {
+  transition: none;
+}
+.no-animation img:hover {
+  transform: none;
+}
+
 
 
 
@@ -2015,6 +2023,11 @@ settings:
    - 
         id: no-h5
         title: Disable h5 header centering
+        type: class-toggle
+        default: false
+   - 
+        id: no-animation
+        title: Disable slight image animation on hover
         type: class-toggle
         default: false
 
