@@ -43,7 +43,7 @@
   --text-warning: var(--color-orange);
   --text-error: var(--color-red);
   --text-accent: var(--rose);
-  --text-selection: var(--highlight-med);
+  --text-selection: rgb(var(--highlight-med-rgb), 0.6);
   /*---interactive elements---*/
   --interactive-normal: var(--highlight-low);
   --interactive-hover: var(--highlight-med);
@@ -53,7 +53,7 @@
 
   /*--editor--*/
   --text-normal: var(--text);
-  --text-highlight-bg: rgba(var(--gold-rgb), 0.3);
+  --text-highlight-bg: rgba(var(--gold-rgb), 0.2);
   --text-faint: var(--muted);
   --bold-color: var(--love);
   --italic-color: var(--foam);
@@ -90,8 +90,6 @@
   --blockquote-background-color: var(--code-background);
   --blockquote-border-color: var(--gold);
   --blockquote-border-thickness: 3px;
-  /*TODO : make it rounded !*/
-
 
   /*---callouts----*/
   --callout-border-width: 2px 6px 6px 2px;
@@ -263,6 +261,7 @@
 
   --highlight-low: #f4ede8;
   --highlight-med: #dfdad9;
+  --highlight-med-rgb: 223, 218, 217;
   --highlight-high: #cecacd;
 
   /*override accent color !*/
@@ -301,6 +300,7 @@
 
   --highlight-low: #E5E9F0;
   --highlight-med: #D8DEE9;
+  --highlight-med-rgb: 216, 222, 233;
   --highlight-high: #81A1C1;
 
   /*override accent color !*/
@@ -337,6 +337,7 @@
 
   --highlight-low: #ccd0da; /*surface0*/
   --highlight-med: #bcc0cc; /*surface1*/
+  --highlight-med-rgb: 188, 192, 204; /*surface1*/
   --highlight-high: #acb0be; /*surface2*/
 
   /*override accent color !*/
@@ -376,6 +377,7 @@
 
   --highlight-low: #21202e;
   --highlight-med: #403d52;
+  --highlight-med-rgb: 64, 61, 82;
   --highlight-high: #524f67;
 
   /*override accent color !*/
@@ -412,6 +414,7 @@
 
   --highlight-low: #2a283e;
   --highlight-med: #44415a;
+  --highlight-med-rgb: 68, 65, 90;
   --highlight-high: #56526e;
 
   /*override accent color !*/
@@ -450,6 +453,7 @@
 
   --highlight-low: #4C566A;
   --highlight-med: #434C5E;
+  --highlight-med-rgb: 67, 76, 94;
   --highlight-high: #81A1C1;
 
   /*override accent color !*/
@@ -485,6 +489,7 @@
 
   --highlight-low: #2a283e; /*?*/
   --highlight-med: #44415a; /*?*/
+  --highlight-med-rgb: 68, 65, 90; /*?*/
   --highlight-high: #56526e; /*?*/
 
   /*override accent color !*/
@@ -520,7 +525,7 @@
   --text: #cdd6f4; /*text*/
 
   --highlight-low: #313244; /*surface0*/
-  --highlight-med: #45475a; /*surface1*/
+  --highlight-med-rgb: 69, 71, 90; /*surface1*/
   --highlight-high: #585b70; /*surface2*/
 
   /*override accent color !*/
