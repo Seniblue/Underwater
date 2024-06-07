@@ -543,8 +543,17 @@
 /* remove for default layout*/
 
 .workspace-tab-container {
-  margin: 7px 15px 14px 0px;
+  margin: 7px 0px 14px 0px;
   border-radius: 12px;
+}
+.mod-right-split { /*right margin*/
+  margin: 0px 14px 0px 0px;
+}
+.mod-left-split  { /*left margin*/
+  margin: 0px 0px 0px 14px;
+}
+.workspace-split.mod-vertical.mod-root { /*middle margins*/
+  margin: 0px 14px;
 }
 
 .side-dock-actions {
@@ -559,7 +568,7 @@
 
 .workspace-tabs {
   background-color: var(--background-primary-alt);
-  /*this one is the most important -> enlève le weird layout pointu avec les tabs collés*/
+  /*very important*/
 }
 
 .workspace-ribbon,
@@ -573,6 +582,17 @@
   background-color: var(--background-primary-alt);
 }
 
+/*new ribbon (1.6) styling*/
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  border-radius: 8px;
+  margin: 0px 0px 14px 0px;
+}
+
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
+  padding: 7px 10px;
+  border-radius: 8px;
+}
+
 
 
 /*Panels styling !!!*/
@@ -581,6 +601,10 @@
   border-radius: 8px;
   margin: 5px 20px;
 }
+
+
+
+
 
 /*Justify text*/
 .markdown-preview-section, .cm-s-obsidian, .markdown-preview-view, .cm-s-obsidian,
