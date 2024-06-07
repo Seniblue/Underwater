@@ -1,4 +1,4 @@
-![uw](thumbnail.png)
+![uw](img/thumbnail.png)
 
 > [!IMPORTANT]
 > This theme works best with the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin, which allows you to choose a colorscheme and even to customize **all** the theme colors.
@@ -14,17 +14,17 @@
 | Rosé pine dawn     | Rosé pine         |
 |                    | Rosé pine moon    |
 
-![colorschemes|500](colorschemes.png)
+![colorschemes|500](img/colorschemes.png)
 
 # Cssclasses
 - **No-title** : removes inline title
 - **Notebook** : adds notebook-like background image to current note
 - **Write** : monospace font + bigger first letter for each paragraph
-![cssclasses](cssclasses.png)
+![cssclasses](img/cssclasses.png)
 
 # Formatting
 - Font : [Lexend](https://www.lexend.com/)
-![formatting](formatting.png)
+![formatting](img/formatting.png)
 
 - Hover line indicator (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
 - Small scrollbar (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
@@ -37,7 +37,7 @@
 - New tab image
 
 # Plugins support
-![plugins](plugins.png)
+![plugins](img/plugins.png)
 - Make.MD
 - Kanban
 - Pomodoro timer
