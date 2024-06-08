@@ -537,7 +537,6 @@
 }
 
 
- 
 
 /* LAYOUT */
 /* remove for default layout*/
@@ -555,6 +554,10 @@
 .workspace-split.mod-vertical.mod-root { /*middle margins*/
   margin: 0px 14px;
 }
+.mod-left-split .workspace-tab-container, .mod-right-split .workspace-tab-container  {
+  margin-bottom: 0px !important; /*reduce spacing between tabs in sidebars*/
+}
+
 
 .side-dock-actions {
   margin: 0px;
@@ -571,6 +574,10 @@
   /*very important*/
 }
 
+.workspace-split.mod-horizontal.mod-left-split {
+  margin-bottom: 50px !important;
+}
+
 .workspace-ribbon,
 .workspace-ribbon.mod-left.is-collapsed {
   padding: 0px;
@@ -585,7 +592,7 @@
 /*new ribbon (1.6) styling*/
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
   border-radius: 8px;
-  margin: 0px 0px 14px 0px;
+  margin: 14px 0px 14px 0px;
 }
 
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
