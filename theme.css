@@ -37,8 +37,8 @@
   /*--accent colors workspace----  */
   --background: var(--base);
   --text-muted: var(--muted);
-  --text-on-accent: var(--highlight-low); /*perfect*/
-  --text-on-accent-inverted: var(--base);
+  --text-on-accent: var(--surface); /*???*/
+  --text-on-accent-inverted: var(--text); /*???*/
   --text-success: var(--color-green);
   --text-warning: var(--color-orange);
   --text-error: var(--color-red);
@@ -84,7 +84,6 @@
   --nav-item-color-hover: var(--subtle);
   --nav-item-background-active: var(--foam);
   --nav-collapse-icon-color: var(--pine);
-  --nav-item-color-active: var(--text-on-accent-inverted);
 
   /*---blockquote----*/
   --blockquote-background-color: var(--code-background);
@@ -712,6 +711,12 @@ body:not(.is-phone) div:has(>input.prompt-input) {
   background-color: transparent;
 }
 
+
+/*file explorer active file bgcolor fix*/
+body:not(.is-grabbing) .nav-file-title.is-active:hover, body:not(.is-grabbing) .nav-folder-title.is-active:hover, .nav-file-title.is-active, .nav-folder-title.is-active {
+  color: var(--text-on-accent);
+}
+
 /*Mermaid styling* -- doesnot work really well...*/
 .mermaid svg {
   display: block;
@@ -926,10 +931,6 @@ img:hover {
 }
 
 
-/*File explorer : hide vault name*/
-.nav-folder.mod-root>.nav-folder-title {
-  display: none;
-}
 
 /*==========================CSSCLASSES=================================*/
 /*no-title*/
