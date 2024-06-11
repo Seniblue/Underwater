@@ -11,6 +11,8 @@
 | :------------------: | :-----------------: |
 | Nord               | Nord              |
 | Catpuccin Latte    | Catpuccin Mocha   |
+| Everforest         | Everforest         |
+| Biscuit            | Biscuit           |
 | Rosé pine dawn     | Rosé pine         |
 |                    | Rosé pine moon    |
 
