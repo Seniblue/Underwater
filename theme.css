@@ -346,8 +346,80 @@
   --color-accent-hsl: 11, 59%, 67%; /*Rosewater*/
 
 }
+.theme-light.everforest-light {
+  color-scheme: light;
 
+  /*PALETTE*/
+  --love: #f85552; /*statusline3*/
+  --gold: #dfA000; /*yellow*/
+  --rose: #f57D26; /*orange*/
+  --pine: #35A77C; /*aqua*/
+  --foam: #3A94C5; /*blue*/
+  --iris: #DF69BA; /*purple*/
+  --love-rgb: 248, 85, 82;
+  --gold-rgb: 223, 160, 0;
+  --rose-rgb: 245, 125, 38;
+  --pine-rgb: 53, 167, 124;
+  --foam-rgb: 58, 148, 197;
+  --iris-rgb: 223, 105, 186;
 
+  --base: #efebd4; /*bg_dim*/
+  --surface: #fdf6e3; /*bg0*/
+  --overlay: #eaedc8; /*bg_visual*/
+
+  --muted: #939f91; /*gray1*/
+  --subtle: #829181; /*gray2*/
+  --text: #5c6a72; /*fg*/
+
+  --highlight-low: #efebd4; /*bg2*/
+  --highlight-med: #e6e2cc; /*bg3*/
+  --highlight-med-rgb: 230, 226, 204; /*bg3*/
+  --highlight-high: #e0dcc7; /*bg4*/
+
+  /*override accent color !*/
+  --accent-h: 97 !important;
+  --accent-s: 38% !important;
+  --accent-l: 53% !important;
+  --color-accent-hsl: 97, 38%, 53%; /*green/statusline1*/
+
+}
+.theme-light.biscuit-light {
+  color-scheme: light;
+
+  /*PALETTE*/
+  --love: #CB2424; /*Fire Engine Red*/
+  --gold: #E98F21; /*Earth Yellow*/
+  --rose: #E95318; /*Giants Orange*/
+  --pine: #34709B; /*UCLA Blue*/
+  --foam: #3E9F85; /*Zomp*/
+  --iris: #A6369F; /*Plum*/
+  --love-rgb: 203, 36, 36;
+  --gold-rgb: 233, 143, 33;
+  --rose-rgb: 233, 83, 24;
+  --pine-rgb: 52, 112, 155;
+  --foam-rgb: 62, 159, 133;
+  --iris-rgb: 166, 54, 159;
+
+  --base: #DBC6C2; /*Pale Dogwood*/ /*??*/
+  --surface: #F4E6D2; /*Antique White*/
+  --overlay: #DBC6C2; /*Pale Dogwood*/ /*??*/
+
+  --muted: #423939; /*Van Dyke*/
+  --subtle: #2B2626; /*Jet*/
+  --text: #181515; /*Night*/
+
+  --highlight-low: #B79F9F; /*Rose Quartz*/
+  --highlight-med: #A18787; /*Rose Taupe*/
+  --highlight-med-rgb: 161, 135, 135; /*Rose Taupe*/
+  --highlight-high: #423939; /*Van Dyke*/
+
+  /*override accent color !*/
+  --accent-h: 324 !important;
+  --accent-s: 64% !important;
+  --accent-l: 49% !important;
+  --color-accent-hsl: 324, 64%, 49%; /*Red violet*/
+
+}
 
 .theme-dark /*Rosé Pine*/ {
   color-scheme: dark;
@@ -524,6 +596,7 @@
   --text: #cdd6f4; /*text*/
 
   --highlight-low: #313244; /*surface0*/
+  --highlight-med: #45475a; /*surface1*/
   --highlight-med-rgb: 69, 71, 90; /*surface1*/
   --highlight-high: #585b70; /*surface2*/
 
@@ -534,8 +607,80 @@
   --color-accent-hsl: 217, 92%, 76%; /*Blue*/
 
 }
+.theme-dark.everforest-dark {
+  color-scheme: dark;
 
+  /*PALETTE*/
+  --love: #e67e80; /*red*/
+  --gold: #dbbc7f; /*yellow*/
+  --rose: #e69875; /*orange*/
+  --pine: #83C092; /*aqua*/
+  --foam: #7fbbb3; /*blue*/
+  --iris: #d699b6; /*purple*/
+  --love-rgb: 230, 126, 128;
+  --gold-rgb: 219, 188, 127;
+  --rose-rgb: 230, 152, 117;
+  --pine-rgb: 131, 192, 146;
+  --foam-rgb: 127, 187, 179;
+  --iris-rgb: 214, 153, 182;
 
+  --base: #1E2326; /*bg_dim*/
+  --surface: #272E33; /*bg0*/
+  --overlay: #384B55; /*bg_blue*/
+
+  --muted: #859289; /*gray1*/
+  --subtle: #9DA9A0; /*gray2*/
+  --text: #d3C6AA; /*fg*/
+
+  --highlight-low: #374145; /*bg2*/
+  --highlight-med: #414b50; /*bg3*/
+  --highlight-med-rgb: 65, 75, 80; /*bg3*/
+  --highlight-high: #495156; /*bg4*/
+
+  /*override accent color !*/
+  --accent-h: 90 !important;
+  --accent-s: 36% !important;
+  --accent-l: 66% !important;
+  --color-accent-hsl: 90, 36%, 66%; /*green/statusline1*/
+
+}
+.theme-dark.biscuit-dark {
+  color-scheme: dark;
+
+  /*PALETTE*/
+  --love: #CA3F3F; /*Persian Red*/
+  --gold: #E39C45; /*Butterscotch*/
+  --rose: #E46A3A; /*Flame*/
+  --pine: #517894; /*Steel Blue*/
+  --foam: #629386; /*Viridian*/
+  --iris: #9F569A; /*Purpureus*/
+  --love-rgb: 202, 63, 63;
+  --gold-rgb: 227, 156, 69;
+  --rose-rgb: 228, 106, 58;
+  --pine-rgb: 81, 120, 148;
+  --foam-rgb: 98, 147, 134;
+  --iris-rgb: 159, 86, 154;
+
+  --base: #181515; /*Night*/
+  --surface: #221E1E; /*Raisin Black*/
+  --overlay: #423939; /*Van Dyke*/
+
+  --muted: #978787; /*Cinereous*/
+  --subtle: #B6A8A5; /*Silver*/
+  --text: #F4E6D2; /*Antique White*/
+
+  --highlight-low: #423939; /*Van Dyke*/
+  --highlight-med: #6D5F5F; /*Wenge*/
+  --highlight-med-rgb: 109, 95, 95; /*Wenge*/
+  --highlight-high: #978787; /*Cinereous*/
+
+  /*override accent color !*/
+  --accent-h: 226 !important;
+  --accent-s: 31% !important;
+  --accent-l: 42% !important;
+  --color-accent-hsl: 226, 31%, 42%; /*YinMn Blue*/
+
+}
 
 /* LAYOUT */
 /* remove for default layout*/
@@ -1877,6 +2022,12 @@ settings:
       -   
          label: Catpuccin mocha
          value: catpuccin-mocha
+      -   
+         label: Everforest
+         value: everforest-dark
+      - 
+         label: Biscuit
+         value: biscuit-dark  
    - 
       id: underwater-colors-light
       title: Light Theme
@@ -1892,7 +2043,13 @@ settings:
          value: nord-bright
       - 
          label: Catpuccin latte
-         value: catpuccin-latte       
+         value: catpuccin-latte
+      - 
+         label: Everforest
+         value: everforest-light
+      - 
+         label: Biscuit
+         value: biscuit-light                   
    - 
         id: my-info-text
         title: 🎨 Colors
