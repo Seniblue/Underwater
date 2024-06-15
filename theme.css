@@ -95,6 +95,7 @@
   --callout-border-opacity: 0.25;
   --callout-radius: 13px;
   --callout-title-size: 1rem;
+  --callout-padding: var(--size-4-3) var(--size-4-6);
 
   /*codeblock*/
   --code-normal: var(--subtle);
@@ -686,19 +687,28 @@
 /* remove for default layout*/
 
 .workspace-tab-container {
-  margin: 7px 0px 14px 0px;
+  margin: 7px 14px 14px 0px;
   border-radius: 12px;
 }
+
 .mod-right-split { /*right margin*/
-  margin: 0px 14px 0px 0px;
+  margin: 0px 0px 0px 0px !important;
 }
-.mod-left-split  { /*left margin*/
-  margin: 0px 0px 0px 14px;
+.mod-left-split  { /*left margin*//*????*/
+  margin: 0px 0px 0px 0px;
 }
-.workspace-split.mod-vertical.mod-root { /*middle margins*/
-  margin: 0px 14px;
+
+
+
+.workspace-tabs.mod-top.mod-top-left-space:not(.workspace-leaf) { /*weird fix*/
+  padding-left: 14px;
 }
-.mod-left-split .workspace-tab-container, .mod-right-split .workspace-tab-container  {
+
+
+
+
+/*NOT WORKING in right panel!!!!!!!!!!!!!!!!!!!*/
+.mod-left-split .workspace-tab-container, .mod-right-split .workspace-tab-container :not(:last-of-type)  {
   margin-bottom: 0px !important; /*reduce spacing between tabs in sidebars*/
 }
 
@@ -724,16 +734,80 @@
 
 .workspace-ribbon,
 .workspace-ribbon.mod-left.is-collapsed {
-  padding: 0px;
+  padding: 0px !important;
   background-color: transparent;
 }
 
-/*couleur de fond*/
+/*bg color*/
 .workspace {
   background-color: var(--background-primary-alt);
 }
 
+
 /*new ribbon (1.6) styling*/
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  border-radius: 8px;
+  margin: 14px !important;
+}
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
+  padding: 7px 10px;
+  border-radius: 8px;
+}
+.workspace-split.mod-horizontal > * {
+  width: auto;
+}
+
+/* alt layout ?
+
+.workspace-tab-container {
+  margin: 7px 0px 14px 0px;
+  border-radius: 12px;
+}
+.mod-right-split { /*right margin
+margin: 0px 14px 0px 0px;
+}
+.mod-left-split  { /*left margin
+  margin: 0px 0px 0px 14px;
+}
+.workspace-split.mod-vertical.mod-root { /*middle margins
+  margin: 0px 14px;
+}
+.mod-left-split .workspace-tab-container, .mod-right-split .workspace-tab-container  {
+  margin-bottom: 0px !important; /*reduce spacing between tabs in sidebars
+}
+
+
+.side-dock-actions {
+  margin: 0px;
+  padding: 0px;
+  margin-top: 7px;
+}
+
+.side-dock-settings {
+  padding: 0px 0px 10px 0px;
+}
+
+.workspace-tabs {
+  background-color: var(--background-primary-alt);
+  /*very important
+}
+
+.workspace-split.mod-horizontal.mod-left-split {
+  margin-bottom: 50px !important;
+}
+
+.workspace-ribbon,
+.workspace-ribbon.mod-left.is-collapsed {
+  padding: 0px;
+  background-color: transparent;
+}
+
+/*couleur de fond
+.workspace {
+  background-color: var(--background-primary-alt);
+}
+
+/*new ribbon (1.6) styling
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
   border-radius: 8px;
   margin: 14px 0px 14px 0px;
@@ -743,6 +817,10 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   padding: 7px 10px;
   border-radius: 8px;
 }
+*/
+
+
+
 
 
 
@@ -1066,6 +1144,7 @@ h1 {
   display: block;
   border-radius: 10px !important;
 }
+
 
 /*hover image animation !*/
 img {
@@ -1963,6 +2042,15 @@ svg.oz-folder-toggle path {
   --callout-border-width: 0px !important;
 }
 
+
+.callout-outlined {
+  --callout-border-width: 1px;
+  --callout-content-background: var(--background-primary);
+  --callout-content-padding: 0px var(--size-4-6);
+  --callout-padding: 0px;
+  --callout-title-padding: 7px 15px;
+}
+
 /*disable hover line indicator*/
 .no-hoverindicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
 .no-hoverindicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .no-hoverindicator .mk-header, .no-hoverindicator :has(.mk-note-footer, .no-hoverindicator .collapse-indicator))::after,
@@ -2197,6 +2285,10 @@ settings:
       -
          label: Classic
          value: callout-simple
+      -
+         label: Outlined
+         value: callout-outlined
+
    - 
         id: tab-img
         title: Image for new tab
