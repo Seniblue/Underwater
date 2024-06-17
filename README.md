@@ -55,5 +55,6 @@ Credit to these themes for certain elements and inspiration
 
 # Tasks
 - [ ] Add more color schemes
-- [ ] Add more options for settings with style settings
-- [ ] ...
+- [ ] Work on README
+- [x] Add more options for settings with style settings
+- [ ] Submit theme to obsidian theme list
