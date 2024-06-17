@@ -965,7 +965,6 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover, body:not(.is-grabbing) .
   border-collapse: separate;
   border-spacing: 0;
 }
-
 /* Add the radius */
 th:first-child {
   border-top-left-radius: var(--table-border-radius)
@@ -986,10 +985,20 @@ table,
   margin-inline: auto;
 }
 
+/*underline styling*/
+u {
+  text-decoration-style: dotted;
+  text-decoration-color: var(--iris);
+  text-underline-offset: 5px;
+}
+
 
 /*latex color*/
-mjx-container[jax="CHTML"][display="true"] {
+.theme-light mjx-container[jax="CHTML"][display="true"] {
   color: var(--pine);
+}
+.theme-dark mjx-container[jax="CHTML"][display="true"] {
+  color: var(--gold);
 }
 
 /*LINKS STYLING !*/
