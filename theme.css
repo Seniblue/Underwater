@@ -936,7 +936,7 @@ body:not(.is-phone) div:has(>input.prompt-input) {
 
 
 /*file explorer active file bgcolor fix*/
-body:not(.is-grabbing) .nav-file-title.is-active:hover, body:not(.is-grabbing) .nav-folder-title.is-active:hover, .nav-file-title.is-active, .nav-folder-title.is-active {
+body:not(.is-grabbing) .nav-file-title.is-active:hover, body:not(.is-grabbing) .nav-folder-title.is-active:hover, .nav-file-title.is-active, .nav-folder-title.is-active, body:not(.is-grabbing) .tree-item-self.is-active:hover, .tree-item-self.is-active {
   color: var(--text-on-accent);
 }
 
