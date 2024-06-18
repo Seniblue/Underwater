@@ -700,8 +700,8 @@
 
 
 
-.workspace-tabs.mod-top.mod-top-left-space { /*weird fix*/
-  padding-left: 14px;
+.workspace-ribbon.side-dock-ribbon.mod-left {
+  padding-right: 14px;
 }
 
 
@@ -746,7 +746,7 @@
 /*new ribbon (1.6) styling*/
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
   border-radius: 8px;
-  margin: 14px !important;
+  margin: 0px !important;
 }
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
   padding: 7px 10px;
@@ -941,7 +941,7 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover, body:not(.is-grabbing) .
 
 /*smaller pinned tab*/
 .workspace-tab-header:has(.mod-pinned) {
-  max-width: 60px !important;
+  max-width: 55px !important;
 }
 
 /*Mermaid styling* -- doesnot work really well...*/
@@ -1017,6 +1017,7 @@ a {
   color: var(--link-color);
   border-radius: 7px;
   padding: 0px 5px;
+  border: 1px solid var(--highlight-med);
 }
 
 .markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover,
@@ -1025,6 +1026,7 @@ a {
   color: var(--link-color-hover);
   border-radius: 7px;
   padding: 0px 5px;
+  border: 1px solid var(--highlight-med);
 }
 
 /*Remove embed icon*/
