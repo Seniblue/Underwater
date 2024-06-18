@@ -700,10 +700,9 @@
 
 
 
-.workspace-tabs.mod-top.mod-top-left-space:not(.workspace-leaf) { /*weird fix*/
+.workspace-tabs.mod-top.mod-top-left-space { /*weird fix*/
   padding-left: 14px;
 }
-
 
 
 
@@ -940,6 +939,11 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover, body:not(.is-grabbing) .
   color: var(--text-on-accent);
 }
 
+/*smaller pinned tab*/
+.workspace-tab-header:has(.mod-pinned) {
+  max-width: 60px !important;
+}
+
 /*Mermaid styling* -- doesnot work really well...*/
 .mermaid svg {
   display: block;
@@ -1023,6 +1027,10 @@ a {
   padding: 0px 5px;
 }
 
+/*Remove embed icon*/
+.markdown-embed-link, .file-embed-link {
+  display: none;
+}
 
 
 /*scrollbar - from BORDER theme*/
