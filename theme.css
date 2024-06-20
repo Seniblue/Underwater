@@ -660,14 +660,35 @@
 .mod-left-split  { /*left margin*//*????*/
   margin: 0px 0px 0px 0px;
 }
-
-
-
-.workspace-tabs.mod-top.mod-top-left-space { /*weird fix*/
-  padding-left: 14px;
+/*layout fix*/
+.workspace-split.mod-horizontal.mod-sidedock.mod-left-split {
+  margin-right: 0px !important
+}
+.workspace {
+padding-left: 14px;
 }
 
+/*old weird fix .workspace-tabs.mod-top.mod-top-left-space { 
+padding-left: 14px;
+}*/
 
+/* alt layout ?
+.workspace-tab-container {
+  margin: 7px 0px 14px 0px;
+  border-radius: 12px;
+}
+.mod-right-split { /*right margin
+margin: 0px 14px 0px 0px;
+}
+.mod-left-split  { /*left margin
+  margin: 0px 0px 0px 14px;
+}
+.workspace-split.mod-vertical.mod-root { /*middle margins
+  margin: 0px 14px;
+}
+.mod-left-split .workspace-tab-container, .mod-right-split .workspace-tab-container  {
+  margin-bottom: 0px !important; /*reduce spacing between tabs in sidebars
+}
 
 /*NOT WORKING in right panel!!!!!!!!!!!!!!!!!!!*/
 .mod-left-split .workspace-tab-container, .mod-right-split .workspace-tab-container :not(:last-of-type)  {
@@ -706,10 +727,10 @@
 }
 
 
-/*new ribbon (1.6) styling*/
+/*new vault switcher (1.6) styling*/
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
   border-radius: 8px;
-  margin: 14px !important;
+  margin: 14px 14px 14px 0px !important;
 }
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
   padding: 7px 10px;
@@ -717,25 +738,6 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 }
 .workspace-split.mod-horizontal > * {
   width: auto;
-}
-
-/* alt layout ?
-
-.workspace-tab-container {
-  margin: 7px 0px 14px 0px;
-  border-radius: 12px;
-}
-.mod-right-split { /*right margin
-margin: 0px 14px 0px 0px;
-}
-.mod-left-split  { /*left margin
-  margin: 0px 0px 0px 14px;
-}
-.workspace-split.mod-vertical.mod-root { /*middle margins
-  margin: 0px 14px;
-}
-.mod-left-split .workspace-tab-container, .mod-right-split .workspace-tab-container  {
-  margin-bottom: 0px !important; /*reduce spacing between tabs in sidebars
 }
 
 
@@ -751,7 +753,7 @@ margin: 0px 14px 0px 0px;
 
 .workspace-tabs {
   background-color: var(--background-primary-alt);
-  /*very important
+  /*very important*/
 }
 
 .workspace-split.mod-horizontal.mod-left-split {
