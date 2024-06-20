@@ -534,43 +534,6 @@
   --accent-l: 72% !important;
   --color-accent-hsl: 196, 53%, 72%;
 }
-.theme-dark.dracula {
-  color-scheme: dark;
-
-  /*PALETTE*/
-  --love: #FF5555;
-  --gold: #FFB86C;
-  --rose: #FF79C6;
-  --pine: #50FA7B;
-  --foam: #8BE9FD;
-  --iris: #BD93F9;
-  --love-rgb: 255, 85, 85;
-  --gold-rgb: 255, 184, 108;
-  --rose-rgb: 255, 121, 198;
-  --pine-rgb: 80, 250, 123;
-  --foam-rgb: 139, 233, 253;
-  --iris-rgb: 189, 147, 249;
-
-  --base: #232136; /*?*/
-  --surface: #282A36;
-  --overlay: #44475A;
-
-  --muted: #6272A4;
-  --subtle: var(--muted);
-  --text: #F8F8F2;
-
-  --highlight-low: #2a283e; /*?*/
-  --highlight-med: #44415a; /*?*/
-  --highlight-med-rgb: 68, 65, 90; /*?*/
-  --highlight-high: #56526e; /*?*/
-
-  /*override accent color !*/
-  --accent-h: 65 !important;
-  --accent-s: 92% !important;
-  --accent-l: 76% !important;
-  --color-accent-hsl: 65, 92%, 76%;
-
-}
 .theme-dark.catpuccin-mocha {
   color-scheme: dark;
 
@@ -700,8 +663,8 @@
 
 
 
-.workspace-ribbon.side-dock-ribbon.mod-left {
-  padding-right: 14px;
+.workspace-tabs.mod-top.mod-top-left-space { /*weird fix*/
+  padding-left: 14px;
 }
 
 
@@ -746,7 +709,7 @@
 /*new ribbon (1.6) styling*/
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
   border-radius: 8px;
-  margin: 0px !important;
+  margin: 14px !important;
 }
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
   padding: 7px 10px;
@@ -1029,7 +992,7 @@ a {
   border: 1px solid var(--highlight-med);
 }
 
-/*Remove embed icon*/
+/*Embeds : Remove embed icon*/
 .markdown-embed-link, .file-embed-link {
   display: none;
 }
@@ -2056,6 +2019,11 @@ svg.oz-folder-toggle path {
 
 
 /*========================Style settings options==========================*/
+/*Focus mode*/
+.focus-mode .workspace-tab-header-container, .focus-mode .view-header, .focus-mode .status-bar, .focus-mode .metadata-properties-heading, .focus-mode ::-webkit-scrollbar {
+  display: none;
+}
+
 /*Alternative callout styles*/
 .callout-simple {
   --callout-border-width: 0px !important;
@@ -2092,6 +2060,24 @@ display: none;
   transform: none;
 }
 
+/*remove internal links styling*/
+.no-links .markdown-source-view.mod-cm6 .cm-hmd-internal-link,
+.no-links .markdown-rendered .internal-link {
+  background-color: transparent;
+  border-radius: 0px;
+  padding: 0px;
+  border: none;
+}
+
+.no-links .markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover,
+.no-links .markdown-rendered .internal-link:hover {
+  background-color: transparent;
+  border-radius: 0px;
+  padding: 0px;
+  border: none;
+  color: var(--link-color-hover);
+  --link-color-hover: var(--love);
+}
 
 
 
@@ -2123,9 +2109,6 @@ settings:
       -
          label: Nord
          value: nord-dark
-      -
-         label: Dracula
-         value: dracula
       -   
          label: Catpuccin mocha
          value: catpuccin-mocha
@@ -2293,7 +2276,7 @@ settings:
         level: 1
    - 
       id: callout
-      title: callout-style
+      title: Callout style
       type: class-select
       allowEmpty: false
       default: normal
@@ -2330,6 +2313,20 @@ settings:
         title: Disable slight image animation on hover
         type: class-toggle
         default: false
+   - 
+        id: no-links
+        title: Disable internal links background
+        type: class-toggle
+        default: false
+   -
+        id: focus-mode
+        title: Full focus mode
+        description: Removes tab bar, status bar, scrollbar, file header and properties heading. You can toggle it with a hotkey.
+        type: class-toggle
+        default: false
+        addCommand: true
+
+
 
 */
 
