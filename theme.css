@@ -654,43 +654,21 @@
   border-radius: 12px;
 }
 
-.mod-right-split { /*right margin*/
-  margin: 0px 0px 0px 0px !important;
-}
-.mod-left-split  { /*left margin*//*????*/
-  margin: 0px 0px 0px 0px;
-}
-/*layout fix*/
-.workspace-split.mod-horizontal.mod-sidedock.mod-left-split {
-  margin-right: 0px !important
-}
-.workspace {
-padding-left: 14px;
+.mod-right-split, .mod-left-split { /*right and left margins*/
+  margin: 0px;
 }
 
-/*old weird fix .workspace-tabs.mod-top.mod-top-left-space { 
-padding-left: 14px;
-}*/
 
-/* alt layout ?
-.workspace-tab-container {
-  margin: 7px 0px 14px 0px;
-  border-radius: 12px;
-}
-.mod-right-split { /*right margin
-margin: 0px 14px 0px 0px;
-}
-.mod-left-split  { /*left margin
-  margin: 0px 0px 0px 14px;
-}
-.workspace-split.mod-vertical.mod-root { /*middle margins
-  margin: 0px 14px;
-}
-.mod-left-split .workspace-tab-container, .mod-right-split .workspace-tab-container  {
-  margin-bottom: 0px !important; /*reduce spacing between tabs in sidebars
+body:not(is-mobile):not(.show-ribbon) .workspace {
+  margin-left: 14px;
 }
 
-/*NOT WORKING in right panel!!!!!!!!!!!!!!!!!!!*/
+.workspace.is-left-sidedock-open {
+  padding-left: 0px;
+}
+
+
+/*NOT WORKING in right panel!*/
 .mod-left-split .workspace-tab-container, .mod-right-split .workspace-tab-container :not(:last-of-type)  {
   margin-bottom: 0px !important; /*reduce spacing between tabs in sidebars*/
 }
@@ -706,7 +684,7 @@ margin: 0px 14px 0px 0px;
   padding: 0px 0px 10px 0px;
 }
 
-.workspace-tabs {
+.workspace-tabs, .horizontal-main-container {
   background-color: var(--background-primary-alt);
   /*very important*/
 }
@@ -1172,19 +1150,14 @@ background-size: 20px 20px;
   font-size: 120%;
 }
 
-/*.no-links .markdown-source-view.mod-cm6 .cm-hmd-internal-link,
-.markdown-rendered .internal-link, .no-links .markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover,
-.markdown-rendered .internal-link:hover {
-  background-color: transparent !important; /*allows you to have imgs with links
-} 
 
 /* ====== hover indicator : from BORDER THEME ====== */
 
-body {
+/*body {
   --hover-indicator-color: var(--rose);
 }
 
-.workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header)) {
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer[data-type="markdown"] /*:has(.collapse-indicator, .mk-header)) {
   position: relative;
 }
 
@@ -1209,7 +1182,7 @@ body {
 .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header)):hover::after {
   height: calc(100% - 6px);
 }
-
+*/
 
 
 /*====active line highlight======*/
@@ -2295,7 +2268,7 @@ settings:
 
    - 
         id: tab-img
-        title: Image for new tab
+        title: New tab image
         description: Please put a small size image
         type: variable-text
         default: url("")
