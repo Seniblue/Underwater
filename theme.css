@@ -2005,6 +2005,17 @@ svg.oz-folder-toggle path {
   --callout-title-padding: 7px 15px;
 }
 
+/*Alternative table*/
+.table-minimal {
+  --table-header-background: transparent;
+  --table-header-color: var(--text-normal);
+  --table-selection-border-radius: 7px;
+  --table-row-alt-background: transparent;
+  --table-border-radius: 0px !important;  
+}
+
+
+
 /*disable hover line indicator*/
 .no-hoverindicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
 .no-hoverindicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .no-hoverindicator .mk-header, .no-hoverindicator :has(.mk-note-footer, .no-hoverindicator .collapse-indicator))::after,
@@ -2257,7 +2268,19 @@ settings:
       -
          label: Outlined
          value: callout-outlined
-
+   - 
+      id: table
+      title: Table style
+      type: class-select
+      allowEmpty: false
+      default: normal
+      options:
+      - 
+         label: Normal
+         value: normal
+      -
+         label: Minimalistic
+         value: table-minimal
    - 
         id: tab-img
         title: New tab image
