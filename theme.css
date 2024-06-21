@@ -669,8 +669,11 @@ body:not(is-mobile):not(.show-ribbon) .workspace {
 
 
 /*NOT WORKING in right panel!*/
-.mod-left-split .workspace-tab-container, .mod-right-split .workspace-tab-container :not(:last-of-type)  {
+.mod-left-split .workspace-tab-container, .mod-right-split .workspace-tab-container  {
   margin-bottom: 0px !important; /*reduce spacing between tabs in sidebars*/
+}
+.workspace-split.mod-left-split, .workspace-split.mod-right-split {
+ padding-bottom: 14px !important;
 }
 
 
@@ -684,24 +687,16 @@ body:not(is-mobile):not(.show-ribbon) .workspace {
   padding: 0px 0px 10px 0px;
 }
 
-.workspace-tabs, .horizontal-main-container {
+.workspace-tabs, .horizontal-main-container, .workspace {
   background-color: var(--background-primary-alt);
   /*very important*/
 }
 
-.workspace-split.mod-horizontal.mod-left-split {
-  margin-bottom: 50px !important;
-}
 
 .workspace-ribbon,
 .workspace-ribbon.mod-left.is-collapsed {
   padding: 0px !important;
   background-color: transparent;
-}
-
-/*bg color*/
-.workspace {
-  background-color: var(--background-primary-alt);
 }
 
 
@@ -734,9 +729,6 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   /*very important*/
 }
 
-.workspace-split.mod-horizontal.mod-left-split {
-  margin-bottom: 50px !important;
-}
 
 .workspace-ribbon,
 .workspace-ribbon.mod-left.is-collapsed {
@@ -744,12 +736,13 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   background-color: transparent;
 }
 
-/*couleur de fond
+
+/*couleur de fond*/
 .workspace {
   background-color: var(--background-primary-alt);
 }
 
-/*new ribbon (1.6) styling
+/*new ribbon (1.6) styling*/
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
   border-radius: 8px;
   margin: 14px 0px 14px 0px;
@@ -759,7 +752,6 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   padding: 7px 10px;
   border-radius: 8px;
 }
-*/
 
 
 
