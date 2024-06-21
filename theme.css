@@ -145,6 +145,7 @@
   /*lists*/
   --list-marker-color: var(--bold-color);
   --list-marker-align: justify;
+  --list-bullet-size: 0.35em;
 
   /*tables*/
   --table-header-background: var(--iris);
