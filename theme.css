@@ -1823,6 +1823,10 @@ svg.oz-folder-toggle path {
 
 
 
+/*iconize v.2.12.1 fix*/
+.iconize-inline-title-wrapper {
+  justify-content: center;
+}
 
 
 
