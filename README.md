@@ -37,6 +37,7 @@
 - Special window styling on Windows
 - Rounded highlighting style + internal links special style
 - New tab image
+- FULL FOCUS MODE (toggle via hotkey)
 
 # Plugins support
 ![plugins](img/plugins.png)
@@ -46,6 +47,7 @@
 - Calendar
 - Widgets
 - Tokei
+- File Tree Alternative
 
 # Credit
 Credit to these themes for certain elements and inspiration
@@ -54,7 +56,7 @@ Credit to these themes for certain elements and inspiration
 - [Minimal](https://github.com/kepano/obsidian-minimal)
 
 # Tasks
-- [ ] Add more color schemes
+- [ ] Add custom color schemes
 - [ ] Work on README
 - [x] Add more options for settings with style settings
 - [ ] Submit theme to obsidian theme list
