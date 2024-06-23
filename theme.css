@@ -14,7 +14,6 @@
   --font-text-size: 15px;
 
   /*COLORS*/
-  /*---Palette de couleurs vives---*/
   --color-red: var(--rose);
   --color-orange: var(--gold);
   --color-yellow: var(--gold);
@@ -1991,9 +1990,14 @@ svg.oz-folder-toggle path {
 
 
 /*========================Style settings options==========================*/
+/*You can also use these as cssclasses in a single file*/
+
 /*Focus mode*/
 .focus-mode .workspace-tab-header-container, .focus-mode .view-header, .focus-mode .status-bar, .focus-mode .metadata-properties-heading, .focus-mode ::-webkit-scrollbar {
   display: none;
+}
+.focus-mode .workspace-tab-container {
+  margin-top: 14px;
 }
 
 /*Alternative callout styles*/
@@ -2019,6 +2023,10 @@ svg.oz-folder-toggle path {
   --table-border-radius: 0px !important;  
 }
 
+/*square checkbox*/
+.checkbox-rounded {
+  --checkbox-radius: 5px;
+}
 
 
 /*disable hover line indicator*/
@@ -2286,6 +2294,20 @@ settings:
       -
          label: Minimalistic
          value: table-minimal
+   - 
+      id: checkbox
+      title: Checkboxes style
+      type: class-select
+      allowEmpty: false
+      default: normal
+      options:
+      - 
+         label: Circle
+         value: normal
+      -
+         label: Rounded
+         value: checkbox-rounded
+
    - 
         id: tab-img
         title: New tab image
