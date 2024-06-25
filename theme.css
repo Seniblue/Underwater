@@ -95,6 +95,7 @@
   --callout-radius: 13px;
   --callout-title-size: 1rem;
   --callout-padding: var(--size-4-3) var(--size-4-6);
+  --callout-title-weight: var(--font-weight);
 
   /*codeblock*/
   --code-normal: var(--subtle);
@@ -1820,6 +1821,69 @@ svg.oz-folder-toggle path {
 .cMenuToolbarDefaultAesthetic {
   background-color: var(--base);
 }
+
+
+/*Todoist sync modifications*/
+ul.todoist-task-list {
+  padding-inline-start: 0px;
+}
+/*match checkboxes colors with theme*/
+.todoist-p1 input {
+  --todoist-p1-border: var(--color-pink);
+  --todoist-p1-border-hover: var(--color-purple);
+  --todoist-p1-background: rgba(var(--color-pink-rgb), 0.1);
+}
+.todoist-p2 input {
+  --todoist-p2-border: var(--color-orange);
+  --todoist-p2-border-hover: var(--color-red);
+  --todoist-p2-background: rgba(var(--color-orange-rgb), 0.1);
+}
+.todoist-p3 input {
+  --todoist-p3-border: var(--color-green);
+  --todoist-p3-border-hover: var(--color-blue);
+  --todoist-p3-background: rgba(var(--color-green-rgb), 0.1);
+}
+/*tasks description*/
+.task-metadata-item {
+  font-size: var(--font-smallest);
+  color: var(--text-muted)
+}
+.task-metadata-item svg.svg-icon {
+  height: 15px;
+}
+/*query buttons styling*/
+.edit-block-button.todoist-add-button, .markdown-reading-view .todoist-add-button, .is-live-preview .todoist-add-button {
+  background-color: var(--interactive-accent);
+  cursor: pointer;
+  border-radius: 30px !important;
+  color: var(--highlight-low) !important;
+}
+.edit-block-button.todoist-add-button:hover, .markdown-reading-view .todoist-add-button:hover, .is-live-preview .todoist-add-button:hover {
+  background-color: var(--interactive-accent-hover) !important;
+  cursor: pointer;
+  border-radius: 30px;
+  color: var(--highlight-low);
+}
+.edit-block-button.todoist-refresh-button, .markdown-reading-view .todoist-refresh-button, .is-live-preview .todoist-refresh-button {
+  color: var(--color-yellow) !important;
+  cursor: pointer;
+  border-radius: 30px !important;
+  padding: var(--size-2-2) var(--size-2-3) !important;
+}
+/*Sub-projects title styling*/
+.todoist-group-title {
+  color: var(--color-purple);
+  font-variant:small-caps;
+  font-size: 17px;
+}
+/*error message*/
+.todoist-error {
+  border-radius: 10px;
+  border: transparent;
+  padding: 5px 20px;
+  background-color: rgb(var(--background-modifier-error-rgb), 0.1);
+}
+
 
 
 
