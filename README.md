@@ -48,6 +48,7 @@
 - Widgets
 - Tokei
 - File Tree Alternative
+- Todoist Sync
 
 # Credit
 Credit to these themes for certain elements and inspiration
