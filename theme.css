@@ -1145,15 +1145,12 @@ background-size: 20px 20px;
 
 
 /* ====== hover indicator : from BORDER THEME ====== */
-
-/*body {
+body {
   --hover-indicator-color: var(--rose);
 }
-
-.workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer[data-type="markdown"] /*:has(.collapse-indicator, .mk-header)) {
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header)) {
   position: relative;
 }
-
 .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
 .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after,
 .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
@@ -1162,20 +1159,18 @@ background-size: 20px 20px;
   position: absolute;
   left: -12px;
   top: 3px;
-  width: 3.5px;
+  width: 3px;
   height: 0;
   border-radius: 10px;
   background: var(--hover-indicator-color);
   opacity: 1;
 }
-
 .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent):hover::after,
 .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator)):hover::after,
 .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
 .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header)):hover::after {
   height: calc(100% - 6px);
 }
-*/
 
 
 /*====active line highlight======*/
