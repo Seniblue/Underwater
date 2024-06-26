@@ -794,9 +794,9 @@ mark {
 
 /*inline title center*/
 .inline-title {
-  text-align: center;    
+  text-align: center;         
 }
-/*doesnt work with MakeMd ?/
+/*doesnt work with MakeMD*/
 
 
 
@@ -1148,13 +1148,13 @@ background-size: 20px 20px;
 body {
   --hover-indicator-color: var(--rose);
 }
-.workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header)) {
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header, .block-language-todoist)) {
   position: relative;
 }
 .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
-.workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after,
+.workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .block-language-todoist, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after,
 .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
-.workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header))::after {
+.workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header, .block-language-todoist))::after {
   content: "";
   position: absolute;
   left: -12px;
@@ -1575,66 +1575,86 @@ body {
   margin: 5px;
 }
 
-.mk-space-banner
 
 /*KANBAN*/
 /*columns color*/
 .kanban-plugin__lane-wrapper:nth-child(1)>div {
   background-color: rgba(var(--foam-rgb), 0.25);
 }
-
 .kanban-plugin__lane-wrapper:nth-child(2)>div {
   background-color: rgba(var(--rose-rgb), 0.25);
 }
-
 .kanban-plugin__lane-wrapper:nth-child(3)>div {
   background-color: rgba(var(--gold-rgb), 0.25);
 }
-
 .kanban-plugin__lane-wrapper:nth-child(4)>div {
   background-color: rgba(var(--iris-rgb), 0.25);
 }
-
 .kanban-plugin__lane-wrapper:nth-child(5)>div {
   background-color: rgba(var(--love-rgb), 0.25);
 }
-
 .kanban-plugin__lane {
   background-color: rgba(var(--foam-rgb), 0.25);
   border: 1px var(--pine);
 }
-
-
 /*cards styling*/
 .kanban-plugin__item-title-wrapper {
   background-color: var(--surface);
   border-radius: 8px;
-  border: 1px dashed var(--color-2);
 }
-
 .kanban-plugin__date-picker {
   background-color: var(--background);
   border-radius: 10px;
 }
-
 .kanban-plugin__item-metadata .is-button {
   background-color: var(--highlight-med);
   border-radius: 10px;
   padding: 0px 6px;
 }
-
 .kanban-plugin__lane-header-wrapper {
   border-bottom: 1px dashed var(--surface);
 }
-
 button.kanban-plugin__new-item-button {
   background-color: var(--rose);
   color: var(--surface);
   box-shadow: none;
 }
-
 .kanban-plugin__item-button-plus {
   display: none;
+}
+/*Todoist Kanban style*/
+
+.kanban-todoist .kanban-plugin__lane {
+  background-color: var(--background-primary) !important;
+}
+.kanban-todoist .kanban-plugin__lane:hover {
+  outline: 1px solid var(--highlight-med);
+}
+.kanban-todoist .kanban-plugin__item-title-wrapper {
+  background-color: var(--overlay);
+  border-radius: 10px;
+  border: 1px solid var(--highlight-high);
+  padding: 10px;
+  box-shadow: a;
+  box-sizing: border-box;
+  transition-duration: .3s;
+  transition-property: border-color, box-shadow, background-color;
+}
+.kanban-todoist .kanban-plugin__item:has(.markdown-source-view) /*fix*/ {
+  outline: none;
+  border: none;
+}
+.kanban-todoist .kanban-plugin__item-title-wrapper:hover {
+  border: 1px solid var(--text-faint);
+  cursor: pointer;
+}
+.kanban-todoist button.kanban-plugin__new-item-button {
+  background-color: transparent;
+  color: var(--text-faint);
+}
+.kanban-todoist button.kanban-plugin__new-item-button:hover {
+  background-color: transparent;
+  color: var(--color-pink);
 }
 
 /*POMODORO TIMER*/
@@ -1848,6 +1868,10 @@ ul.todoist-task-list {
 }
 /*query buttons styling*/
 .edit-block-button.todoist-add-button, .markdown-reading-view .todoist-add-button, .is-live-preview .todoist-add-button {
+  display: none;
+}
+/*Add task button styling
+.edit-block-button.todoist-add-button, .markdown-reading-view .todoist-add-button, .is-live-preview .todoist-add-button {
   background-color: var(--interactive-accent);
   cursor: pointer;
   border-radius: 30px !important;
@@ -1858,7 +1882,7 @@ ul.todoist-task-list {
   cursor: pointer;
   border-radius: 30px;
   color: var(--highlight-low);
-}
+}*/
 .edit-block-button.todoist-refresh-button, .markdown-reading-view .todoist-refresh-button, .is-live-preview .todoist-refresh-button {
   color: var(--color-yellow) !important;
   cursor: pointer;
@@ -2055,6 +2079,7 @@ ul.todoist-task-list {
 .focus-mode .workspace-tab-header-container, .focus-mode .view-header, .focus-mode .status-bar, .focus-mode .metadata-properties-heading, .focus-mode ::-webkit-scrollbar {
   display: none;
 }
+
 .focus-mode .workspace-tab-container {
   margin-top: 14px;
 }
@@ -2401,7 +2426,26 @@ settings:
         type: class-toggle
         default: false
         addCommand: true
-
+        
+   - 
+        id: plugins
+        title: 🧩 Plugins styling
+        type: heading
+        collapsed: true
+        level: 1
+   - 
+      id: kanban
+      title: Kanban board style
+      type: class-select
+      allowEmpty: false
+      default: normal
+      options:
+      - 
+         label: Colorful
+         value: normal
+      -
+         label: Todoist-like board
+         value: kanban-todoist
 
 
 */
