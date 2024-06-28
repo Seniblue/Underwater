@@ -49,7 +49,6 @@
   --interactive-accent: var(--rose);
   --interactive-accent-hover: var(--gold);
 
-
   /*--editor--*/
   --text-normal: var(--text);
   --text-highlight-bg: rgba(var(--gold-rgb), 0.2);
@@ -76,7 +75,6 @@
   --checkbox-border-color-hover: var(--love);
   --checklist-done-decoration: line-through;
   --checklist-done-color: var(--text-faint);
-
 
   /*--file explorer**/
   --nav-item-color: var(--text);
@@ -125,8 +123,6 @@
   --h5-size: 1em;
   --h6-size: 1em;
   --inline-title-size: 1.8em;
-
-
   --inline-title-color: var(--foam);
   --inline-title-font: "Lexend";
 
@@ -156,8 +152,6 @@
   --table-row-alt-background: var(--highlight-low);
   --table-row-alt-background-hover: var(--table-row-alt-background);
 
-
-
   /*canvas*/
   --canvas-dot-pattern: var(--text-faint);
   --canvas-color-6: var(--gold-rgb);
@@ -173,7 +167,6 @@
   --graph-node-tag: var(--foam);
   --graph-node: var(--text-normal);
   --graph-node-unresolved: var(--text-faint);
-
 
   /*scrollbar*/
   --scrollbar-thumb-bg: var(--highlight-med);
@@ -217,20 +210,18 @@
 
   --file-header-border: 1px dashed var(--highlight-high);
 
-
   /*properties*/
   --metadata-display-reading: none;
   /*properties visible even with notebook css class*/
   --metadata-background: var(--background-secondary);
   --metadata-padding: 0px 5px;
   --metadata-border-radius: 12px;
-  /*--metadata-divider-color: var(--base);
-  --metadata-divider-width: 2px;*/
+
 
   --color-accent-1: var(--rose);
   --color-accent-2: var(--foam);
-
   --caret-color: var(--love);
+  --cursor: pointer;
 }
 
 .theme-light /*Rosé Pine dawn*/ {
@@ -970,38 +961,31 @@ a {
   display: none;
 }
 
-
 /*scrollbar - from BORDER theme*/
 ::-webkit-scrollbar {
   width: 10px !important;
   border-radius: 20px !important;
 }
-body:not(.restored-scrollbars) ::-webkit-scrollbar-thumb,
-body:not(.restored-scrollbars) .kanban-plugin__scroll-container::-webkit-scrollbar-thumb {
-  border-width: 3px 3px 3px 3px;
-  min-height: 45px
+::-webkit-scrollbar-thumb,
+.kanban-plugin__scroll-container::-webkit-scrollbar-thumb {
+  min-height: 45px;
 }
-body:not(.restored-scrollbars) .mobile-toolbar-options-container::-webkit-scrollbar {
-  width: 0 !important;
-  height: 0 !important;
-}
-body:not(.restored-scrollbars) ::-webkit-scrollbar-track,
-body:not(.restored-scrollbars) ::-webkit-scrollbar-track-piece,
-body:not(.restored-scrollbars):not(.is-mobile) ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-thumb {
   background-color: transparent !important;
 }
-body:not(.restored-scrollbars):not(.is-mobile) :hover::-webkit-scrollbar-thumb {
+:hover::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-thumb-bg) !important;
 }
-body:not(.restored-scrollbars):not(.is-mobile) ::-webkit-scrollbar-thumb:hover,
-body:not(.restored-scrollbars):not(.is-mobile) ::-webkit-scrollbar-thumb:active {
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active {
   background-color: var(--scrollbar-active-thumb-bg) !important;
 }
 .workspace-leaf-content:is([data-type="surfing-view"], [data-type="graph"], [data-type="localgraph"]) ::-webkit-scrollbar,
 .scrollbar-hide ::-webkit-scrollbar {
   display: none;
 }
-
 
 /*----CUSTOM CALLOUTS -----------------------*/
 .callout[data-callout="signet"] {
@@ -1016,7 +1000,6 @@ body:not(.restored-scrollbars):not(.is-mobile) ::-webkit-scrollbar-thumb:active 
   --callout-color: var(--color-green-rgb);
   --callout-icon: lucide-arrow-right-square;
 }
-
 .callout[data-callout="person"] {
   --callout-color: var(--color-cyan-rgb);
   --callout-icon: lucide-user-2;
@@ -1498,36 +1481,24 @@ source: https://discord.com/channels/686053708261228577/702656734631821413/11407
   border: 1px solid var(--list-marker-color);
 }
 
-
-
 /*
 New tab image
 author: sai1494
 source: https://discord.com/channels/686053708261228577/702656734631821413/1052346864055369808
 */
-
 body {
   --tab-img: url("https://cdn-icons-png.flaticon.com/256/7957/7957556.png");
 }
-
 .empty-state-container {
   max-height: unset;
   opacity: 1 !important;
-  
 }
 .empty-state-container::before {
   content: var(--tab-img);
-  /*content: url("https://cdn-icons-png.flaticon.com/256/8408/8408730.png");*/
 }
-
 .empty-state-title {
   display: none;
 } 
-
-
-
-
-
 
 /*loading screen*/
 .progress-bar-message::before {
@@ -1622,6 +1593,12 @@ button.kanban-plugin__new-item-button {
 .kanban-plugin__item-button-plus {
   display: none;
 }
+.kanban-plugin__item.is-complete .kanban-plugin__item-markdown {
+  text-decoration: line-through;
+  text-decoration-color: var(--text-muted);
+  color: var(--text-muted);
+}
+
 /*Todoist Kanban style*/
 
 .kanban-todoist .kanban-plugin__lane {
