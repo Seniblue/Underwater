@@ -393,9 +393,9 @@
   --foam-rgb: 62, 159, 133;
   --iris-rgb: 166, 54, 159;
 
-  --base: #DBC6C2; /*Pale Dogwood*/ /*??*/
+  --base: #DBC6C2; /*Pale Dogwood*/
   --surface: #F4E6D2; /*Antique White*/
-  --overlay: #DBC6C2; /*Pale Dogwood*/ /*??*/
+  --overlay: #e0c39e; /*custom color not part of the colorscheme*/
 
   --muted: #423939; /*Van Dyke*/
   --subtle: #2B2626; /*Jet*/
@@ -640,26 +640,19 @@
 
 /* LAYOUT */
 /* remove for default layout*/
-
 .workspace-tab-container {
   margin: 7px 14px 14px 0px;
   border-radius: 12px;
 }
-
 .mod-right-split, .mod-left-split { /*right and left margins*/
   margin: 0px;
 }
-
-
 body:not(is-mobile):not(.show-ribbon) .workspace {
   margin-left: 14px;
 }
-
 .workspace.is-left-sidedock-open {
   padding-left: 0px;
 }
-
-
 /*Reduce spacing between tabs in sidebars*/
 .mod-left-split .workspace-tab-container, .mod-right-split .workspace-tab-container  {
   margin-bottom: 0px !important;
@@ -667,31 +660,23 @@ body:not(is-mobile):not(.show-ribbon) .workspace {
 .workspace-split.mod-right-split { /*right panel*/
  padding-bottom: 14px !important;
 }
-
-
 .side-dock-actions {
   margin: 0px;
   padding: 0px;
   margin-top: 7px;
 }
-
 .side-dock-settings {
   padding: 0px 0px 10px 0px;
 }
-
 .workspace-tabs, .horizontal-main-container, .workspace {
   background-color: var(--background-primary-alt);
   /*very important*/
 }
-
-
 .workspace-ribbon,
 .workspace-ribbon.mod-left.is-collapsed {
   padding: 0px !important;
   background-color: transparent;
 }
-
-
 /*new vault switcher (1.6) styling*/
 body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
   border-radius: 8px;
@@ -704,51 +689,27 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 .workspace-split.mod-horizontal > * {
   width: auto;
 }
-
-
 .side-dock-actions {
   margin: 0px;
   padding: 0px;
   margin-top: 7px;
 }
-
 .side-dock-settings {
   padding: 0px 0px 10px 0px;
 }
-
 .workspace-tabs {
   background-color: var(--background-primary-alt);
   /*very important*/
 }
-
-
 .workspace-ribbon,
 .workspace-ribbon.mod-left.is-collapsed {
   padding: 0px;
   background-color: transparent;
 }
-
-
-/*couleur de fond*/
+/*workspace color*/
 .workspace {
   background-color: var(--background-primary-alt);
 }
-
-/*new ribbon (1.6) styling*/
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
-  border-radius: 8px;
-  margin: 14px 0px 14px 0px;
-}
-
-body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
-  padding: 7px 10px;
-  border-radius: 8px;
-}
-
-
-
-
-
 
 /*Panels styling !!!*/
 .nav-buttons-container {
@@ -756,10 +717,6 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   border-radius: 8px;
   margin: 5px 20px;
 }
-
-
-
-
 
 /*Justify text*/
 .markdown-preview-section, .cm-s-obsidian, .markdown-preview-view, .cm-s-obsidian,
@@ -790,7 +747,6 @@ mark {
 /*doesnt work with MakeMD*/
 
 
-
 /*status bar styling*/
 .status-bar {
   border: 1px solid var(--highlight-high);
@@ -813,7 +769,6 @@ mark {
   background-color: var(--background-secondary);
   border-radius: 8px;
 }
-
 /*margin and gaps for sidebars tabs*/
 .mod-left-split .workspace-tab-header-container-inner,
 .mod-right-split .workspace-tab-header-container-inner {
@@ -821,7 +776,6 @@ mark {
   margin: 6px 0 0 0;
   gap: 5px;
 }
-
 /*tabs spacing*/
 .mod-root .workspace-tab-header-container-inner {
   padding: 1px 15px 0;
@@ -836,8 +790,10 @@ mark {
 .sidebar-toggle-button {
   padding: 4px 10px;
 }
-
-
+/*.clickable-icon:hover, .workspace-tab-header-inner-icon:hover {
+  transform: scale(1.1) !important;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}*/
 
 
 /*popups, windows, styling*/
@@ -1498,7 +1454,42 @@ body {
 }
 .empty-state-title {
   display: none;
-} 
+}
+
+/*New tab buttons*/
+.empty-state-container {
+  max-width: max-content;
+}
+.empty-state-action:nth-child(3) { /*hides "open recent files" button*/
+  display: none;
+}
+.empty-state-action:nth-child(4) { /*hides close button*/
+  display: none;
+}
+.empty-state-action { /*hides close button*/
+  background-color: var(--text-selection);
+  padding: 0px 10px;
+  border-radius: 7px;
+}
+.empty-state-action-list {/*display buttons inline*/
+  display: flex;
+  gap: 10px;
+}
+.empty-state-action:nth-child(1)::before {
+/*  content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW5vdGVib29rLXBlbiI+PHBhdGggZD0iTTEzLjQgMkg2YTIgMiAwIDAgMC0yIDJ2MTZhMiAyIDAgMCAwIDIgMmgxMmEyIDIgMCAwIDAgMi0ydi03LjQiLz48cGF0aCBkPSJNMiA2aDQiLz48cGF0aCBkPSJNMiAxMGg0Ii8+PHBhdGggZD0iTTIgMTRoNCIvPjxwYXRoIGQ9Ik0yIDE4aDQiLz48cGF0aCBkPSJNMjEuMzc4IDUuNjI2YTEgMSAwIDEgMC0zLjAwNC0zLjAwNGwtNS4wMSA1LjAxMmEyIDIgMCAwIDAtLjUwNi44NTRsLS44MzcgMi44N2EuNS41IDAgMCAwIC42Mi42MmwyLjg3LS44MzdhMiAyIDAgMCAwIC44NTQtLjUwNnoiLz48L3N2Zz4=');
+  display: inline-block;
+  background-color: var(--text-normal);
+  align-items: center !important;
+  flex-wrap: wrap;
+  justify-content: space-between;*/
+  content: "🧻 ";
+}
+.empty-state-action:nth-child(2)::before {
+  content: "📖 ";
+  color: var(--iris);
+/*  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWxpYnJhcnktYmlnIj48cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSIxOCIgeD0iMyIgeT0iMyIgcng9IjEiLz48cGF0aCBkPSJNNyAzdjE4Ii8+PHBhdGggZD0iTTIwLjQgMTguOWMuMi41LS4xIDEuMS0uNiAxLjNsLTEuOS43Yy0uNS4yLTEuMS0uMS0xLjMtLjZMMTEuMSA1LjFjLS4yLS41LjEtMS4xLjYtMS4zbDEuOS0uN2MuNS0uMiAxLjEuMSAxLjMuNloiLz48L3N2Zz4=');
+  mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWxpYnJhcnktYmlnIj48cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSIxOCIgeD0iMyIgeT0iMyIgcng9IjEiLz48cGF0aCBkPSJNNyAzdjE4Ii8+PHBhdGggZD0iTTIwLjQgMTguOWMuMi41LS4xIDEuMS0uNiAxLjNsLTEuOS43Yy0uNS4yLTEuMS0uMS0xLjMtLjZMMTEuMSA1LjFjLS4yLS41LjEtMS4xLjYtMS4zbDEuOS0uN2MuNS0uMiAxLjEuMSAxLjMuNloiLz48L3N2Zz4=');
+*/}
 
 /*loading screen*/
 .progress-bar-message::before {
@@ -2078,9 +2069,11 @@ ul.todoist-task-list {
 /*Alternative table*/
 .table-minimal {
   --table-header-background: transparent;
+  --table-header-background-hover: var(--table-header-background);
   --table-header-color: var(--text-normal);
   --table-selection-border-radius: 7px;
   --table-row-alt-background: transparent;
+  --table-row-alt-background-hover: var(--table-row-alt-background);
   --table-border-radius: 0px !important;  
 }
 
