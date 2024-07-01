@@ -1,7 +1,7 @@
 ![uw](img/thumbnail.png)
 
 > [!IMPORTANT]
-> This theme works best with the [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin, which allows you to choose a colorscheme and even to customize **all** the theme colors.
+> 🐳 This theme works best with the **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin**, which allows you to choose a **colorscheme**, to customize all of the **colors** or to choose alternate stylings.
 
 ---
 
@@ -28,16 +28,15 @@
 - Font : [Lexend](https://www.lexend.com/)
 ![formatting](img/formatting.png)
 
-- Hover line indicator (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
-- Small scrollbar (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
+- Scrollbar on hover (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
 - Outline pane ([Maple](https://github.com/subframe7536/obsidian-theme-maple) theme)
 - Active line coloring
 - Cursor color
-- Image slight animation on hover
-- Special window styling on Windows
+- Slight image animation on hover
+- Special window styling (better for Windows)
 - Rounded highlighting style + internal links special style
-- New tab image
-- FULL FOCUS MODE (toggle via hotkey)
+- New tab custom image & styling
+- FULL FOCUS MODE (can be toggled via a hotkey)
 
 # Plugins support
 ![plugins](img/plugins.png)
@@ -57,7 +56,7 @@ Credit to these themes for certain elements and inspiration
 - [Minimal](https://github.com/kepano/obsidian-minimal)
 
 # Tasks
-- [ ] Add custom color schemes
 - [ ] Work on README
+- [ ] Add custom color schemes
 - [x] Add more options for settings with style settings
 - [ ] Submit theme to obsidian theme list
