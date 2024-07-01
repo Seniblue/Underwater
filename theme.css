@@ -1082,43 +1082,11 @@ background-size: 20px 20px;
   font-size: 120%;
 }
 
-
-/* ====== hover indicator : from BORDER THEME ====== */
-body {
-  --hover-indicator-color: var(--rose);
-}
-.workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header, .block-language-todoist)) {
-  position: relative;
-}
-.workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
-.workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .block-language-todoist, .mk-header, :has(.mk-note-footer, .collapse-indicator))::after,
-.workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
-.workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header, .block-language-todoist))::after {
-  content: "";
-  position: absolute;
-  left: -12px;
-  top: 3px;
-  width: 3px;
-  height: 0;
-  border-radius: 10px;
-  background: var(--hover-indicator-color);
-  opacity: 1;
-}
-.workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent):hover::after,
-.workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .mk-header, :has(.mk-note-footer, .collapse-indicator)):hover::after,
-.workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol):hover::after,
-.workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], :has(.collapse-indicator, .mk-header)):hover::after {
-  height: calc(100% - 6px);
-}
-
-
 /*====active line highlight======*/
 .cm-active.cm-line {
   background-color: rgb(var(--rose-rgb), 0.08);
   box-shadow: -25vw 0px rgb(var(--rose-rgb), 0.08), 25vw 0 rgb(var(--rose-rgb), 0.08);
 }
-
-
 
 /*outline pane*/
 /* from https://github.com/subframe7536/obsidian-theme-maple, author:@subframe7536 */
@@ -1835,8 +1803,8 @@ ul.todoist-task-list {
   height: 15px;
 }
 /*query buttons styling*/
-.edit-block-button.todoist-add-button, .markdown-reading-view .todoist-add-button, .is-live-preview .todoist-add-button {
-  display: none;
+.edit-block-button .todoist-add-button, .markdown-reading-view .todoist-add-button, .is-live-preview .todoist-add-button {
+  display: none !important;
 }
 /*Add task button styling
 .edit-block-button.todoist-add-button, .markdown-reading-view .todoist-add-button, .is-live-preview .todoist-add-button {
