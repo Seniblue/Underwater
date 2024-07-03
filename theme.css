@@ -638,6 +638,43 @@
   --color-accent-hsl: 226, 31%, 42%; /*YinMn Blue*/
 
 }
+.theme-dark.uw-deep {
+  color-scheme: dark;
+
+  /*PALETTE*/
+  --love: #D7614C; /*goldfish*/
+  --gold: #D9D159; /*Sand!*/
+  --rose: #E59C58; /*Crab!*/
+  --pine: #6993C2; /*Ocean!*/
+  --foam: #9FC387; /*Seaweed!*/
+  --iris: #9287C2; /*Jellyfish!*/
+  --love-rgb: 215, 97, 76; /*goldfish*/
+  --gold-rgb: 217, 209, 89; /*Sand!*/
+  --rose-rgb: 229, 156, 88; /*Crab!*/
+  --pine-rgb: 105, 147, 194; /*Ocean!*/
+  --foam-rgb: 159, 195, 135; /*Seaweed!*/
+  --iris-rgb: 146, 135, 194; /*Jellyfish!*/
+  
+  --base: #222735;
+  --surface: #15171D; 
+  --overlay: #22252F; 
+
+  --muted: #57626B;
+  --subtle: #7C8185; 
+  --text: #D5E1E5;
+
+  --highlight-low: #272B2F;
+  --highlight-med: #313C42;
+  --highlight-med-rgb: 49, 60, 66;
+  --highlight-high: #334852;
+
+  /*override accent color !*/
+  --accent-h: 213 !important;
+  --accent-s: 49% !important;
+  --accent-l: 61% !important;
+  --color-accent-hsl: 213, 49%, 61%; /*Ocean*/
+
+}
 
 /* LAYOUT */
 /* remove for default layout*/
@@ -758,11 +795,12 @@ mark {
 .markdown-source-view.mod-cm6 div.cm-editor div {
   caret-color: var(--love);
 }
-
 .markdown-source-view.mod-cm6 div.cm-editor .cm-cursor {
   border-left-color: var(--love);
   border-width: 2px;
 }
+
+
 
 /*===================icons background=======================*/
 .mod-left-split .workspace-tab-header.is-active,
@@ -1109,6 +1147,8 @@ background-size: 20px 20px;
   margin-left: -16px;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: var(--nav-item-white-space);
+  
   height: calc(var(--nav-item-size) * 1.8);
   line-height: calc(var(--nav-item-size) * 1.8);
   position: relative;
@@ -1184,7 +1224,6 @@ background-size: 20px 20px;
   margin-left: var(--size-4-5);
   border-left: none;
 }
-
 
 
 /*checkboxes*/
@@ -2133,7 +2172,11 @@ settings:
          value: everforest-dark
       - 
          label: Biscuit
-         value: biscuit-dark  
+         value: biscuit-dark
+      - 
+         label: 🌊 Underwater Deep
+         value: uw-deep  
+
    - 
       id: underwater-colors-light
       title: Light Theme
