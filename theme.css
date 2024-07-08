@@ -700,9 +700,9 @@
   --subtle: #97A4C9; 
   --text: #E1E3FF;
 
-  --highlight-low: #111F37;
-  --highlight-med: #19263B;
-  --highlight-med-rgb: 25, 38, 59;
+  --highlight-low: #3a4964;
+  --highlight-med: #283852;
+  --highlight-med-rgb: 40, 56, 82;
   --highlight-high: #19263B;
 
   /*override accent color !*/
