@@ -48,6 +48,7 @@
 - Tokei
 - File Tree Alternative
 - Todoist Sync
+- Wypst
 
 # Credit
 Credit to these themes for certain elements and inspiration
