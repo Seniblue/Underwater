@@ -955,11 +955,14 @@ u {
 }
 
 /*latex color*/
-.theme-light mjx-container[jax="CHTML"][display="true"] {
+.theme-light mjx-container[jax="CHTML"][display="true"], .theme-light .MJX-TEX, .theme-light mjx-container[jax="CHTML"] {
   color: var(--pine);
 }
-.theme-dark mjx-container[jax="CHTML"][display="true"] {
+.theme-dark mjx-container[jax="CHTML"][display="true"], .theme-light .MJX-TEX, .theme-dark mjx-container[jax="CHTML"] {
   color: var(--gold);
+}
+th .MJX-TEX { /*no color for table headers*/
+  color: var(--table-header-color) !important;
 }
 
 /*LINKS STYLING !*/
@@ -1859,6 +1862,13 @@ ul.todoist-task-list {
   justify-content: center;
 }
 
+/*Typst color (Wypst plugin)*/
+.theme-light .katex-display, .theme-light .katex {
+  color: var(--pine);
+}
+.theme-dark .katex-display, .theme-dark .katex {
+  color: var(--gold);
+}
 
 /*=============================PDF STYLING=====================================*/
 /*headings*/
