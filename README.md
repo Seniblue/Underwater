@@ -55,7 +55,6 @@ Credit to these themes for certain elements and inspiration
 - [Border](https://github.com/Akifyss/obsidian-border)
 - [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin)
 - [Minimal](https://github.com/kepano/obsidian-minimal)
-- Default new tab image comes from @kerismaker on [flaticon](https://www.flaticon.com/). You can change it through style settings.
 
 # Tasks
 - [ ] Work on README
