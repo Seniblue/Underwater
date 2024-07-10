@@ -66,7 +66,7 @@
 
   /*---tasks*/
   --button-radius: 7px;
-  --checkbox-radius: 100px;
+  --checkbox-radius: 5px;
   --checkbox-marker-color: white;
   --checkbox-color: var(--pine);
   --checkbox-color-hover: var(--foam);
@@ -1494,10 +1494,7 @@ body {
   padding: 0px 10px;
   border-radius: 7px;
 }
-.empty-state-action-list {/*display buttons inline*/
-  display: flex;
-  gap: 10px;
-}
+
 .empty-state-action:nth-child(1)::before {
 /*  content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW5vdGVib29rLXBlbiI+PHBhdGggZD0iTTEzLjQgMkg2YTIgMiAwIDAgMC0yIDJ2MTZhMiAyIDAgMCAwIDIgMmgxMmEyIDIgMCAwIDAgMi0ydi03LjQiLz48cGF0aCBkPSJNMiA2aDQiLz48cGF0aCBkPSJNMiAxMGg0Ii8+PHBhdGggZD0iTTIgMTRoNCIvPjxwYXRoIGQ9Ik0yIDE4aDQiLz48cGF0aCBkPSJNMjEuMzc4IDUuNjI2YTEgMSAwIDEgMC0zLjAwNC0zLjAwNGwtNS4wMSA1LjAxMmEyIDIgMCAwIDAtLjUwNi44NTRsLS44MzcgMi44N2EuNS41IDAgMCAwIC42Mi42MmwyLjg3LS44MzdhMiAyIDAgMCAwIC44NTQtLjUwNnoiLz48L3N2Zz4=');
   display: inline-block;
@@ -1860,6 +1857,11 @@ ul.todoist-task-list {
 .iconize-inline-title-wrapper {
   justify-content: center;
 }
+/*lucide icons in links fix*/
+.iconize-icon-in-link svg {
+  width: 16px;
+  height: 16px;
+}
 
 /*Typst color (Wypst plugin)*/
 .theme-light .katex-display, .theme-light .katex {
@@ -2033,9 +2035,9 @@ ul.todoist-task-list {
   --table-border-radius: 0px !important;  
 }
 
-/*square checkbox*/
-.checkbox-rounded {
-  --checkbox-radius: 5px;
+/*circle checkbox*/
+.checkbox-circle {
+  --checkbox-radius: 100px;
 }
 
 /*disable hover line indicator*/
@@ -2068,7 +2070,6 @@ display: none;
   padding: 0px;
   border: none;
 }
-
 .no-links .markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover,
 .no-links .markdown-rendered .internal-link:hover {
   background-color: transparent;
@@ -2079,7 +2080,10 @@ display: none;
   --link-color-hover: var(--love);
 }
 
-
+/*Allow properties to be visible in reading mode*/
+.visible-properties {
+--metadata-display-reading: block;
+}
 
 /* @settings
 
@@ -2318,19 +2322,18 @@ settings:
       default: normal
       options:
       - 
-         label: Circle
+         label: Rounded
          value: normal
       -
-         label: Rounded
-         value: checkbox-rounded
+         label: Circle
+         value: checkbox-circle
 
    - 
         id: tab-img
         title: New tab image
-        description: Please put a small size image
+        description: It is better when the image is small
         type: variable-text
         default: url("")
-
    - 
         id: no-hoverindicator
         title: Disable hover line indicator (credit to Border theme)
@@ -2349,6 +2352,11 @@ settings:
    - 
         id: no-links
         title: Disable internal links background
+        type: class-toggle
+        default: false
+   - 
+        id: visible-properties
+        title: Allow properties to be visible in reading mode as well
         type: class-toggle
         default: false
    -
