@@ -530,18 +530,18 @@
   color-scheme: dark;
 
   /*PALETTE*/
-  --love: #eba0ac; /*maroon*/
-  --gold: #fab387; /*peach*/
-  --rose: #f2cdcd; /*flamingo*/
-  --pine: #74c7ec; /*sapphire*/
-  --foam: #94e2d5; /*teal*/
-  --iris: #b4befe; /*lavender*/
-  --love-rgb: 235, 160, 172;
-  --gold-rgb: 250, 179, 135;
-  --rose-rgb: 242, 205, 205;
-  --pine-rgb: 116, 199, 236;
-  --foam-rgb: 148, 226, 213;
-  --iris-rgb: 180, 190, 254;
+  --love: #f38ba8; /*Red*/
+  --gold: #f9e2af; /*Yellow*/
+  --rose: #fab387; /*Peach*/
+  --pine: #89b4fa; /*Blue*/
+  --foam: #a6e3a1; /*Green*/
+  --iris: #cba6f7; /*Mauve*/
+  --love-rgb: 243, 139, 168;
+  --gold-rgb: 249, 226, 175;
+  --rose-rgb: 250, 179, 135;
+  --pine-rgb: 137, 180, 250;
+  --foam-rgb: 166, 227, 161;
+  --iris-rgb: 203, 166, 247;
 
   --base: #11111b; /*crust*/
   --surface: #181825; /*mantle*/
@@ -557,12 +557,12 @@
   --highlight-high: #585b70; /*surface2*/
 
   /*override accent color !*/
-  --accent-h: 217 !important;
-  --accent-s: 92% !important;
-  --accent-l: 76% !important;
-  --color-accent-hsl: 217, 92%, 76%; /*Blue*/
-
+  --accent-h: 231 !important;
+  --accent-s: 11% !important;
+  --accent-l: 47% !important;
+  --color-accent-hsl: 231, 11%, 47%; /*Overlay0*//*ok*/
 }
+
 .theme-dark.everforest-dark {
   color-scheme: dark;
 
