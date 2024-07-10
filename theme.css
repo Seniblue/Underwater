@@ -1,6 +1,5 @@
 /*CUSTOM FONTS*/
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-
 .app-container {
   font-family: "Lexend";
 }
@@ -557,10 +556,10 @@
   --highlight-high: #585b70; /*surface2*/
 
   /*override accent color !*/
-  --accent-h: 231 !important;
-  --accent-s: 11% !important;
-  --accent-l: 47% !important;
-  --color-accent-hsl: 231, 11%, 47%; /*Overlay0*//*ok*/
+  --accent-h: 232 !important;
+  --accent-s: 97% !important;
+  --accent-l: 85% !important;
+  --color-accent-hsl: 232, 97%, 85%; /*Lavender*/
 }
 
 .theme-dark.everforest-dark {
@@ -792,11 +791,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 }
 
 /*Justify text*/
-.markdown-preview-section, .cm-s-obsidian, .markdown-preview-view, .cm-s-obsidian,
-.justified .markdown-preview-section,
-.justified .cm-s-obsidian,
-.justified.markdown-preview-view,
-.justified.cm-s-obsidian {
+.markdown-preview-section, .cm-s-obsidian, .markdown-preview-view, .cm-s-obsidian {
   text-align: justify;
 }
 
@@ -816,8 +811,7 @@ mark {
 /*inline title center*/
 .inline-title {
   text-align: center;         
-}
-/*doesnt work with MakeMD*/
+}/*doesnt work with MakeMD*/
 
 
 /*status bar styling*/
@@ -835,9 +829,7 @@ mark {
   border-width: 2px;
 }
 
-
-
-/*===================icons background=======================*/
+/*=======icons background=======*/
 .mod-left-split .workspace-tab-header.is-active,
 .mod-right-split .workspace-tab-header.is-active {
   background-color: var(--background-secondary);
@@ -890,7 +882,6 @@ body:not(.is-phone) div:has(>input.prompt-input) {
   background-color: transparent;
 }
 
-
 /*file explorer active file bgcolor fix*/
 body:not(.is-grabbing) .nav-file-title.is-active:hover, body:not(.is-grabbing) .nav-folder-title.is-active:hover, .nav-file-title.is-active, .nav-folder-title.is-active, body:not(.is-grabbing) .tree-item-self.is-active:hover, .tree-item-self.is-active {
   color: var(--text-on-accent);
@@ -901,7 +892,7 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover, body:not(.is-grabbing) .
   max-width: 55px !important;
 }
 
-/*Mermaid styling* -- doesnot work really well...*/
+/*Mermaid styling.. doesn't work very well though :(*/
 .mermaid svg {
   display: block;
   font-family: var(--font-default);
@@ -909,24 +900,20 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover, body:not(.is-grabbing) .
   margin-left: auto;
   margin-right: auto;
 }
-
 .mermaid svg .node rect {
   fill: var(--rose) !important;
   stroke-width: 0px !important;
 }
-
 .mermaid .edge-thickness-normal {
   stroke-width: 2px !important;
 }
 
 /*-----------Rounded corners for tables--------*/
-/* Fix the borders and add a radius variable */
 :root table {
   --table-border-radius: 8px;
   border-collapse: separate;
   border-spacing: 0;
 }
-/* Add the radius */
 th:first-child {
   border-top-left-radius: var(--table-border-radius)
 }
@@ -969,7 +956,6 @@ th .MJX-TEX { /*no color for table headers*/
 a {
   color: var(--external-link-color);
 }
-
 .markdown-source-view.mod-cm6 .cm-hmd-internal-link,
 .markdown-rendered .internal-link {
   background-color: var(--overlay);
@@ -978,7 +964,6 @@ a {
   padding: 0px 5px;
   border: 1px solid var(--highlight-med);
 }
-
 .markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover,
 .markdown-rendered .internal-link:hover {
   background-color: var(--highlight-med);
@@ -1092,21 +1077,17 @@ progress::-webkit-progress-bar {
   width: 200px;
 }
 
-
-
 /*-----center h5--------------------*/
 .HyperMD-header.HyperMD-header-5,
 h5 {
   text-align: center !important;
 }
-
 .HyperMD-header.HyperMD-header-1,
 h1 {
   display: block;
   padding-bottom: 2px;
   border-bottom: 1px solid var(--h1-color);
 }
-
 
 /*---center + radius for img and embeds---*/
 :is(:is(.markdown-source-view.mod-cm6) :is(.cm-content, .cm-line), .markdown-rendered) :is(img, .external-embed, .internal-embed audio, .internal-embed video, .iframe-external-embed) {
@@ -1115,7 +1096,6 @@ h1 {
   border-radius: 10px !important;
 }
 
-
 /*hover image animation !*/
 img {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -1123,7 +1103,6 @@ img {
 img:hover {
   transform: scale(1.04);
 }
-
 
 
 /*==========================CSSCLASSES=================================*/
@@ -1439,16 +1418,6 @@ li[data-task="e"]>p>input:checked {
     mask-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224px%22%20viewBox%3D%220%20-960%20960%20960%22%20width%3D%2224px%22%20fill%3D%22%235f6368%22%3E%3Cpath%20d%3D%22M333.13-322H232.61q-37.65%200-54.41-33.02-16.77-33.02%204.06-63.55l352.7-508.91q12.13-17.26%2031.39-23.54%2019.26-6.29%2037.95%201.28%2019.27%207.56%2029.9%2025.04%2010.63%2017.48%208.06%2037.74l-36%20288.96h133.65q39.09%200%2055.57%2035.3%2016.48%2035.31-8.35%2065.27L402.87-32.78q-12.13%2015.69-31.39%2019.98-19.26%204.28-37.96-4.29-18.69-8-28.11-25.19-9.41-17.2-6.85-37.02L333.13-322Z%22%2F%3E%3C%2Fsvg%3E');
 }
 
-/*Emoji folders*/
-/*.nav-folder-title[data-path="Excalidraw"] .nav-folder-title-content::before {
-  content: "🖌️ ";
-  font-size:1.3em;
-}
-.nav-folder-title[data-path="Fichiers"] .nav-folder-title-content::before {
-  content: "📑 ";
-  font-size:1.3em;
-}
-
 /*unordered list styling
 author: sailKite
 source: https://discord.com/channels/686053708261228577/702656734631821413/1140761432082886707
@@ -1494,7 +1463,6 @@ body {
   padding: 0px 10px;
   border-radius: 7px;
 }
-
 .empty-state-action:nth-child(1)::before {
 /*  content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW5vdGVib29rLXBlbiI+PHBhdGggZD0iTTEzLjQgMkg2YTIgMiAwIDAgMC0yIDJ2MTZhMiAyIDAgMCAwIDIgMmgxMmEyIDIgMCAwIDAgMi0ydi03LjQiLz48cGF0aCBkPSJNMiA2aDQiLz48cGF0aCBkPSJNMiAxMGg0Ii8+PHBhdGggZD0iTTIgMTRoNCIvPjxwYXRoIGQ9Ik0yIDE4aDQiLz48cGF0aCBkPSJNMjEuMzc4IDUuNjI2YTEgMSAwIDEgMC0zLjAwNC0zLjAwNGwtNS4wMSA1LjAxMmEyIDIgMCAwIDAtLjUwNi44NTRsLS44MzcgMi44N2EuNS41IDAgMCAwIC42Mi42MmwyLjg3LS44MzdhMiAyIDAgMCAwIC44NTQtLjUwNnoiLz48L3N2Zz4=');
   display: inline-block;
@@ -1511,13 +1479,13 @@ body {
   mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWxpYnJhcnktYmlnIj48cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSIxOCIgeD0iMyIgeT0iMyIgcng9IjEiLz48cGF0aCBkPSJNNyAzdjE4Ii8+PHBhdGggZD0iTTIwLjQgMTguOWMuMi41LS4xIDEuMS0uNiAxLjNsLTEuOS43Yy0uNS4yLTEuMS0uMS0xLjMtLjZMMTEuMSA1LjFjLS4yLS41LjEtMS4xLjYtMS4zbDEuOS0uN2MuNS0uMiAxLjEuMSAxLjMuNloiLz48L3N2Zz4=');
 */}
 
-/*loading screen*/
+/*Loading screen*/
 .progress-bar-message::before {
   content: "✨ ";
 }
 
 
-/*=========================================PLUGINS SUPPORT==============================================================================*/
+/*=========================================PLUGINS SUPPORT==============================================*/
 /*1. MAKE.MD*/
 body {
   --mk-color-red: var(--color-red);
@@ -1820,19 +1788,6 @@ ul.todoist-task-list {
 .edit-block-button .todoist-add-button, .markdown-reading-view .todoist-add-button, .is-live-preview .todoist-add-button {
   display: none !important;
 }
-/*Add task button styling
-.edit-block-button.todoist-add-button, .markdown-reading-view .todoist-add-button, .is-live-preview .todoist-add-button {
-  background-color: var(--interactive-accent);
-  cursor: pointer;
-  border-radius: 30px !important;
-  color: var(--highlight-low) !important;
-}
-.edit-block-button.todoist-add-button:hover, .markdown-reading-view .todoist-add-button:hover, .is-live-preview .todoist-add-button:hover {
-  background-color: var(--interactive-accent-hover) !important;
-  cursor: pointer;
-  border-radius: 30px;
-  color: var(--highlight-low);
-}*/
 .edit-block-button.todoist-refresh-button, .markdown-reading-view .todoist-refresh-button, .is-live-preview .todoist-refresh-button {
   color: var(--color-yellow) !important;
   cursor: pointer;
@@ -1853,7 +1808,7 @@ ul.todoist-task-list {
   background-color: rgb(var(--background-modifier-error-rgb), 0.1);
 }
 
-/*iconize v.2.12.1 fix*/
+/*ICONIZE v.2.12.1 fix*/
 .iconize-inline-title-wrapper {
   justify-content: center;
 }
@@ -1874,7 +1829,7 @@ ul.todoist-task-list {
 /*=============================PDF STYLING=====================================*/
 /*headings*/
 .print .inline-title,
-.print h1:first-of-type {
+.print h1:first-of-type /*= inline title*/{
   color: var(--pine);
   text-align: center !important;
   font-size: 18px;
@@ -2001,9 +1956,8 @@ ul.todoist-task-list {
   }
 }
 
-
 /*========================Style settings options==========================*/
-/*You can also use these as cssclasses in a single file*/
+/*You can also use these as cssclasses*/
 /*Focus mode*/
 .focus-mode .workspace-tab-header-container, .focus-mode .view-header, .focus-mode .status-bar, .focus-mode .metadata-properties-heading, .focus-mode ::-webkit-scrollbar {
   display: none;
@@ -2035,17 +1989,9 @@ ul.todoist-task-list {
   --table-border-radius: 0px !important;  
 }
 
-/*circle checkbox*/
+/*Circle checkbox*/
 .checkbox-circle {
   --checkbox-radius: 100px;
-}
-
-/*disable hover line indicator*/
-.no-hoverindicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(:has(.mk-note-footer)):has(.cm-hmd-list-indent)::after,
-.no-hoverindicator .workspace-leaf-content[data-type="markdown"] .markdown-source-view .cm-content>div:not(.image-embed, .no-hoverindicator .mk-header, .no-hoverindicator :has(.mk-note-footer, .no-hoverindicator .collapse-indicator))::after,
-.no-hoverindicator .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:is(.el-ul, .el-ol)::after,
-.no-hoverindicator .workspace-leaf-content[data-type="markdown"] .markdown-preview-sizer>div:not([class], .no-hoverindicator :has(.collapse-indicator, .no-hoverindicator .mk-header))::after {
-display: none;
 }
 
 /*Remove h5 centered*/
@@ -2054,7 +2000,7 @@ display: none;
   text-align: left !important;
 }
 
-/*remove hover image animation*/
+/*Remove hover image animation*/
 .no-animation img {
   transition: none;
 }
@@ -2094,7 +2040,7 @@ settings:
    - 
         id: my-info-text
         title: ✨ Welcome to Underwater theme !
-        description: "Blab dzauiuidyeu"
+        description: "**↳** Check the Github page : [Underwater on Github](https://github.com/Seniblue/Underwater)"
         type: info-text
         markdown: true
    - 
@@ -2334,11 +2280,6 @@ settings:
         description: It is better when the image is small
         type: variable-text
         default: url("")
-   - 
-        id: no-hoverindicator
-        title: Disable hover line indicator (credit to Border theme)
-        type: class-toggle
-        default: false
    - 
         id: no-h5
         title: Disable h5 header centering
