@@ -37,6 +37,7 @@
 - Rounded highlighting style + internal links special style
 - New tab custom image & styling
 - FULL FOCUS MODE (can be toggled via a hotkey)
+- VAULT ICON (icon can be chosen via Style settings)
 
 # Plugins support
 ![plugins](img/plugins.png)
