@@ -808,6 +808,14 @@ mark {
   margin: 0 0px !important;
 }
 
+/*Bold and italic visible in blockquotes*/
+.cm-em {
+  color: var(--italic-color) !important;
+}
+.cm-strong {
+  color: var(--bold-color) !important;
+}
+
 /*inline title center*/
 .inline-title {
   text-align: center;         
@@ -1844,11 +1852,10 @@ ul.todoist-task-list {
 
 /*=============================PDF STYLING=====================================*/
 /*headings*/
-.print .inline-title,
-.print h1:first-of-type /*= inline title*/{
+.print h1:first-of-type {
   color: var(--pine);
   text-align: center !important;
-  font-size: 18px;
+  font-size: 22px;
   background-color: transparent;
   display: block;
   border: 0px;
@@ -1856,7 +1863,7 @@ ul.todoist-task-list {
 }
 .print h1 {
   color: var(--love);
-  font-size: 16px;
+  font-size: 18px;
   font-family: 'Lexend';
   font-weight: bold;
   border-bottom: 1px solid;
@@ -1865,7 +1872,7 @@ ul.todoist-task-list {
 }
 .print h2 {
   color: var(--love);
-  font-size: 15px;
+  font-size: 16px;
   font-family: 'Lexend';
   font-weight: bold;
   margin-left: 5px;
