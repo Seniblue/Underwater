@@ -86,7 +86,7 @@
   --blockquote-border-thickness: 3px;
 
   /*---callouts----*/
-  --callout-border-width: 2px 6px 6px 2px;
+  --callout-border-width: 0px;
   --callout-border-opacity: 0.25;
   --callout-radius: 13px;
   --callout-title-size: 1rem;
@@ -1013,64 +1013,71 @@ a {
 }
 
 /*----CUSTOM CALLOUTS -----------------------*/
-.callout[data-callout="signet"] {
-  --callout-color: var(--color-pink-rgb);
-  --callout-icon: bookmark;
-}
-.callout[data-callout="bookmark"] {
+.callout[data-callout="signet"], .callout[data-callout="bookmark"] {
   --callout-color: var(--color-pink-rgb);
   --callout-icon: bookmark;
 }
 .callout[data-callout="timeline"] {
   --callout-color: var(--color-green-rgb);
-  --callout-icon: lucide-arrow-right-square;
+  --callout-icon: lucide-flag-triangle-right;
 }
 .callout[data-callout="person"] {
   --callout-color: var(--color-cyan-rgb);
   --callout-icon: lucide-user-2;
 }
 .callout[data-callout="note"] {
-  --callout-color: var(--color-blue-rgb);
-  --callout-icon: lucide-pencil;
+  --callout-icon: lucide-sticker;
 }
 .callout[data-callout="media"] {
   --callout-color: var(--color-yellow-rgb);
-  --callout-icon: image;
+  --callout-icon: lucide-image;
 }
-.callout[data-callout="flashcard"] {
-  --callout-color: var(--color-orange-rgb);
-  --callout-icon: copy;
-}
-.custom-callout .callout[data-callout="custom"] {
+.callout[data-callout="custom"] {
   --callout-icon: none;
-  --callout-title: center;
+  --callout-title: center !important;
   border-radius: 25px;
-  border-color: var(--foam-rgb);
-  justify-content: center;
+  border-color: var(--iris);
   background-color: transparent;
-  border-width: 2px;
-  border-style: dotted;
+  border-width: 1px;
+  border-style: dashed;
+  & .callout-title {
+    justify-content: center;
+    color: var(--iris);
+  }
 }
-.callout[data-callout="bleu"] {
+.callout[data-callout="center"] {
   --callout-icon: none;
   --callout-color: var(--color-cyan-rgb);
+  & .callout-title {
+    justify-content: center;
+  }
 }
-.callout.callout[data-callout="bleu"] .callout-title {
-  justify-content: custom;
+/*Default callouts*/
+.callout[data-callout="question"] {
+  --callout-color: var(--color-pink-rgb);
+  --callout-icon: lucide-badge-help;
 }
-  /*????*/
-.custom-callout .callout.callout[data-callout="cutom"] .callout-title {
-  justify-content: custom;
+.callout[data-callout="info"] {
+  --callout-icon: lucide-badge-info;
 }
-.callout.callout[data-callout="note"] .callout-title {
-  justify-content: left;
+.callout[data-callout="todo"] {
+  --callout-icon: circle-check-big;
+}
+.callout[data-callout="fail"] {
+  --callout-icon: lucide-ban;
+}
+.callout[data-callout="example"] {
+  --callout-icon: lucide-lightbulb;
+}
+.callout[data-callout="done"], .callout[data-callout="success"] {
+  --callout-icon: lucide-check-check;
 }
 
-/*---divider--------*/
-.markdown-source-view.mod-cm6 hr, .markdown-preview-view hr, hr, .markdown-source-view hr, .markdown-preview-view hr {
+/*---divider line------*/
+ .markdown-source-view.mod-cm6 .hr, .view-content hr {
   border-radius: 30px;
-  width: 90%;
-  margin-inline: auto;
+  width: 90% !important;
+  margin-inline: auto !important;
 }
 
 /*progress bar*/
@@ -1976,8 +1983,8 @@ ul.todoist-task-list {
 }
 
 /*Alternative callout styles*/
-.callout-simple {
-  --callout-border-width: 0px !important;
+.callout-solid {
+  --callout-border-width: 2px 6px 6px 2px !important;
 }
 .callout-outlined {
   --callout-border-width: 1px;
@@ -2249,10 +2256,10 @@ settings:
       options:
       - 
          label: Solid
-         value: normal
+         value: callout-solid
       -
          label: Classic
-         value: callout-simple
+         value: normal
       -
          label: Outlined
          value: callout-outlined
@@ -2293,7 +2300,7 @@ settings:
         title: Vault icon
         type: class-select
         allowEmpty: false
-        default: normal
+        default: Moon
         options:
         - 
          label: Moon
