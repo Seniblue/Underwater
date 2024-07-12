@@ -2057,43 +2057,43 @@ settings:
       default-light: '#56949f'
       default-dark: '#9ccfd8'
    - 
-      id: pine
+      id: pine-rgb
       title: Pine
       type: variable-themed-color
       opacity: false
-      format: hex      
+      format: 'rgb-values'      
       default-light: '#286983'
       default-dark: '#31748f'
    - 
-      id: iris
+      id: iris-rgb
       title: Iris
       type: variable-themed-color
       opacity: false
-      format: hex      
+      format: 'rgb-values'      
       default-light: '#907aa9'
       default-dark: '#c4a7e7'      
    - 
-      id: gold
+      id: gold-rgb
       title: Gold
       type: variable-themed-color
       opacity: false
-      format: hex      
+      format: 'rgb-values'      
       default-light: '#ea9d34'
       default-dark: '#f6c177'
    - 
-      id: rose
+      id: rose-rgb
       title: Rose
       type: variable-themed-color
       opacity: false
-      format: hex      
+      format: 'rgb-values'      
       default-light: '#d7827e'
       default-dark: '#ebbcba'      
    - 
-      id: love
+      id: love-rgb
       title: Love
       type: variable-themed-color
       opacity: false
-      format: hex      
+      format: 'rgb-values'      
       default-light: '#b4637a'
       default-dark: '#eb6f92'   
 
@@ -2154,11 +2154,11 @@ settings:
       default-light: '#f4ede8'
       default-dark: '#21202e' 
    - 
-      id: highlight-med
+      id: highlight-med-rgb
       title: Highlight med
       type: variable-themed-color
       opacity: false
-      format: hex      
+      format: 'rgb-values'      
       default-light: '#dfdad9'
       default-dark: '#403d52' 
    - 
