@@ -1772,6 +1772,14 @@ ul.todoist-task-list {
   color: var(--gold);
 }
 
+/*PopKit plugin*/
+.css-zz0qod, .css-ja44k1 {
+  background-color: var(--highlight-med) !important;
+}
+.css-ja44k1:hover {
+  opacity: 1;
+  background-color: var(--color-blue) !important;
+}
 /*=============================PDF STYLING=====================================*/
 /*headings*/
 .print h1:first-of-type {
