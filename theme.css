@@ -1780,6 +1780,12 @@ ul.todoist-task-list {
   opacity: 1;
   background-color: var(--color-blue) !important;
 }
+
+/*Meta Bind*/
+.mb-card {
+	background-color: var(--overlay);
+}
+
 /*=============================PDF STYLING=====================================*/
 /*headings*/
 .print h1:first-of-type {
