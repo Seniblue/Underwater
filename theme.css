@@ -1781,9 +1781,12 @@ ul.todoist-task-list {
 }
 
 /*Meta Bind*/
+.mb-input {
+  --background-modifier-border: var(--highlight-med);
+  --mb-border-width: 1px;
+}
 .mb-card {
 	background-color: var(--overlay);
-  border-color: var(--highlight-med);
 }
 
 /*=============================PDF STYLING=====================================*/
