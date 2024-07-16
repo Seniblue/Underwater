@@ -1777,13 +1777,13 @@ ul.todoist-task-list {
   background-color: var(--highlight-med) !important;
 }
 .css-ja44k1:hover {
-  opacity: 1;
   background-color: var(--color-blue) !important;
 }
 
 /*Meta Bind*/
 .mb-card {
 	background-color: var(--overlay);
+  border-color: var(--highlight-med);
 }
 
 /*=============================PDF STYLING=====================================*/
