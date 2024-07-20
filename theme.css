@@ -391,6 +391,37 @@
 
 }
 
+.theme-light.uw-octopus {
+  color-scheme: light;
+
+  /*PALETTE*/
+  --love-rgb: 86, 139, 187;/*Ocean*/
+  --gold-rgb: 230, 161, 73;/*Sand*/
+  --rose-rgb: 106, 168, 149;/*green water*/
+  --pine-rgb: 205, 106, 94;/**/
+  --foam-rgb: 127, 111, 134;/**/
+  --iris-rgb: 204, 135, 90;/**/
+
+  --base: #F2EDF4; 
+  --surface: #FBF6FE;
+  --overlay: #DFD9E2;
+
+  --muted: #798094;
+  --subtle: #616980;
+  --text: #475669; 
+
+  --highlight-low: #D9DFE1; 
+  --highlight-med-rgb: 206, 222, 227; 
+  --highlight-high: #B4C3C8;
+
+  /*override accent color !*/
+  --accent-h: 6 !important;
+  --accent-s: 53% !important;
+  --accent-l: 59% !important;
+  --color-accent-hsl: 6, 53%, 59%; /*foam*/
+
+}
+
 .theme-dark /*Rosé Pine*/ {
   color-scheme: dark;
 
@@ -830,16 +861,15 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover, body:not(.is-grabbing) .
   max-width: 55px !important;
 }
 
-/*Mermaid styling.. doesn't work very well though :(*/
+/*Mermaid styling :/*/
 .mermaid svg {
   display: block;
-  font-family: var(--font-default);
-  font-size: 15px;
+  font-family: var(--font-text-theme) !important;
+  font-size: 15px !important;
   margin-left: auto;
   margin-right: auto;
 }
 .mermaid svg .node rect {
-  fill: var(--rose) !important;
   stroke-width: 0px !important;
 }
 .mermaid .edge-thickness-normal {
@@ -1051,8 +1081,8 @@ img:hover {
 
 /*==========================CSSCLASSES=================================*/
 /*no-title*/
-.no-title .inline-title {
-  display: none;
+.no-title .inline-title, .no-title .iconize-inline-title-wrapper {
+  display: none !important;
 }
 
 /*notebook*/ /*https://www.magicpattern.design/tools/css-backgrounds*/
@@ -2058,7 +2088,11 @@ settings:
          value: everforest-light
       - 
          label: Biscuit
-         value: biscuit-light                   
+         value: biscuit-light           
+      - 
+         label: 🌊 Underwater Octopus
+         value: uw-octopus              
+         
    - 
         id: my-info-text
         title: 🎨 Colors
