@@ -845,7 +845,7 @@ body:not(.is-phone) div:has(>input.prompt-input) {
 
 /*file explorer active file bgcolor fix*/
 body:not(.is-grabbing) .nav-file-title.is-active:hover, body:not(.is-grabbing) .nav-folder-title.is-active:hover, .nav-file-title.is-active, .nav-folder-title.is-active, body:not(.is-grabbing) .tree-item-self.is-active:hover, .tree-item-self.is-active {
-  color: var(--text-on-accent);
+  color: var(--text-on-accent) !important;
 }
 /*Dotted intendation*/
 .tree-item-children {
@@ -1117,102 +1117,29 @@ background-size: 20px 20px;
   box-shadow: -25vw 0px rgb(var(--rose-rgb), 0.08), 25vw 0 rgb(var(--rose-rgb), 0.08);
 }
 
-/*outline pane*/
-/* from https://github.com/subframe7536/obsidian-theme-maple, author:@subframe7536 */
-.workspace-leaf-content[data-type=outline] .view-content .collapse-icon::before {
-  content: "" !important;
-}
-:not(.is-grabbing) .workspace-leaf-content[data-type=outline] .view-content .tree-item {
-  position: relative;
-}
-.workspace-leaf-content[data-type=outline] .view-content .tree-item-self {
-  position: relative;
-  margin-bottom: 0;
-  white-space: nowrap;
-  margin-top: -1px;
-  /* fix item gap */
-}
-.workspace-leaf-content[data-type=outline] .view-content .tree-item-self .tree-item-inner {
-  padding-left: 16px;
-  margin-left: -16px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: var(--nav-item-white-space);
-  
-  height: calc(var(--nav-item-size) * 1.8);
-  line-height: calc(var(--nav-item-size) * 1.8);
-  position: relative;
-}
-.workspace-leaf-content[data-type=outline] .view-content .tree-item-self .tree-item-inner::before {
-  content: "";
-  width: var(--size-4-1);
-  height: var(--size-4-1);
-  border: 2px solid var(--rose);
-  border-radius: 50%;
-  position: absolute;
-  left: 0px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.workspace-leaf-content[data-type=outline] .view-content .tree-item-self .tree-item-icon~.tree-item-inner::before {
-  content: none;
-}
-:not(.is-grabbing) .workspace-leaf-content[data-type=outline] .view-content .tree-item::after {
-  content: "";
-  width: 2px;
-  position: absolute;
-  background-color: transparent;
-  top: calc(var(--nav-item-size) * 1.8 / 2 * -1);
-  left: -9px;
-  height: calc(100% - var(--nav-item-size) * 1.8 + var(--size-4-8));
-}
-.workspace-leaf-content[data-type=outline] .view-content .tree-item-icon {
-  cursor: pointer;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-.workspace-leaf-content[data-type=outline] .view-content .tree-item-icon::before {
-  width: var(--size-4-2);
-  height: var(--size-4-2);
-  background-color: var(--pine);
-  border-radius: 50%;
-  position: absolute;
-  left: 4px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.workspace-leaf-content[data-type=outline] .view-content .tree-item-icon svg {
-  display: block;
-}
-.workspace-leaf-content[data-type=outline] .view-content .tree-item-icon svg path {
-  display: none;
-}
-.workspace-leaf-content[data-type=outline] .view-content .tree-item:hover>.tree-item-children>.tree-item::after {
-  background-color: var(--rose);
-}
-.workspace-leaf-content[data-type=outline] .view-content .tree-item:hover>.tree-item-self:hover+.tree-item-children .tree-item::after {
-  background-color: transparent;
-}
-.workspace-leaf-content[data-type=outline] .view-content .tree-item:hover>.tree-item-children>.tree-item:hover::after,
-.workspace-leaf-content[data-type=outline] .view-content .tree-item:hover>.tree-item-children>.tree-item:hover~.tree-item::after {
-  background-color: transparent;
-}
-:not(.is-grabbing) .workspace-leaf-content[data-type=outline] .view-content .tree-item:hover>.tree-item-children>.tree-item:hover::before {
-  content: "";
-  position: absolute;
-  top: calc(var(--nav-item-size) * 1.8 / 2 * -1);
-  left: -9px;
-  bottom: calc(100% - (var(--nav-item-size) * 1.8 + var(--size-4-2)) / 2 - 1px);
-  width: 16px;
-  border-bottom-left-radius: var(--radius-m);
-  border-bottom: 2px solid var(--rose);
-  border-left: 2px solid var(--rose);
-}
-.workspace-leaf-content[data-type=outline] .view-content :is(.tree-item-children, .tree-item-self .tree-item-self) {
-  padding-left: 0;
-  margin-left: var(--size-4-5);
-  border-left: none;
+/*Outline pane styling
+FROM https://forum.obsidian.md/t/trying-to-color-the-outline-headers-levels/79451/3 */
+[data-type="outline"] {
+  .tree-item > .tree-item-self {
+    color: var(--h1-color);
+    font-weight:500;
+  }
+  .tree-item .tree-item > .tree-item-self {
+    color: var(--h2-color);
+    font-weight: 400;
+  }
+  .tree-item .tree-item .tree-item > .tree-item-self {
+    color: var(--h3-color);
+  }
+  .tree-item .tree-item .tree-item .tree-item > .tree-item-self {
+    color: var(--h4-color);
+  }
+  .tree-item .tree-item .tree-item .tree-item .tree-item > .tree-item-self {
+    color: var(--h5-color);
+  }
+  .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item > .tree-item-self {
+    color: var(--h6-color);
+  }
 }
 
 /*==checkboxes==*/
@@ -1375,14 +1302,13 @@ body {
 .empty-state-container::before {
   content: var(--tab-img);
 }
+/*Styling*/
 .empty-state-container {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .empty-state-container:hover {
   transform:scale(1.03);
 }
-
-
 .empty-state-title, .empty-state-action:nth-child(3), .empty-state-action:nth-child(4) {
   display: none;
 }
@@ -1788,11 +1714,6 @@ ul.todoist-task-list {
 .iconize-inline-title-wrapper {
   justify-content: center;
 }
-/*lucide icons in links fix*/
-.iconize-icon-in-link svg {
-  width: 16px;
-  height: 16px;
-}
 
 /*Typst color (Wypst plugin)*/
 .theme-light .katex-display, .theme-light .katex {
@@ -1969,6 +1890,17 @@ ul.todoist-task-list {
   --callout-padding: 0px;
   --callout-title-padding: 7px 15px;
 }
+.callout-math .callout {
+  border-width: 2px;
+  border-color: rgba(var(--callout-color));
+  border-radius: 0px;
+  background-color: transparent;
+  page-break-inside: avoid;
+  font-size: 14px;
+  padding: 12px 12px;
+  --callout-title: center;
+}
+
 
 /*Alternative table*/
 .table-minimal {
@@ -2243,6 +2175,9 @@ settings:
       -
          label: Outlined
          value: callout-outlined
+      -
+         label: Math
+         value: callout-math         
    - 
       id: table
       title: Table style
