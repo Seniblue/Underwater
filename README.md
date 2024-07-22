@@ -29,11 +29,10 @@
 ![formatting](img/formatting.png)
 
 - Scrollbar on hover (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
-- Outline pane ([Maple](https://github.com/subframe7536/obsidian-theme-maple) theme)
-- Active line coloring
-- Cursor color
+- Active line highlight
+- Cursor vibrant color
 - Slight image animation on hover
-- Special window styling (better for Windows)
+- Special window styling (best suited for Windows)
 - Rounded highlighting style + internal links special style
 - New tab custom image & styling
 - FULL FOCUS MODE (can be toggled via a hotkey)
@@ -58,7 +57,7 @@ Credit to these themes for certain elements and inspiration
 - [Minimal](https://github.com/kepano/obsidian-minimal)
 
 # Tasks
+- [x] Add more options for settings with style settings
 - [ ] Work on README
 - [ ] Add custom color schemes
-- [x] Add more options for settings with style settings
 - [ ] Submit theme to obsidian theme list
