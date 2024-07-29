@@ -652,7 +652,7 @@
   --subtle: #97A4C9; 
   --text: #E1E3FF;
 
-  --highlight-low: #3a4964;
+  --highlight-low: #28344B;
   --highlight-med-rgb: 40, 56, 82;
   --highlight-high: #19263B;
 
@@ -661,6 +661,35 @@
   --accent-s: 63% !important;
   --accent-l: 51% !important;
   --color-accent-hsl: 179, 63%, 51%;
+}
+.theme-dark.uw-seaweed {
+  color-scheme: dark;
+
+  /*PALETTE*/
+  --love-rgb: 255, 123, 123;
+  --gold-rgb: 242, 225, 95;
+  --rose-rgb: 216, 237, 141;
+  --pine-rgb: 109, 196, 120;
+  --foam-rgb: 191, 229, 222;
+  --iris-rgb: 95, 163, 162;
+    
+  --base: #193233;
+  --surface: #19393A;
+  --overlay: #214B4C; 
+
+  --muted: #7CAB9B;
+  --subtle: #A7C9C9; 
+  --text: #DEEDDD;
+
+  --highlight-low: #1F3533;
+  --highlight-med-rgb: 63, 99, 96;
+  --highlight-high: #5D817E;
+
+  /*override accent color !*/
+  --accent-h: 169 !important;
+  --accent-s: 42% !important;
+  --accent-l: 82% !important;
+  --color-accent-hsl: 169, 42%, 82%; /*foam*/
 }
 
 /* LAYOUT */
@@ -1991,6 +2020,9 @@ settings:
       - 
          label: 🌊 Underwater Blue ocean
          value: uw-ocean         
+      - 
+         label: 🌊 Underwater Seaweed
+         value: uw-seaweed              
    - 
       id: underwater-colors-light
       title: Light Theme
