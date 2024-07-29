@@ -614,7 +614,7 @@
   --foam-rgb: 159, 195, 135; /*Seaweed!*/
   --iris-rgb: 146, 135, 194; /*Jellyfish!*/
   
-  --base: #222735;
+  --base: #11121a;
   --surface: #15171D; 
   --overlay: #22252F; 
 
@@ -644,8 +644,8 @@
   --foam-rgb: 70, 201, 199;
   --iris-rgb: 115, 104, 182;
     
-  --base: #0D1A39;
-  --surface: #08122B; 
+  --base: #081020;
+  --surface: #08122B;
   --overlay: #06334D; 
 
   --muted: #7585B2;
@@ -761,14 +761,6 @@ mark {
   margin: 0 0px !important;
 }
 
-/*Bold and italic visible in blockquotes*/
-.cm-em {
-  color: var(--italic-color) !important;
-}
-.cm-strong {
-  color: var(--bold-color) !important;
-}
-
 /*inline title center*/
 .inline-title {
   text-align: center;         
@@ -847,6 +839,9 @@ body:not(.is-phone) div:has(>input.prompt-input) {
 body:not(.is-grabbing) .nav-file-title.is-active:hover, body:not(.is-grabbing) .nav-folder-title.is-active:hover, .nav-file-title.is-active, .nav-folder-title.is-active, body:not(.is-grabbing) .tree-item-self.is-active:hover, .tree-item-self.is-active {
   color: var(--text-on-accent) !important;
 }
+.tree-item-self.bookmark.mod-collapsible.is-clickable {
+  background-color: var(--highlight-med);
+}
 /*Dotted intendation*/
 .tree-item-children {
   border-inline-start: var(--nav-indentation-guide-width) dashed var(--nav-indentation-guide-color);
@@ -900,12 +895,23 @@ table,
 .table-wrapper {
   margin-inline: auto;
 }
-
-/*underline styling*/
+/*underline & strikethrough styling*/
 u {
   text-decoration-style: dotted;
   text-decoration-color: var(--iris);
   text-underline-offset: 5px;
+}
+del, .cm-strikethrough {
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 2px;
+}
+
+/*Bold and italic visible in blockquotes*/
+.cm-em {
+  color: var(--italic-color) !important;
+}
+.cm-strong {
+  color: var(--bold-color) !important;
 }
 
 /*latex color*/
@@ -1094,7 +1100,6 @@ background-size: 20px 20px;
 /*write*/
 .write :is(.cm-line, p)::first-letter {
   margin: 0.36rem;
-  color: var(--text-normal);
   font-size: 30px;
 }
 .write, .markdown-source-view.write .cm-scroller {
@@ -1142,8 +1147,8 @@ FROM https://forum.obsidian.md/t/trying-to-color-the-outline-headers-levels/7945
   }
 }
 
-/*==checkboxes==*/
-/*-------tasks=bullet points unclickable except les normaux-----------*/
+
+/*Checkboxes*/
 /* Disable click in Reading View */
 input[data-task]:not(input[data-task=" "], input[data-task="x"], input[data-task="/"]):checked,
 li[data-task]:not(li[data-task=" "], li[data-task="x"], li[data-task="/"])>input:checked,
@@ -1155,7 +1160,6 @@ label.task-list-label:has(> input[data-task]:not(input[data-task=" "], input[dat
 input[type=checkbox] {
   transition: background 0.4s, stroke-dashoffset 0.6s;
 }
-
 /* use these settings : https://fonts.google.com/icons?icon.style=Rounded&icon.size=24&icon.color=%235f6368&icon.platform=web */
 /*CHECKBOXES : from minimal, tweaked*/
 input[data-task="/"]:checked,
@@ -1210,7 +1214,6 @@ li[data-task="e"] > p > input:checked {
   -webkit-mask-position: 50% 50%;
   mask-position: 50% 50%;
 }
-
 input[data-task="i"]:checked, li[data-task="i"]>input:checked, li[data-task="i"]>p>input:checked {
 color: var(--pine);
 -webkit-mask-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224px%22%20viewBox%3D%220%20-960%20960%20960%22%20width%3D%2224px%22%20fill%3D%22%235f6368%22%3E%3Cpath%20d%3D%22M480.59-261.17q23.75%200%2040.28-16.64%2016.52-16.64%2016.52-40.32v-144.91q0-23.68-16.57-40.32T480.67-520q-23.58%200-40.38%2016.64-16.81%2016.64-16.81%2040.32v144.91q0%2023.68%2016.68%2040.32t40.43%2016.64Zm-.77-337.87q24.85%200%2041.47-16.45%2016.62-16.44%2016.62-41.29%200-24.85-16.44-41.47-16.45-16.62-41.29-16.62-24.85%200-41.47%2016.44-16.62%2016.45-16.62%2041.3%200%2024.85%2016.44%2041.47%2016.45%2016.62%2041.29%2016.62ZM480-40.09q-91.34%200-171.86-34.35-80.53-34.35-139.94-93.76-59.41-59.41-93.76-139.94Q40.09-388.66%2040.09-480q0-91.59%2034.41-172.06%2034.4-80.47%2094.01-140.04%2059.6-59.56%20139.93-93.69%2080.34-34.12%20171.56-34.12%2091.58%200%20172.07%2034.11%2080.49%2034.12%20140.05%2093.68%2059.56%2059.56%2093.68%20140.08%2034.11%2080.51%2034.11%20172.12%200%2091.62-34.12%20171.71-34.13%2080.1-93.69%20139.7-59.57%2059.61-140.04%2094.01Q571.59-40.09%20480-40.09Z%22%2F%3E%3C%2Fsvg%3E');
@@ -1817,14 +1820,7 @@ ul.todoist-task-list {
   padding: 12px 12px;
   --callout-title: center;
 }
-.print .task-list-item,
-.print ol,
-.print li,
-.print ul,
-.print tr,
-.print td,
-.print th,
-.print thead {
+.print .task-list-item, .print ol, .print li, .print ul, .print tr, .print td, .print th, .print thead {
   font-size: 14px !important;
   text-align: justify !important;
 }
@@ -1838,9 +1834,7 @@ ul.todoist-task-list {
 .print .file-embed {
   display: none;
 }
-.print td,
-.print th,
-.print thead tr {
+.print td, .print th, .print thead tr {
   border-width: 1px 0px 0px 1px;
   border-color: rgb(0, 0, 0);
 }
@@ -1856,7 +1850,6 @@ ul.todoist-task-list {
   padding: 0px 2px;
   margin: 0 0px;
 }
-.cm-s-obsidian span.cm-highlight,
 .cm-s-obsidian span.cm-highlight {
   border-radius: 2px;
   padding: 0px 2px;
@@ -1871,6 +1864,7 @@ ul.todoist-task-list {
 
 /*========================Style settings options==========================*/
 /*You can also use these as cssclasses*/
+
 /*Focus mode*/
 .focus-mode .workspace-tab-header-container, .focus-mode .view-header, .focus-mode .status-bar, .focus-mode .metadata-properties-heading, .focus-mode ::-webkit-scrollbar {
   display: none;
@@ -1900,7 +1894,6 @@ ul.todoist-task-list {
   padding: 12px 12px;
   --callout-title: center;
 }
-
 
 /*Alternative table*/
 .table-minimal {
@@ -1998,7 +1991,6 @@ settings:
       - 
          label: 🌊 Underwater Blue ocean
          value: uw-ocean         
-
    - 
       id: underwater-colors-light
       title: Light Theme
@@ -2023,8 +2015,7 @@ settings:
          value: biscuit-light           
       - 
          label: 🌊 Underwater Octopus
-         value: uw-octopus              
-         
+         value: uw-octopus                       
    - 
         id: my-info-text
         title: 🎨 Colors
@@ -2079,7 +2070,6 @@ settings:
       format: 'rgb-values'      
       default-light: '#b4637a'
       default-dark: '#eb6f92'   
-
    - 
       id: base
       title: Base
@@ -2152,7 +2142,6 @@ settings:
       format: hex      
       default-light: '#cecacd'
       default-dark: '#524f67' 
-
    - 
         id: my-info-text
         title: 🔍 Options
@@ -2264,8 +2253,7 @@ settings:
         description: Removes tab bar, status bar, scrollbar, file header and properties heading. You can toggle it with a hotkey.
         type: class-toggle
         default: false
-        addCommand: true
-        
+        addCommand: true        
    - 
         id: plugins
         title: 🧩 Plugins styling
@@ -2285,7 +2273,5 @@ settings:
       -
          label: Todoist-like board
          value: kanban-todoist
-
-
 */
 
