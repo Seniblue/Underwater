@@ -1127,9 +1127,9 @@ background-size: 20px 20px;
 }
 
 /*write*/
-.write :is(.cm-line, p)::first-letter {
-  margin: 0.36rem;
+.write p::first-letter {
   font-size: 30px;
+  font-weight: bolder;
 }
 .write, .markdown-source-view.write .cm-scroller {
   font-family: var(--font-monospace);
