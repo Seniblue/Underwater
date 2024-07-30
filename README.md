@@ -7,6 +7,7 @@
 
 # Colorschemes
 
+Popular color schemes :
 | Light | Dark |
 | :------------------: | :-----------------: |
 | Nord               | Nord              |
@@ -16,7 +17,16 @@
 | Rosé pine dawn     | Rosé pine         |
 |                    | Rosé pine moon    |
 
-![colorschemes|500](img/colorschemes.png)
+![colorschemes|200](img/colorschemes.png)
+
+_Underwater_ color schemes :
+| Light | Dark |
+| :------------------: | :-----------------: |
+| Octopus               | Deep              |
+|     | Blue Ocean   |
+|          | Seaweed         |
+
+
 
 # Cssclasses
 - **No-title** : removes inline title
