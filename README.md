@@ -42,7 +42,6 @@ _Underwater_ color schemes :
 
 - Scrollbar on hover (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
 - Active line highlight
-- Cursor vibrant color
 - Slight image animation on hover
 - Special window styling (best suited for Windows)
 - Rounded highlighting style + internal links special style
