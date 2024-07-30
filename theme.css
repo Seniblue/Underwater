@@ -1145,6 +1145,17 @@ background-size: 20px 20px;
   font-size: 120%;
 }
 
+/*inline-space - css class reducing spacing between inline title and file content*/
+.inline-space {
+  --inline-title-margin-bottom: 0px;
+}
+
+/*no-embed - makes embeds seameless*/
+.no-embed .markdown-embed {
+  --embed-padding: 0px;
+  border-inline-start: none;
+}
+
 /*====active line highlight======*/
 .cm-active.cm-line {
   background-color: rgb(var(--rose-rgb), 0.08);
@@ -1355,7 +1366,6 @@ body {
 .empty-state-action:nth-child(1) {
   margin-bottom: 10px;
 }
-
 .empty-state-action:nth-child(1)::before {
   content: "pq";
   background-color: currentColor;
@@ -1773,7 +1783,7 @@ ul.todoist-task-list {
 }
 
 /*=============================PDF STYLING=====================================*/
-/*headings*/
+/*headings
 .print h1:first-of-type {
   color: var(--pine);
   text-align: center !important;
@@ -1886,8 +1896,8 @@ ul.todoist-task-list {
 }
 @media print {
   @page {
-    margin: 0.5in;/*margin on each page*/
-    size: 8.5in 11in;/*page size*/
+    margin: 0.5in;/*margin on each page
+    size: 8.5in 11in;/*page size
   }
 }
 
