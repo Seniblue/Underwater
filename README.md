@@ -29,9 +29,11 @@ _Underwater_ color schemes :
 
 
 # Cssclasses
-- **No-title** : removes inline title
-- **Notebook** : adds notebook-like background image to current note
-- **Write** : monospace font + bigger first letter for each paragraph
+- **no-title** : removes inline title
+- **inline-space** : removes spacing between inline title and file content
+- **no-embed** : seamless embeds
+- **notebook** : adds notebook-like background to current note
+- **write** : monospace font + bigger first letter for each paragraph
 ![cssclasses](img/cssclasses.png)
 
 # Formatting
