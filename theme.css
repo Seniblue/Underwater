@@ -764,8 +764,11 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 .workspace {
   background-color: var(--background-primary-alt);
 }
+.workspace-tab-header-tab-list .clickable-icon, .workspace-tab-header-new-tab .clickable-icon {
+  margin-top: 5px;/*aligns new tab button with tabs*/
+}
 
-/*Panels styling !!!*/
+/*Panels titlebar styling*/
 .nav-buttons-container {
   background-color: var(--text-selection);
   border-radius: 8px;
@@ -1783,122 +1786,93 @@ ul.todoist-task-list {
 }
 
 /*=============================PDF STYLING=====================================*/
-/*headings
-.print h1:first-of-type {
-  color: var(--pine);
-  text-align: center !important;
-  font-size: 22px;
-  background-color: transparent;
-  display: block;
-  border: 0px;
-  padding-top: 0px;
-}
-.print h1 {
-  color: var(--love);
-  font-size: 18px;
-  font-family: 'Lexend';
-  font-weight: bold;
-  border-bottom: 1px solid;
-  page-break-after: avoid;
-  padding-top: 50px;
-}
-.print h2 {
-  color: var(--love);
-  font-size: 16px;
-  font-family: 'Lexend';
-  font-weight: bold;
-  margin-left: 5px;
-  border: none;
-  page-break-after: avoid;
-  padding-top: 30px;
-}
-.print h3 {
-  color: var(--gold);
-  font-size: 15px;
-  font-family: 'Lexend';
-  font-weight: bold;
-  margin-left: 10px;
-  border: none;
-  page-break-after: avoid;
-  padding-top: 25px;
-}
-.print h4 {
-  color: var(--pine);
-  font-size: 14px;
-  font-family: 'Lexend';
-  font-weight: bold;
-  margin-left: 15px;
-  page-break-after: avoid;
-  padding-top: 20px;
-}
-.print h5 {
-  color: var(--iris);
-  font-size: 14px;
-  font-family: 'Lexend';
-  text-transform: em;
-}
-.print h6 {
-  color: var(--text-normal);
-}
-.print p {
-  font-size: 14px;
-}
-.print {
-  --bold-weight: 700;
-}
-.print .embed {
-  page-break-after: avoid;
-}
-.print .callout {
-  border-width: 2px;
-  border-color: rgba(var(--callout-color));
-  border-radius: 0px;
-  background-color: transparent;
-  page-break-inside: avoid;
-  font-size: 14px;
-  padding: 12px 12px;
-  --callout-title: center;
-}
-.print .task-list-item, .print ol, .print li, .print ul, .print tr, .print td, .print th, .print thead {
-  font-size: 14px !important;
-  text-align: justify !important;
-}
-.print .callout-title {
-  font-size: 14px;
-  text-align: center;
-}
-.print hr {
-  border-bottom: 2px solid rgb(218, 218, 218) !important;
-}
-.print .file-embed {
-  display: none;
-}
-.print td, .print th, .print thead tr {
-  border-width: 1px 0px 0px 1px;
-  border-color: rgb(0, 0, 0);
-}
-.print table {
-  border: 0.5px solid black;
-  --table-border-radius: 0px;
-  --table-column-last-border-width: 0px;
-  --table-column-first-border-width: 0px;
-  --table-row-last-border-width: 0px;
-}
-.print mark {
-  border-radius: 2px;
-  padding: 0px 2px;
-  margin: 0 0px;
-}
-.cm-s-obsidian span.cm-highlight {
-  border-radius: 2px;
-  padding: 0px 2px;
-  margin: 0 0px;
-}
+/*-----------------------*/
 @media print {
-  @page {
-    margin: 0.5in;/*margin on each page
-    size: 8.5in 11in;/*page size
+  body {
+    --bold-weight: 750;
+    --font-default: "Inter" !important;
+    font-family: "Inter" !important;
+    text-align: justify;
+    font-size: 14px !important;
+    --font-text-size: 14px !important;
+  
+    --table-header-background: transparent;
+      --table-header-background-hover: var(--table-header-background);
+      --table-header-color: var(--text-normal);
+      --table-selection-border-radius: 7px;
+      --table-row-alt-background: transparent;
+      --table-row-alt-background-hover: var(--table-row-alt-background);
+      --table-border-radius: 0px !important;  
+  
   }
+  :is(.task-list-item, ol, li, ul, tr, td, th, thead, p, h1, h2, h3, h4, h5, h6, .callout, table) {
+    font-family: "Inter" !important;
+  }
+  /*headings*/
+  h1:first-of-type {
+    color: var(--foam);
+    text-align: center !important;
+    font-size: 22px;
+    background-color: transparent;
+    display: block;
+    border: 0px;
+    padding-top: 0px;
+  }
+  h1 {
+    font-size: 18px;
+    page-break-after: avoid;
+    padding-top: 50px;
+  }
+  h2 {
+    font-size: 16px;
+    margin-left: 15px;
+    border: none;
+    page-break-after: avoid;
+    padding-top: 30px;
+  }
+  h3 {
+    font-size: 15px;
+    margin-left: 30px;
+    border: none;
+    page-break-after: avoid;
+    padding-top: 25px;
+  }
+  h4 {
+    font-size: 14px;
+    margin-left: 50px;
+    page-break-after: avoid;
+    padding-top: 20px;
+  }
+  h5 {
+    font-size: 14px;
+  }
+  .markdown-embed {
+    page-break-after: avoid;
+  }
+  .callout {
+    border-width: 2px;
+    border-color: rgba(var(--callout-color));
+    border-radius: 0px;
+    background-color: transparent;
+    page-break-inside: avoid;
+    font-size: 14px;
+    padding: 12px 12px;
+    --callout-title: center;
+  }
+  
+  :is(td, th, thead tr) {
+    border-width: 1px 0px 0px 1px;
+    border-color: rgb(0, 0, 0);
+  }
+  mark, .cm-s-obsidian span.cm-highlight {
+    border-radius: 2px;
+    padding: 0px 2px;
+    margin: 0 0px;
+  }
+    @page {
+      margin: 0.5in;
+      size: 8.5in 11in;
+    }
 }
 
 /*========================Style settings options==========================*/
