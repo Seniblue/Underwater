@@ -80,7 +80,7 @@
 
 
 # Formatting
-- Font : [Lexend](https://www.lexend.com/)
+**🌅 Looks nice with [Lexend](https://www.lexend.com/) font**
 
 ![formatting](img/formatting.png)
 
