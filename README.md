@@ -6,7 +6,7 @@
 ![uw](img/thumbnail.png)
 
 > [!IMPORTANT]
-> 🐳 This theme works best with the **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin**, which allows you to choose a **color scheme**, to customize all of the **colors** or to choose alternate **stylings**.
+> 🐳 This theme works best with the **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin**, which allows you to choose a **color scheme**, to customize all of the **colors** and to choose alternate **stylings**.
 
 ---
 
