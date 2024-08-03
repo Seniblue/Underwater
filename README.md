@@ -14,7 +14,7 @@
 
 ![colorschemes](img/colorschemes.png)
 
-<table>
+<table align="center">
     <thead>
         <tr>
             <th colspan="2">Popular color schemes</th>
