@@ -6,11 +6,13 @@
 ![uw](img/thumbnail.png)
 
 > [!IMPORTANT]
-> 🐳 This theme works best with the **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin**, which allows you to choose a **colorscheme**, to customize all of the **colors** or to choose alternate stylings.
+> 🐳 This theme works best with the **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin**, which allows you to choose a **color scheme**, to customize all of the **colors** or to choose alternate **stylings**.
 
 ---
 
-# Colorschemes
+# Color schemes
+
+![colorschemes|200](img/colorschemes.png)
 
 <table>
     <thead>
@@ -66,38 +68,20 @@
 </table>
 
 
-Popular color schemes :
-| Light | Dark |
-| :------------------: | :-----------------: |
-| Nord               | Nord              |
-| Catpuccin Latte    | Catpuccin Mocha   |
-| Everforest         | Everforest         |
-| Biscuit            | Biscuit           |
-| Rosé pine dawn     | Rosé pine         |
-|                    | Rosé pine moon    |
-
-![colorschemes|200](img/colorschemes.png)
-
-_Underwater_ color schemes :
-| Light | Dark |
-| :------------------: | :-----------------: |
-| Octopus               | Deep              |
-|     | Blue Ocean   |
-|          | Seaweed         |
-
-
-
 # Cssclasses
+<img src="https://github.com/Seniblue/Underwater/blob/main/img/cssclasses.png" alt="cssclasses" align="right"/>
+
 - **no-title** : removes inline title
 - **inline-space** : removes spacing between inline title and file content
 - **no-embed** : seamless embeds
 - **notebook** : adds notebook-like background to current note
 - **write** : monospace font + bigger first letter for each paragraph
-![cssclasses](img/cssclasses.png)
+
 
 # Formatting
 - Font : [Lexend](https://www.lexend.com/)
-![formatting](img/formatting.png)
+
+![formatting|1000](img/formatting.png)
 
 - Scrollbar on hover (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
 - Active line highlight
@@ -109,7 +93,7 @@ _Underwater_ color schemes :
 - VAULT ICON (icon can be chosen via Style settings)
 
 # Plugins support
-![plugins](img/plugins.png)
+<img src="https://github.com/Seniblue/Underwater/blob/main/img/plugins.png" alt="plugins" align="right"/>
 - Make.MD
 - Kanban
 - Pomodoro timer
