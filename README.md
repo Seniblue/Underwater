@@ -12,7 +12,7 @@
 
 # Color schemes
 
-![colorschemes|200](img/colorschemes.png)
+![colorschemes](img/colorschemes.png)
 
 <table>
     <thead>
@@ -82,7 +82,7 @@
 # Formatting
 - Font : [Lexend](https://www.lexend.com/)
 
-![formatting|1000](img/formatting.png)
+![formatting](img/formatting.png)
 
 - Scrollbar on hover (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
 - Active line highlight
