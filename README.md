@@ -67,9 +67,10 @@
     </tbody>
 </table>
 
+<img src="https://github.com/Seniblue/Underwater/blob/main/img/cssclasses.png" alt="cssclasses" align="right"/>
+
 
 # Cssclasses
-<img src="https://github.com/Seniblue/Underwater/blob/main/img/cssclasses.png" alt="cssclasses" align="right"/>
 
 - **no-title** : removes inline title
 - **inline-space** : removes spacing between inline title and file content
@@ -112,6 +113,6 @@ Credit to these themes for certain elements and inspiration
 
 # Tasks
 - [x] Add more options for settings with style settings
-- [ ] Work on README
-- [ ] Add custom color schemes
+- [x] Work on README
+- [x] Add custom color schemes
 - [ ] Submit theme to obsidian theme list
