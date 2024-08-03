@@ -1,6 +1,6 @@
-![Version](https://img.shields.io/github/manifest-json/v/Seniblue/Underwater?style=for-the-badge&color=7368b6&labelColor=06334D)
-![Stars](https://img.shields.io/github/stars/Seniblue/Underwater?style=for-the-badge&color=ffe161&labelColor=06334D)
-![Watchers](https://img.shields.io/github/watchers/Seniblue/Underwater?style=for-the-badge&color=fe728f&labelColor=06334D)
+![Version](https://img.shields.io/github/manifest-json/v/Seniblue/Underwater?style=for-the-badge&color=9ccfd8&labelColor=26233a)
+![Stars](https://img.shields.io/github/stars/Seniblue/Underwater?style=for-the-badge&color=c4a7e7&labelColor=26233a)
+![Watchers](https://img.shields.io/github/watchers/Seniblue/Underwater?style=for-the-badge&color=ebbcba&labelColor=26233a)
 
 
 ![uw](img/thumbnail.png)
@@ -31,20 +31,20 @@
         <tr>
             <td>Nord</td>
             <td>Nord</td>
-            <td>Octopus 🐙</td>
-            <td>Deep 🦈๋࣭</td>
+            <td>Octopus</td>
+            <td>Deep๋࣭</td>
         </tr>
         <tr>
             <td>Catppuccin Latte</td>
             <td>Catppuccin Mocha</td>
             <td></td>
-            <td>Blue Ocean🐬</td>
+            <td>Blue Ocean</td>
         </tr>
         <tr>
             <td>Everforest</td>
             <td>Everforest</td>
             <td></td>
-            <td>Seaweed 🪸</td>
+            <td>Seaweed</td>
         </tr>
         <tr>
             <td>Biscuit</td>
