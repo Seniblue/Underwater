@@ -1,3 +1,8 @@
+![Version](https://img.shields.io/github/manifest-json/v/Seniblue/Underwater?style=for-the-badge&color=7368b6&labelColor=06334D)
+![Stars](https://img.shields.io/github/stars/Seniblue/Underwater?style=for-the-badge&color=ffe161&labelColor=06334D)
+![Watchers](https://img.shields.io/github/watchers/Seniblue/Underwater?style=for-the-badge&color=fe728f&labelColor=06334D)
+
+
 ![uw](img/thumbnail.png)
 
 > [!IMPORTANT]
