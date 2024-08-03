@@ -12,6 +12,60 @@
 
 # Colorschemes
 
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">Popular color schemes</th>
+            <th colspan="2">🌊 Underwater color schemes</th>
+        </tr>
+    </thead>
+    <tbody align="center">
+        <tr>
+            <td><b>Light</b></td>
+            <td><b>Dark</b></td>
+            <td><b>Light</b></td>
+            <td><b>Dark</b></td>
+        </tr>
+        <tr>
+            <td>Nord</td>
+            <td>Nord</td>
+            <td>Octopus 🐙</td>
+            <td>Deep 🦈๋࣭</td>
+        </tr>
+        <tr>
+            <td>Catppuccin Latte</td>
+            <td>Catppuccin Mocha</td>
+            <td></td>
+            <td>Blue Ocean🐬</td>
+        </tr>
+        <tr>
+            <td>Everforest</td>
+            <td>Everforest</td>
+            <td></td>
+            <td>Seaweed 🪸</td>
+        </tr>
+        <tr>
+            <td>Biscuit</td>
+            <td>Biscuit</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Rosé Pine Dawn</td>
+            <td>Rosé Pine</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Rosé Pine Moon</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+
 Popular color schemes :
 | Light | Dark |
 | :------------------: | :-----------------: |
