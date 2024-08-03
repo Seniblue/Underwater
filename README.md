@@ -95,6 +95,7 @@
 
 # Plugins support
 <img src="https://github.com/Seniblue/Underwater/blob/main/img/plugins.png" alt="plugins" align="right"/>
+
 - Make.MD
 - Kanban
 - Pomodoro timer
