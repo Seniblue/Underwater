@@ -93,8 +93,10 @@
 - FULL FOCUS MODE (can be toggled via a hotkey)
 - VAULT ICON (icon can be chosen via Style settings)
 
-# Plugins support
 <img src="https://github.com/Seniblue/Underwater/blob/main/img/plugins.png" alt="plugins" align="right"/>
+
+
+# Plugins support
 
 - Make.MD
 - Kanban
