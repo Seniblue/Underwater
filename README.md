@@ -84,6 +84,8 @@
 
 ![formatting](img/formatting.png)
 
+- Checkboxes (check screenshot)
+- Custom callouts : timeline, bookmark, media
 - Scrollbar on hover (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
 - Active line highlight
 - Slight image animation on hover
