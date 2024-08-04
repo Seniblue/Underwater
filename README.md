@@ -84,7 +84,7 @@
 
 ![formatting](img/formatting.png)
 
-- Checkboxes (check screenshot)
+- Checkboxes
 - Custom callouts : timeline, bookmark, media
 - Scrollbar on hover (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
 - Active line highlight
@@ -94,6 +94,37 @@
 - New tab custom image & styling
 - FULL FOCUS MODE (can be toggled via a hotkey)
 - VAULT ICON (icon can be chosen via Style settings)
+
+<details>
+    <summary>✅ Click to see <b>checkboxes</b></summary>
+    <p>
+        <table>
+    <tr>
+        <td><pre>
+- [ ] task 
+- [x] done
+- [-] canceled
+- [/] in progress
+- [i] info
+- [!] important
+- [l] location
+- [*] star
+- [H] heart
+- [b] bookmark
+- [<] scheduled
+- [e] energy
+- [T] timer
+- [I] idea
+- [s] sparkles
+- [w] wave</pre></td>
+        <td>![checkboxes](img/checkboxes.png)</td>
+    </tr>
+</table>
+
+</p>
+</details>
+
+
 
 <img src="https://github.com/Seniblue/Underwater/blob/main/img/plugins.png" alt="plugins" align="right"/>
 
