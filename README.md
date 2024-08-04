@@ -120,4 +120,4 @@ Credit to these themes for certain elements and inspiration
 - [x] Add more options for settings with style settings
 - [x] Work on README
 - [x] Add custom color schemes
-- [ ] Submit theme to obsidian theme list
+- [x] Submit theme
