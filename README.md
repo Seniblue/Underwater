@@ -117,7 +117,8 @@
 - [I] idea
 - [s] sparkles
 - [w] wave</pre></td>
-        <td>![checkboxes](img/checkboxes.png)</td>
+        <td><img src="https://github.com/Seniblue/Underwater/blob/main/img/checkboxes.png" alt="checkboxes"/>
+</td>
     </tr>
 </table>
 
