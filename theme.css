@@ -32,8 +32,8 @@
   /*--accent colors workspace----  */
   --background: var(--base);
   --text-muted: var(--muted);
-  --text-on-accent: var(--surface); /*???*/
-  --text-on-accent-inverted: var(--text); /*???*/
+  --text-on-accent: var(--surface);
+  --text-on-accent-inverted: var(--text);
   --text-success: var(--color-green);
   --text-warning: var(--color-orange);
   --text-error: var(--color-red);
@@ -1936,6 +1936,14 @@ ul.todoist-task-list {
 --metadata-display-reading: block;
 }
 
+/*checkboxes - Enable  click in Reading View */
+.checkbox-clickable input[data-task]:not(input[data-task=" "], .checkbox-clickable input[data-task="x"], .checkbox-clickable input[data-task="/"]):checked,
+.checkbox-clickable li[data-task]:not(li[data-task=" "], .checkbox-clickable li[data-task="x"], .checkbox-clickable li[data-task="/"])>input:checked,
+.checkbox-clickable li[data-task]:not(li[data-task=" "], .checkbox-clickable li[data-task="x"], .checkbox-clickable li[data-task="/"])>p>input:checked,
+.checkbox-clickable label.task-list-label:has(> input[data-task]:not(input[data-task=" "], .checkbox-clickable input[data-task="x"], .checkbox-clickable input[data-task="/"]):checked) {
+  pointer-events: all;
+}
+
 /* @settings
 
 name: Underwater theme 🐳
@@ -2238,6 +2246,12 @@ settings:
         title: Allow properties to be visible in reading mode as well
         type: class-toggle
         default: false
+   - 
+        id: checkbox-clickable
+        title: Enable checkbox click in Reading View
+        type: class-toggle
+        default: false
+
    -
         id: focus-mode
         title: Full focus mode
