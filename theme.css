@@ -28,7 +28,6 @@
   --color-purple-rgb: var(--iris-rgb);
   --color-pink-rgb: var(--love-rgb);
 
-
   /*--accent colors workspace----  */
   --background: var(--base);
   --text-muted: var(--muted);
@@ -53,10 +52,10 @@
   --italic-color: var(--foam);
 
   /*---titlebar---*/
-  --titlebar-background: var(--overlay);
-  --titlebar-background-focused: var(--titlebar-background);
+  --titlebar-background: transparent; /*var(--overlaty)*/
+  --titlebar-background-focused: transparent; /*var(--titlebar-background)*/
   --titlebar-border-width: 0px;
-
+  
   /*--icons----*/
   --icon-color: var(--text);
   --clickable-icon-radius: 8px;
@@ -72,7 +71,7 @@
   --checklist-done-decoration: line-through;
   --checklist-done-color: var(--text-faint);
 
-  /*--file explorer**/
+  /*--file explorer---*/
   --nav-item-color: var(--text);
   --nav-item-color-hover: var(--subtle);
   --nav-item-background-active: var(--foam);
@@ -133,7 +132,6 @@
   --link-color-hover: var(--link-color);
   --link-decoration: none;
   --link-decoration-hover: none;
-
   --link-unresolved-color: var(--subtle);
 
   /*lists*/
@@ -196,8 +194,8 @@
   --tab-radius: 9px;
   --tab-radius-active: 9px;
   --tab-curve: 0px;
-  --tab-container-background: none;
-  --tab-divider-color: none;
+  --tab-container-background: transparent;
+  --tab-divider-color: transparent;
   --tab-max-width: 200px;
 
   /*Tags*/
@@ -231,6 +229,7 @@
   --iris: rgb(var(--iris-rgb));
 
   --highlight-med: rgb(var(--highlight-med-rgb));
+  --surface: rgb(var(--surface-rgb));
 
 }
 
@@ -247,6 +246,7 @@
 
   --base: #faf4ed;
   --surface: #fffaf3;
+  --surface-rgb: 255, 250, 243;
   --overlay: #f2e9e1;
 
 
@@ -280,6 +280,7 @@
 
   --base: #E5E9F0;
   --surface: #ECEFF4;
+  --surface-rgb: 236, 239, 244;
   --overlay: #D8DEE9;
 
 
@@ -312,6 +313,7 @@
 
   --base: #eff1f5; /*base*/
   --surface: #e6e9ef; /*mantle*/
+  --surface-rgb: 230, 233, 239;
   --overlay: #dce0e8; /*crust*/
 
   --muted: #6c6f85; /*subtext0*/
@@ -342,6 +344,7 @@
 
   --base: #efebd4; /*bg_dim*/
   --surface: #fdf6e3; /*bg0*/
+  --surface-rgb: 253, 246, 227;
   --overlay: #eaedc8; /*bg_visual*/
 
   --muted: #939f91; /*gray1*/
@@ -372,6 +375,7 @@
 
   --base: #DBC6C2; /*Pale Dogwood*/
   --surface: #F4E6D2; /*Antique White*/
+  --surface-rgb: 244, 230, 210;
   --overlay: #e0c39e; /*custom color not part of the colorscheme*/
 
   --muted: #423939; /*Van Dyke*/
@@ -403,6 +407,7 @@
 
   --base: #F2EDF4; 
   --surface: #FBF6FE;
+  --surface-rgb: 251, 246, 254;
   --overlay: #DFD9E2;
 
   --muted: #798094;
@@ -434,6 +439,7 @@
 
   --base: #191724;
   --surface: #1f1d2e;
+  --surface-rgb: 31, 29, 46;
   --overlay: #26233a;
 
   --muted: #6e6a86;
@@ -464,6 +470,7 @@
 
   --base: #232136;
   --surface: #2a273f;
+  --surface-rgb: 42, 39, 63;
   --overlay: #393552;
 
   --muted: #6e6a86;
@@ -494,6 +501,7 @@
 
   --base: #3B4252;
   --surface: #2E3440;
+  --surface-rgb: 46, 52, 64;
   --overlay: #434C5E;
 
 
@@ -525,6 +533,7 @@
 
   --base: #11111b; /*crust*/
   --surface: #181825; /*mantle*/
+  --surface-rgb: 24, 24, 37;
   --overlay: #1e1e2e; /*base*/
 
   --muted: #a6adc8; /*subtext0*/
@@ -555,6 +564,7 @@
 
   --base: #1E2326; /*bg_dim*/
   --surface: #272E33; /*bg0*/
+  --surface-rgb: 39, 46, 51;
   --overlay: #384B55; /*bg_blue*/
 
   --muted: #859289; /*gray1*/
@@ -585,6 +595,7 @@
 
   --base: #181515; /*Night*/
   --surface: #221E1E; /*Raisin Black*/
+  --surface-rgb: 34, 30, 30;
   --overlay: #423939; /*Van Dyke*/
 
   --muted: #978787; /*Cinereous*/
@@ -614,7 +625,8 @@
   --iris-rgb: 146, 135, 194; /*Jellyfish!*/
   
   --base: #11121a;
-  --surface: #15171D; 
+  --surface: #15171D;
+  --surface-rgb: 21, 23, 29;
   --overlay: #22252F; 
 
   --muted: #57626B;
@@ -645,6 +657,7 @@
     
   --base: #081020;
   --surface: #08122B;
+  --surface-rgb: 8, 18, 43;
   --overlay: #06334D; 
 
   --muted: #7585B2;
@@ -674,6 +687,7 @@
     
   --base: #193233;
   --surface: #19393A;
+  --surface-rgb: 25, 57, 58;
   --overlay: #214B4C; 
 
   --muted: #7CAB9B;
@@ -721,7 +735,10 @@ body:not(is-mobile):not(.show-ribbon) .workspace {
 .side-dock-settings {
   padding: 0px 0px 10px 0px;
 }
-.workspace-tabs, .horizontal-main-container, .workspace {
+.workspace {
+  background-color: transparent; /*var(--background-primary-alt)*/
+}
+.workspace-tabs, .horizontal-main-container {
   background-color: var(--background-primary-alt);
   /*very important*/
 }
@@ -750,18 +767,10 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 .side-dock-settings {
   padding: 0px 0px 10px 0px;
 }
-.workspace-tabs {
-  background-color: var(--background-primary-alt);
-  /*very important*/
-}
 .workspace-ribbon,
 .workspace-ribbon.mod-left.is-collapsed {
   padding: 0px;
   background-color: transparent;
-}
-/*workspace color*/
-.workspace {
-  background-color: var(--background-primary-alt);
 }
 .workspace-tab-header-tab-list .clickable-icon, .workspace-tab-header-new-tab .clickable-icon {
   margin-top: 5px;/*aligns new tab button with tabs*/
@@ -780,13 +789,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 }
 
 /*Rounded Highlight style*/
-mark {
-  border-radius: 10px 5px;
-  padding: 0px 4px;
-  margin: 0 0px;
-}
-.cm-s-obsidian span.cm-highlight,
-.cm-s-obsidian span.cm-highlight {
+.cm-s-obsidian span.cm-highlight, mark {
   border-radius: 10px 5px !important;
   padding: 0px 4px !important;
   margin: 0 0px !important;
@@ -1688,12 +1691,12 @@ ul.todoist-task-list {
   --todoist-p1-border-hover: var(--color-purple);
   --todoist-p1-background: rgba(var(--color-pink-rgb), 0.1);
 }
-.todoist-p2 input {
+.todoist-p2 input  {
   --todoist-p2-border: var(--color-orange);
   --todoist-p2-border-hover: var(--color-red);
   --todoist-p2-background: rgba(var(--color-orange-rgb), 0.1);
 }
-.todoist-p3 input {
+.todoist-p3 input  {
   --todoist-p3-border: var(--color-green);
   --todoist-p3-border-hover: var(--color-blue);
   --todoist-p3-background: rgba(var(--color-green-rgb), 0.1);
@@ -1943,6 +1946,34 @@ ul.todoist-task-list {
 .checkbox-clickable label.task-list-label:has(> input[data-task]:not(input[data-task=" "], .checkbox-clickable input[data-task="x"], .checkbox-clickable input[data-task="/"]):checked) {
   pointer-events: all;
 }
+
+/*Background image*/
+.workspace-bg .app-container::before {
+  background-image: var(--bg-url);
+  opacity: var(--bg-opacity, 0.8);
+  filter: blur(var(--bg-blur, 1px));
+
+  background-color: var(--overlay);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1; 
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.workspace-bg .app-container {
+    &.workspace, .workspace-tabs, .workspace-split, .horizontal-main-container {
+    background-color: transparent;
+  }
+}
+.workspace-bg {
+  --background-primary: rgba(var(--surface-rgb),var(--layout-opacity, 0.8));
+}
+
 
 /* @settings
 
@@ -2254,11 +2285,54 @@ settings:
 
    -
         id: focus-mode
-        title: Full focus mode
+        title: 🎯 Full focus mode
         description: Removes tab bar, status bar, scrollbar, file header and properties heading. You can toggle it with a hotkey.
         type: class-toggle
         default: false
         addCommand: true        
+
+   - 
+        id: my-info-text
+        title: 🖼️ Background image
+        type: heading
+        collapsed: true
+        level: 1
+   - 
+        id: workspace-bg
+        title: Enable background image
+        type: class-toggle
+        default: false
+   - 
+        id: bg-url
+        title: Background image url
+        type: variable-text
+        default: url("")        
+   - 
+        id: bg-opacity
+        title: Background opacity
+        type: variable-number-slider
+        default: 0.9
+        min: 0
+        max: 1
+        step: 0.1        
+   - 
+        id: bg-blur
+        title: Background blur
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 10
+        step: 1
+        format: px          
+   - 
+        id: layout-opacity
+        title: Layout opacity
+        type: variable-number-slider
+        default: 0.8
+        min: 0
+        max: 1
+        step: 0.1
+        
    - 
         id: plugins
         title: 🧩 Plugins styling
@@ -2278,4 +2352,5 @@ settings:
       -
          label: Todoist-like board
          value: kanban-todoist
+       
 */
