@@ -1,6 +1,6 @@
 ![Version](https://img.shields.io/github/manifest-json/v/Seniblue/Underwater?style=for-the-badge&color=9ccfd8&labelColor=26233a)
 ![Stars](https://img.shields.io/github/stars/Seniblue/Underwater?style=for-the-badge&color=c4a7e7&labelColor=26233a)
-![Watchers](https://img.shields.io/github/watchers/Seniblue/Underwater?style=for-the-badge&color=ebbcba&labelColor=26233a)
+![Issues](https://img.shields.io/github/issues/Seniblue/Underwater?style=for-the-badge&color=ebbcba&labelColor=26233a)
 
 
 ![uw](img/thumbnail.png)
@@ -94,6 +94,7 @@
 - New tab custom image & styling
 - FULL FOCUS MODE (can be toggled via a hotkey)
 - VAULT ICON (icon can be chosen via Style settings)
+- Background image
 
 <details>
     <summary>✅ Click to see <b>checkboxes</b></summary>
@@ -143,7 +144,7 @@
 - Wypst
 
 # Credit
-Credit to these themes for certain elements and inspiration
+Credit to these themes for certain elements and inspiration !
 - [Border](https://github.com/Akifyss/obsidian-border)
 - [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin)
 - [Minimal](https://github.com/kepano/obsidian-minimal)
