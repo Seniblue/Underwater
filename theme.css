@@ -1,5 +1,5 @@
 .app-container {
-  font-family: "Lexend";
+  font-family: "Lexend", "Inter";
 }
 
 .theme-light, .theme-dark {
@@ -110,7 +110,7 @@
   --h3-color: var(--gold);
   --h4-color: var(--pine);
   --h5-color: var(--iris);
-  --h6-color: var(--color-1);
+  --h6-color: var(--text-normal);
   --h1-size: 1.45em;
   --h2-size: 1.3em;
   --h3-size: 1.15em;
@@ -793,6 +793,8 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   border-radius: 10px 5px !important;
   padding: 0px 4px !important;
   margin: 0 0px !important;
+  background-color: var(--text-highlight-bg);
+  color: var(--text-normal);
 }
 
 /*inline title center*/
@@ -931,12 +933,14 @@ table,
 }
 /*underline & strikethrough styling*/
 u {
+  --underline-color: var(--iris);
   text-decoration-style: dotted;
-  text-decoration-color: var(--iris);
+  text-decoration-color: var(--underline-color);
   text-underline-offset: 5px;
 }
 del, .cm-strikethrough {
-  text-decoration-color: var(--gold);
+  --strikethrough-color: var(--gold);
+  text-decoration-color: var(--strikethrough-color);
   text-decoration-thickness: 2px;
 }
 
@@ -1686,17 +1690,17 @@ ul.todoist-task-list {
   padding-inline-start: 0px !important;
 }
 /*match checkboxes colors with theme*/
-.todoist-p1 input {
+body:not(.no-todoist) .todoist-p1 input {
   --todoist-p1-border: var(--color-pink);
   --todoist-p1-border-hover: var(--color-purple);
   --todoist-p1-background: rgba(var(--color-pink-rgb), 0.1);
 }
-.todoist-p2 input  {
+body:not(.no-todoist) .todoist-p2 input  {
   --todoist-p2-border: var(--color-orange);
   --todoist-p2-border-hover: var(--color-red);
   --todoist-p2-background: rgba(var(--color-orange-rgb), 0.1);
 }
-.todoist-p3 input  {
+body:not(.no-todoist) .todoist-p3 input  {
   --todoist-p3-border: var(--color-green);
   --todoist-p3-border-hover: var(--color-blue);
   --todoist-p3-background: rgba(var(--color-green-rgb), 0.1);
@@ -1951,9 +1955,9 @@ ul.todoist-task-list {
 .workspace-bg .app-container::before {
   background-image: var(--bg-url);
   opacity: var(--bg-opacity, 0.8);
-  filter: blur(var(--bg-blur, 1px));
+  filter: blur(var(--bg-blur, 4px));
 
-  background-color: var(--overlay);
+  background-color: var(--background-primary-alt);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1968,363 +1972,484 @@ ul.todoist-task-list {
 .workspace-bg .app-container {
     &.workspace, .workspace-tabs, .workspace-split, .horizontal-main-container {
     background-color: transparent;
-  }
-}
-.workspace-bg {
-  --background-primary: rgba(var(--surface-rgb),var(--layout-opacity, 0.8));
-}
+}}
 
+.workspace-bg {
+  &.mod-left-split, .workspace-tab-container {
+  --background-primary: transparent;
+}}
+
+.workspace-bg .workspace-tabs .workspace-leaf, .workspace-bg .workspace-sidedock-vault-profile {
+  --background-primary: rgba(var(--surface-rgb),var(--layout-opacity, 0.8));
+
+  background-color: var(--background-primary) !important;
+}
 
 /* @settings
 
-name: Underwater theme 🐳
+name: 🐳 Underwater theme
 id: underwater-theme
 collapsed: false
 settings:
-   - 
+    - 
         id: my-info-text
         title: ✨ Welcome to Underwater theme !
-        description: "**↳** Check the Github page : [Underwater on Github](https://github.com/Seniblue/Underwater) </br> **💡** The theme looks nice with [Lexend](https://www.lexend.com/) font !"
+        description: "**↳** ==Star the theme on Github : [Underwater on Github](https://github.com/Seniblue/Underwater) ! 💫==</br> **💡** The theme looks nice with [Lexend](https://www.lexend.com/) font !"
         type: info-text
         markdown: true
-   - 
-      id: underwater-colors-dark
-      title: Dark theme
-      type: class-select
-      allowEmpty: false
-      default: rose-pine
-      options:
-      - 
-         label: Rosé pine
-         value: rose-pine
-      -
-         label: Rosé pine moon
-         value: rose-pine-moon
-      -
-         label: Nord
-         value: nord-dark
-      -   
-         label: Catpuccin mocha
-         value: catpuccin-mocha
-      -   
-         label: Everforest
-         value: everforest-dark
-      - 
-         label: Biscuit
-         value: biscuit-dark
-      - 
-         label: 🌊 Underwater Deep
-         value: uw-deep
-      - 
-         label: 🌊 Underwater Blue ocean
-         value: uw-ocean         
-      - 
-         label: 🌊 Underwater Seaweed
-         value: uw-seaweed              
-   - 
-      id: underwater-colors-light
-      title: Light Theme
-      type: class-select
-      allowEmpty: false
-      default: rose-pine-dawn
-      options:
-      - 
-         label: Rosé pine dawn
-         value: rose-pine-dawn
-      - 
-         label: Nord
-         value: nord-bright
-      - 
-         label: Catpuccin latte
-         value: catpuccin-latte
-      - 
-         label: Everforest
-         value: everforest-light
-      - 
-         label: Biscuit
-         value: biscuit-light           
-      - 
-         label: 🌊 Underwater Octopus
-         value: uw-octopus                       
-   - 
+    -
+        id: underwater-colors-dark
+        title: Dark theme
+        type: class-select
+        allowEmpty: false
+        default: rose-pine
+        options:
+            - 
+               label: Rosé pine
+               value: rose-pine
+            -
+               label: Rosé pine moon
+               value: rose-pine-moon
+            -
+               label: Nord
+               value: nord-dark
+            -
+               label: Catpuccin mocha
+               value: catpuccin-mocha
+            -
+               label: Everforest
+               value: everforest-dark
+            -
+               label: Biscuit
+               value: biscuit-dark
+            -
+               label: 🌊 Underwater Deep
+               value: uw-deep
+            -
+               label: 🌊 Underwater Blue ocean
+               value: uw-ocean
+            -
+               label: 🌊 Underwater Seaweed
+               value: uw-seaweed
+
+    -
+        id: underwater-colors-light
+        title: Light Theme
+        type: class-select
+        allowEmpty: false
+        default: rose-pine-dawn
+        options:
+            -
+               label: Rosé pine dawn
+               value: rose-pine-dawn
+            -
+               label: Nord
+               value: nord-bright
+            -
+               label: Catpuccin latte
+               value: catpuccin-latte
+            -
+               label: Everforest
+               value: everforest-light
+            -
+               label: Biscuit
+               value: biscuit-light
+            -
+               label: 🌊 Underwater Octopus
+               value: uw-octopus
+
+# 🎨 Theme colors
+    -
         id: my-info-text
-        title: 🎨 Colors
+        title: 🎨 Theme colors
         type: heading
         collapsed: true
         level: 1
-   - 
-      id: foam-rgb
-      title: Foam
-      type: variable-themed-color
-      opacity: false
-      format: 'rgb-values'      
-      default-light: '#56949f'
-      default-dark: '#9ccfd8'
-   - 
-      id: pine-rgb
-      title: Pine
-      type: variable-themed-color
-      opacity: false
-      format: 'rgb-values'      
-      default-light: '#286983'
-      default-dark: '#31748f'
-   - 
-      id: iris-rgb
-      title: Iris
-      type: variable-themed-color
-      opacity: false
-      format: 'rgb-values'      
-      default-light: '#907aa9'
-      default-dark: '#c4a7e7'      
-   - 
-      id: gold-rgb
-      title: Gold
-      type: variable-themed-color
-      opacity: false
-      format: 'rgb-values'      
-      default-light: '#ea9d34'
-      default-dark: '#f6c177'
-   - 
-      id: rose-rgb
-      title: Rose
-      type: variable-themed-color
-      opacity: false
-      format: 'rgb-values'      
-      default-light: '#d7827e'
-      default-dark: '#ebbcba'      
-   - 
-      id: love-rgb
-      title: Love
-      type: variable-themed-color
-      opacity: false
-      format: 'rgb-values'      
-      default-light: '#b4637a'
-      default-dark: '#eb6f92'   
-   - 
-      id: base
-      title: Base
-      type: variable-themed-color
-      opacity: false
-      format: hex      
-      default-light: '#faf4ed'
-      default-dark: '#191724'       
-   - 
-      id: surface
-      title: Surface
-      type: variable-themed-color
-      opacity: false
-      format: hex      
-      default-light: '#fffaf3'
-      default-dark: '#1f1d2e' 
-   - 
-      id: overlay
-      title: Overlay
-      type: variable-themed-color
-      opacity: false
-      format: hex      
-      default-light: '#f2e9e1'
-      default-dark: '#26233a' 
-   - 
-      id: muted
-      title: Muted
-      type: variable-themed-color
-      opacity: false
-      format: hex      
-      default-light: '#9893a5'
-      default-dark: '#6e6a86' 
-   - 
-      id: subtle
-      title: Subtle
-      type: variable-themed-color
-      opacity: false
-      format: hex      
-      default-light: '#797593'
-      default-dark: '#908caa' 
-   - 
-      id: text
-      title: Text
-      type: variable-themed-color
-      opacity: false
-      format: hex      
-      default-light: '#575279'
-      default-dark: '#e0def4' 
-   - 
-      id: highlight-low
-      title: Highlight low
-      type: variable-themed-color
-      opacity: false
-      format: hex      
-      default-light: '#f4ede8'
-      default-dark: '#21202e' 
-   - 
-      id: highlight-med-rgb
-      title: Highlight med
-      type: variable-themed-color
-      opacity: false
-      format: 'rgb-values'      
-      default-light: '#dfdad9'
-      default-dark: '#403d52' 
-   - 
-      id: highlight-high
-      title: Highlight high
-      type: variable-themed-color
-      opacity: false
-      format: hex      
-      default-light: '#cecacd'
-      default-dark: '#524f67' 
-   - 
+    -
+        id: foam-rgb
+        title: Foam
+        type: variable-themed-color
+        opacity: false
+        format: 'rgb-values'
+        default-light: '#56949f'
+        default-dark: '#9ccfd8'
+    -
+        id: pine-rgb
+        title: Pine
+        type: variable-themed-color
+        opacity: false
+        format: 'rgb-values'
+        default-light: '#286983'
+        default-dark: '#31748f'
+    -
+        id: iris-rgb
+        title: Iris
+        type: variable-themed-color
+        opacity: false
+        format: 'rgb-values'
+        default-light: '#907aa9'
+        default-dark: '#c4a7e7'
+    -
+        id: gold-rgb
+        title: Gold
+        type: variable-themed-color
+        opacity: false
+        format: 'rgb-values'
+        default-light: '#ea9d34'
+        default-dark: '#f6c177'
+    - 
+        id: rose-rgb
+        title: Rose
+        type: variable-themed-color
+        opacity: false
+        format: 'rgb-values'
+        default-light: '#d7827e'
+        default-dark: '#ebbcba'
+    - 
+        id: love-rgb
+        title: Love
+        type: variable-themed-color
+        opacity: false
+        format: 'rgb-values'
+        default-light: '#b4637a'
+        default-dark: '#eb6f92'
+    - 
+        id: base
+        title: Base
+        type: variable-themed-color
+        opacity: false
+        format: hex
+        default-light: '#faf4ed'
+        default-dark: '#191724'
+    - 
+        id: surface
+        title: Surface
+        type: variable-themed-color
+        opacity: false
+        format: hex
+        default-light: '#fffaf3'
+        default-dark: '#1f1d2e'
+    - 
+        id: overlay
+        title: Overlay
+        type: variable-themed-color
+        opacity: false
+        format: hex
+        default-light: '#f2e9e1'
+        default-dark: '#26233a' 
+    -
+        id: muted
+        title: Muted
+        type: variable-themed-color
+        opacity: false
+        format: hex
+        default-light: '#9893a5'
+        default-dark: '#6e6a86'
+    -
+        id: subtle
+        title: Subtle
+        type: variable-themed-color
+        opacity: false
+        format: hex
+        default-light: '#797593'
+        default-dark: '#908caa'
+    - 
+        id: text
+        title: Text
+        type: variable-themed-color
+        opacity: false
+        format: hex
+        default-light: '#575279'
+        default-dark: '#e0def4'
+    -
+        id: highlight-low
+        title: Highlight low
+        type: variable-themed-color
+        opacity: false
+        format: hex
+        default-light: '#f4ede8'
+        default-dark: '#21202e'
+    -
+        id: highlight-med-rgb
+        title: Highlight med
+        type: variable-themed-color
+        opacity: false
+        format: 'rgb-values'
+        default-light: '#dfdad9'
+        default-dark: '#403d52'
+    -
+        id: highlight-high
+        title: Highlight high
+        type: variable-themed-color
+        opacity: false
+        format: hex
+        default-light: '#cecacd'
+        default-dark: '#524f67'
+
+# ✏️ Editor colors
+    -
         id: my-info-text
-        title: 🔍 Options
+        title: ✏️ Editor colors
         type: heading
         collapsed: true
         level: 1
-   - 
-      id: callout
-      title: Callout style
-      type: class-select
-      allowEmpty: false
-      default: normal
-      options:
-      - 
-         label: Solid
-         value: callout-solid
-      -
-         label: Classic
-         value: normal
-      -
-         label: Outlined
-         value: callout-outlined
-      -
-         label: Math
-         value: callout-math         
-   - 
-      id: table
-      title: Table style
-      type: class-select
-      allowEmpty: false
-      default: normal
-      options:
-      - 
-         label: Normal
-         value: normal
-      -
-         label: Minimalistic
-         value: table-minimal
-   - 
-      id: checkbox
-      title: Checkboxes style
-      type: class-select
-      allowEmpty: false
-      default: normal
-      options:
-      - 
-         label: Rounded
-         value: normal
-      -
-         label: Circle
-         value: checkbox-circle
-   - 
+    -
+        id: my-info-text
+        title:
+        type: info-text
+        description: 💡 You can tweak these values using theme variables (that you can define in the previous "Theme Colors" section) like **`var(--pine)`** or color values like **`#8ec7e8`** (hex) or **`rgb(142, 199, 232)`** (rgb).
+        markdown: true
+    -
+        id: bold-color
+        title: Bold
+        type: variable-text
+        default: var(--love)
+    -
+        id: italic-color
+        title: Italic
+        type: variable-text
+        default: var(--foam)
+    -
+        id: list-marker-color
+        title: List bullets
+        type: variable-text
+        default: var(--bold-color)
+    -
+        id: text-highlight-bg
+        title: Highlight
+        type: variable-text
+        default: rgba(var(--gold-rgb), 0.2)
+    -
+        id: underline-color
+        title: Underline
+        type: variable-text
+        default: var(--iris)
+    -
+        id: strikethrough-color
+        title: Strikethrough
+        type: variable-text
+        default: var(--iris)
+    -
+        id: hr-color
+        title: Hr (divider)
+        type: variable-text
+        default: var(--highlight-med)
+    -
+        id: table-header-background
+        title: Table header
+        type: variable-text
+        default: var(--iris)
+    -
+        id: background-primary-alt
+        title: Workspace background color
+        type: variable-text
+        default: var(--overlay)
+
+# Headers color
+    -
+        id: my-info-text
+        title: HEADINGS color
+        type: heading
+        collapsed: true
+        level: 2
+    -
+        id: inline-title-color
+        title: Inline title
+        type: variable-text
+        default: var(--foam)
+    -
+        id: h1-color
+        title: H1
+        type: variable-text
+        default: var(--love)
+    -
+        id: h2-color
+        title: H2
+        type: variable-text
+        default: var(--rose)
+    -
+        id: h3-color
+        title: H3
+        type: variable-text
+        default: var(--gold)
+    -
+        id: h4-color
+        title: H4
+        type: variable-text
+        default: var(--pine)
+    -
+        id: h5-color
+        title: H5
+        type: variable-text
+        default: var(--iris)
+    -
+        id: h6-color
+        title: H6
+        type: variable-text
+        default: var(--text-normal)
+
+# 🔧 Settings
+    -
+        id: my-info-text
+        title: 🔧 Settings
+        type: heading
+        collapsed: true
+        level: 1
+    -
+        id: callout
+        title: Callout style
+        type: class-select
+        allowEmpty: false
+        default: normal
+        options:
+            -
+               label: Solid
+               value: callout-solid
+            -
+               label: Classic
+               value: normal
+            -
+               label: Outlined
+               value: callout-outlined
+            -
+               label: Math
+               value: callout-math
+    -
+        id: table
+        title: Table style
+        type: class-select
+        allowEmpty: false
+        default: normal
+        options:
+            -
+               label: Normal
+               value: normal
+            -
+               label: Minimalistic
+               value: table-minimal
+    -
+        id: checkbox
+        title: Checkboxes style
+        type: class-select
+        allowEmpty: false
+        default: normal
+        options:
+            -
+               label: Rounded
+               value: normal
+            -
+               label: Circle
+               value: checkbox-circle
+    -
         id: tab-img
         title: New tab image
         description: It is better when the image is small
         type: variable-text
         default: url("")
-   - 
+    -
         id: vault-icon
         title: Vault icon
         type: class-select
         allowEmpty: false
         default: Moon
         options:
-        - 
-         label: Moon
-         value: Moon
-        -
-         label: School
-         value: vault-school
-        -
-         label: Science
-         value: vault-science
-        -
-         label: Brain
-         value: vault-brain
-        -
-         label: Book
-         value: vault-book
-        -
-         label: Plant
-         value: vault-plant
-        -
-         label: Rocket
-         value: vault-rocket                                    
-   - 
+            -
+               label: Moon
+               value: Moon
+            -
+               label: School
+               value: vault-school
+            -
+               label: Science
+               value: vault-science
+            -
+               label: Brain
+               value: vault-brain
+            -
+               label: Book
+               value: vault-book
+            -
+               label: Plant
+               value: vault-plant
+            -
+               label: Rocket
+               value: vault-rocket
+
+# 🔍 Options      
+    -
+        id: my-info-text
+        title: 🔍 Options
+        type: heading
+        collapsed: true
+        level: 1
+    -
         id: no-h5
         title: Disable h5 header centering
         type: class-toggle
         default: false
-   - 
+    -
         id: no-animation
         title: Disable slight image animation on hover
         type: class-toggle
         default: false
-   - 
+    -
         id: no-links
         title: Disable internal links background
         type: class-toggle
         default: false
-   - 
+    -
         id: visible-properties
         title: Allow properties to be visible in reading mode as well
         type: class-toggle
         default: false
-   - 
+    -
         id: checkbox-clickable
         title: Enable checkbox click in Reading View
         type: class-toggle
         default: false
-
-   -
+    -
         id: focus-mode
         title: 🎯 Full focus mode
         description: Removes tab bar, status bar, scrollbar, file header and properties heading. You can toggle it with a hotkey.
         type: class-toggle
         default: false
-        addCommand: true        
+        addCommand: true
 
-   - 
+# 🖼️ Background image
+    - 
         id: my-info-text
         title: 🖼️ Background image
         type: heading
         collapsed: true
         level: 1
-   - 
+    - 
         id: workspace-bg
         title: Enable background image
         type: class-toggle
         default: false
-   - 
+    - 
         id: bg-url
         title: Background image url
         type: variable-text
-        default: url("")        
-   - 
+        default: url("")
+    - 
         id: bg-opacity
         title: Background opacity
         type: variable-number-slider
         default: 0.9
         min: 0
         max: 1
-        step: 0.1        
-   - 
+        step: 0.1
+    - 
         id: bg-blur
         title: Background blur
         type: variable-number-slider
-        default: 1
+        default: 4
         min: 0
         max: 10
         step: 1
-        format: px          
-   - 
+        format: px
+    - 
         id: layout-opacity
         title: Layout opacity
         type: variable-number-slider
@@ -2332,25 +2457,30 @@ settings:
         min: 0
         max: 1
         step: 0.1
-        
-   - 
+
+# 🧩 Plugins styling
+    - 
         id: plugins
         title: 🧩 Plugins styling
         type: heading
         collapsed: true
         level: 1
-   - 
-      id: kanban
-      title: Kanban board style
-      type: class-select
-      allowEmpty: false
-      default: normal
-      options:
-      - 
-         label: Colorful
-         value: normal
-      -
-         label: Todoist-like board
-         value: kanban-todoist
-       
+    - 
+        id: kanban
+        title: Kanban board style
+        type: class-select
+        allowEmpty: false
+        default: normal
+        options:
+            - 
+               label: Colorful
+               value: normal
+            -
+               label: Todoist-like board
+               value: kanban-todoist
+    -
+        id: no-todoist
+        title: Todoist
+        type: class-toggle
+        default: false
 */
