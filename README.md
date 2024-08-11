@@ -154,3 +154,4 @@ Credit to these themes for certain elements and inspiration !
 - [x] Work on README
 - [x] Add custom color schemes
 - [x] Submit theme
+- [ ] 📱 Mobile support
