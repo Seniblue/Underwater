@@ -864,7 +864,7 @@ body:not(.is-phone) div:has(>input.prompt-input) {
 .community-item {
   background-color: var(--text-selection);
 }
-.vertical-tab-header {
+.vertical-tab-header, .modal-sidebar {
   background-color: var(--base);
 }
 .community-item .suggestion-highlight {
@@ -953,36 +953,42 @@ del, .cm-strikethrough {
 }
 
 /*latex color*/
-.theme-light mjx-container[jax="CHTML"][display="true"], .theme-light .MJX-TEX, .theme-light mjx-container[jax="CHTML"] {
-  color: var(--pine);
+.theme-light {
+  --latex-color: var(--pine);
 }
-.theme-dark mjx-container[jax="CHTML"][display="true"], .theme-light .MJX-TEX, .theme-dark mjx-container[jax="CHTML"] {
-  color: var(--gold);
+.theme-dark {
+  --latex-color: var(--gold);
+}
+mjx-container[jax="CHTML"][display="true"], .MJX-TEX, mjx-container[jax="CHTML"] {
+  color: var(--latex-color);
 }
 th .MJX-TEX { /*no color for table headers*/
   color: var(--table-header-color) !important;
 }
 
 /*LINKS STYLING !*/
-/*links fix*/
 a {
   color: var(--external-link-color);
 }
-.markdown-source-view.mod-cm6 .cm-hmd-internal-link,
-.markdown-rendered .internal-link {
+body:not(.no-links) .markdown-source-view.mod-cm6 .cm-hmd-internal-link,
+body:not(.no-links) .markdown-rendered .internal-link {
   background-color: var(--overlay);
   color: var(--link-color);
   border-radius: 7px;
   padding: 0px 5px;
   border: 1px solid var(--highlight-med);
 }
-.markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover,
-.markdown-rendered .internal-link:hover {
+body:not(.no-links) .markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover,
+body:not(.no-links) .markdown-rendered .internal-link:hover {
   background-color: var(--highlight-med);
   color: var(--link-color-hover);
   border-radius: 7px;
   padding: 0px 5px;
   border: 1px solid var(--highlight-med);
+}
+.no-links .markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover,
+.no-links .markdown-rendered .internal-link:hover {
+  --link-color-hover: var(--love);
 }
 
 /*Embeds : Remove embed icon*/
@@ -1096,9 +1102,8 @@ progress::-webkit-progress-bar {
   width: 200px;
 }
 
-/*-----center h5--------------------*/
-.HyperMD-header.HyperMD-header-5,
-h5 {
+/*-----center h5-------*/
+body:not(.no-h5) .HyperMD-header.HyperMD-header-5, body:not(.no-h5) h5 {
   text-align: center !important;
 }
 .HyperMD-header.HyperMD-header-1,
@@ -1116,10 +1121,10 @@ h1 {
 }
 
 /*hover image animation !*/
-img {
+body:not(.no-animation) img {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-img:hover {
+body:not(.no-animation) img:hover {
   transform: scale(1.04);
 }
 
@@ -1196,13 +1201,12 @@ FROM https://forum.obsidian.md/t/trying-to-color-the-outline-headers-levels/7945
   }
 }
 
-
 /*Checkboxes*/
-/* Disable click in Reading View */
-input[data-task]:not(input[data-task=" "], input[data-task="x"], input[data-task="/"]):checked,
-li[data-task]:not(li[data-task=" "], li[data-task="x"], li[data-task="/"])>input:checked,
+/* Disable click */
+body:not(.checkbox-clickable) input[data-task]:not(input[data-task=" "], body:not(.checkbox-clickable) input[data-task="x"], body:not(.checkbox-clickable) input[data-task="/"]):checked,
+body:not(.checkbox-clickable) li[data-task]:not(li[data-task=" "], body:not(.checkbox-clickable) li[data-task="x"], body:not(.checkbox-clickable) li[data-task="/"])>input:checked,
 li[data-task]:not(li[data-task=" "], li[data-task="x"], li[data-task="/"])>p>input:checked,
-label.task-list-label:has(> input[data-task]:not(input[data-task=" "], input[data-task="x"], input[data-task="/"]):checked) {
+body:not(.checkbox-clickable) label.task-list-label:has(> input[data-task]:not(input[data-task=" "], body:not(.checkbox-clickable) input[data-task="x"], body:not(.checkbox-clickable) input[data-task="/"]):checked) {
   pointer-events: none;
 }
 /*little animation */
@@ -1551,7 +1555,7 @@ button.kanban-plugin__new-item-button {
 }
 
 /*CALENDAR*/
-#calendar-container {
+body:not(.no-calendar) #calendar-container {
   --color-background-weeknum: transparent;
   --color-background-weekend: var(--highlight-low);
 }
@@ -1710,14 +1714,14 @@ body:not(.no-todoist) .todoist-p3 input  {
   font-size: var(--font-smallest);
   color: var(--text-muted)
 }
-.task-metadata-item svg.svg-icon {
+body:not(.no-todoist) .task-metadata-item svg.svg-icon {
   height: 15px;
 }
 /*query buttons styling*/
-.edit-block-button .todoist-add-button, .markdown-reading-view .todoist-add-button, .is-live-preview .todoist-add-button {
+body:not(.no-todoist) .edit-block-button .todoist-add-button, .markdown-reading-view .todoist-add-button, .is-live-preview .todoist-add-button {
   display: none !important;
 }
-.edit-block-button.todoist-refresh-button, .markdown-reading-view .todoist-refresh-button, .is-live-preview .todoist-refresh-button {
+body:not(.no-todoist) .edit-block-button.todoist-refresh-button, .markdown-reading-view .todoist-refresh-button, .is-live-preview .todoist-refresh-button {
   color: var(--color-yellow) !important;
   cursor: pointer;
   border-radius: 30px !important;
@@ -1743,11 +1747,8 @@ body:not(.no-todoist) .todoist-p3 input  {
 }
 
 /*Typst color (Wypst plugin)*/
-.theme-light .katex-display, .theme-light .katex {
-  color: var(--pine);
-}
-.theme-dark .katex-display, .theme-dark .katex {
-  color: var(--gold);
+.katex-display, .katex {
+  color: var(--latex-color);
 }
 
 /*PopKit plugin*/
@@ -1906,49 +1907,9 @@ body:not(.no-todoist) .todoist-p3 input  {
   --checkbox-radius: 100px;
 }
 
-/*Remove h5 centered*/
-.no-h5 .HyperMD-header.HyperMD-header-5,
-.no-h5 h5 {
-  text-align: left !important;
-}
-
-/*Disable image animation on hover*/
-.no-animation img {
-  transition: none;
-}
-.no-animation img:hover {
-  transform: none;
-}
-
-/*remove internal links styling*/
-.no-links .markdown-source-view.mod-cm6 .cm-hmd-internal-link,
-.no-links .markdown-rendered .internal-link {
-  background-color: transparent;
-  border-radius: 0px;
-  padding: 0px;
-  border: none;
-}
-.no-links .markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover,
-.no-links .markdown-rendered .internal-link:hover {
-  background-color: transparent;
-  border-radius: 0px;
-  padding: 0px;
-  border: none;
-  color: var(--link-color-hover);
-  --link-color-hover: var(--love);
-}
-
 /*Allow properties to be visible in reading mode*/
 .visible-properties {
 --metadata-display-reading: block;
-}
-
-/*checkboxes - Enable  click in Reading View */
-.checkbox-clickable input[data-task]:not(input[data-task=" "], .checkbox-clickable input[data-task="x"], .checkbox-clickable input[data-task="/"]):checked,
-.checkbox-clickable li[data-task]:not(li[data-task=" "], .checkbox-clickable li[data-task="x"], .checkbox-clickable li[data-task="/"])>input:checked,
-.checkbox-clickable li[data-task]:not(li[data-task=" "], .checkbox-clickable li[data-task="x"], .checkbox-clickable li[data-task="/"])>p>input:checked,
-.checkbox-clickable label.task-list-label:has(> input[data-task]:not(input[data-task=" "], .checkbox-clickable input[data-task="x"], .checkbox-clickable input[data-task="/"]):checked) {
-  pointer-events: all;
 }
 
 /*Background image*/
@@ -1973,15 +1934,12 @@ body:not(.no-todoist) .todoist-p3 input  {
     &.workspace, .workspace-tabs, .workspace-split, .horizontal-main-container {
     background-color: transparent;
 }}
-
 .workspace-bg {
   &.mod-left-split, .workspace-tab-container {
   --background-primary: transparent;
 }}
-
 .workspace-bg .workspace-tabs .workspace-leaf, .workspace-bg .workspace-sidedock-vault-profile {
   --background-primary: rgba(var(--surface-rgb),var(--layout-opacity, 0.8));
-
   background-color: var(--background-primary) !important;
 }
 
@@ -1993,8 +1951,8 @@ collapsed: false
 settings:
     - 
         id: my-info-text
-        title: ✨ Welcome to Underwater theme !
-        description: "**↳** ==Star the theme on Github : [Underwater on Github](https://github.com/Seniblue/Underwater) ! 💫==</br> **💡** The theme looks nice with [Lexend](https://www.lexend.com/) font !"
+        title:
+        description: "</br>**↳** 💫 ==Star the theme on Github : [Underwater on Github](https://github.com/Seniblue/Underwater) !== </br></br> ✨ Theme updates and new features : [Changelog](https://github.com/Seniblue/Underwater/commits/main/) </br></br> **💡** The theme looks nice with [Lexend](https://www.lexend.com/) font !"
         type: info-text
         markdown: true
     -
@@ -2229,6 +2187,11 @@ settings:
         title: Strikethrough
         type: variable-text
         default: var(--iris)
+    -
+        id: latex-color
+        title: Latex
+        type: variable-text
+        default: var(--gold)
     -
         id: hr-color
         title: Hr (divider)
@@ -2480,7 +2443,14 @@ settings:
                value: kanban-todoist
     -
         id: no-todoist
-        title: Todoist
+        title: Disable Todoist Sync styling
+        description: Checkboxes colors are matching with theme, new task button next to a query is deleted
+        type: class-toggle
+        default: false
+    -
+        id: no-calendar
+        title: Disable Calendar styling
+        description: Weekends are highlighted
         type: class-toggle
         default: false
 */
