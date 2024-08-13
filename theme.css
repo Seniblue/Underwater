@@ -613,37 +613,6 @@
   --color-accent-hsl: 226, 31%, 42%; /*YinMn Blue*/
 
 }
-.theme-dark.obsidian-dark {
-  color-scheme: dark;
-
-  /*PALETTE*/
-  --love-rgb: 251, 70, 76; /*red*/
-  --gold-rgb: 224, 222, 113; /*yellow*/
-  --rose-rgb: 233, 151, 63; /*orange*/
-  --pine-rgb: 83, 223, 221; /*cyan*/
-  --foam-rgb: 68, 207, 110; /*green*/
-  --iris-rgb: 168, 130, 255; /*purple*/
-
-  --base: #262626; /*color-base-20*/
-  --surface: #1e1e1e; /*color-base-00*/
-  --surface-rgb: 30, 30, 30;
-  --overlay: #363636; /*color-base-30*/
-
-  --muted: #666666; /*color-base-50*/
-  --subtle: #B6A8A5; 
-  --text: #dadada; /*color-base-100*/
-
-  --highlight-low: #423939;
-  --highlight-med-rgb: 109, 95, 95;
-  --highlight-high: #978787;
-
-  /*override accent color !*/
-  --accent-h: 258 !important;
-  --accent-s: 88% !important;
-  --accent-l: 66% !important;
-  --color-accent-hsl: 258, 88%, 66%;
-
-}
 .theme-dark.uw-deep {
   color-scheme: dark;
 
@@ -1800,19 +1769,19 @@ body:not(.no-todoist) .edit-block-button.todoist-refresh-button, .markdown-readi
 }
 
 /*STYLE SETTINGS*/
-
 .style-settings-info-text .style-settings-markdown {
   background-color: var(--base);
   border-radius: 6px;
   padding: 20px;
   border: 1px var(--highlight-med) dashed;
+  color: var(--text-normal);
 }
 .setting-item[data-id=underwater-theme] .setting-item-name {
   color: var(--foam);
-}  
-  
-.setting-item[data-id=underwater-theme] .setting-item-name::before {
-  content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTQiIHdpZHRoPSIxNS43NSIgdmlld0JveD0iMCAwIDU3NiA1MTIiPjwhLS0hRm9udCBBd2Vzb21lIEZyZWUgNi42LjAgYnkgQGZvbnRhd2Vzb21lIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20gTGljZW5zZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tL2xpY2Vuc2UvZnJlZSBDb3B5cmlnaHQgMjAyNCBGb250aWNvbnMsIEluYy4tLT48cGF0aCBmaWxsPSIjQjE5N0ZDIiBkPSJNMTgwLjUgMTQxLjVDMjE5LjcgMTA4LjUgMjcyLjYgODAgMzM2IDgwczExNi4zIDI4LjUgMTU1LjUgNjEuNWMzOS4xIDMzIDY2LjkgNzIuNCA4MSA5OS44YzQuNyA5LjIgNC43IDIwLjEgMCAyOS4zYy0xNC4xIDI3LjQtNDEuOSA2Ni44LTgxIDk5LjhDNDUyLjMgNDAzLjUgMzk5LjQgNDMyIDMzNiA0MzJzLTExNi4zLTI4LjUtMTU1LjUtNjEuNWMtMTYuMi0xMy43LTMwLjUtMjguNS00Mi43LTQzLjFMNDguMSAzNzkuNmMtMTIuNSA3LjMtMjguNCA1LjMtMzguNy00LjlTLTMgMzQ4LjcgNC4yIDMzNi4xTDUwIDI1NiA0LjIgMTc1LjljLTcuMi0xMi42LTUtMjguNCA1LjMtMzguNnMyNi4xLTEyLjIgMzguNy00LjlsODkuNyA1Mi4zYzEyLjItMTQuNiAyNi41LTI5LjQgNDIuNy00My4xek00NDggMjU2YTMyIDMyIDAgMSAwIC02NCAwIDMyIDMyIDAgMSAwIDY0IDB6Ii8+PC9zdmc+");
+}
+.setting-item[data-id=underwater-theme] .style-settings-collapse-indicator::after {
+  color: var(--foam);
+  content: " 🐳";
 }
 .setting-item:is([data-id=theme-colors], [data-id=editor-colors], [data-id=options], [data-id=plugins], [data-id=settings], [data-id=bg-image], [data-id=headings-color]) {
   background-color: var(--base);
@@ -1837,7 +1806,6 @@ body:not(.no-todoist) .edit-block-button.todoist-refresh-button, .markdown-readi
   margin-bottom: 10px;
   margin-top: 5px;
 }
-
 
 /*=============================PDF STYLING=====================================*/
 /*-----------------------*/
@@ -2023,7 +1991,7 @@ settings:
     - 
         id: my-info-text
         title:
-        description: "💫 ==Star the theme on Github : [Underwater on Github](https://github.com/Seniblue/Underwater) !== </br></br> ✨ Theme updates and new features : [Changelog](https://github.com/Seniblue/Underwater/commits/main/) </br></br> **💡** The theme looks nice with [Lexend](https://www.lexend.com/) font !"
+        description: "💫 **Star the theme on Github : [Underwater on Github](https://github.com/Seniblue/Underwater) !** </br></br> ✨ Theme updates and new features : [Changelog](https://github.com/Seniblue/Underwater/commits/main/) </br></br> **💡** The theme looks nice with [Lexend](https://www.lexend.com/) font !"
         type: info-text
         markdown: true
     -
@@ -2051,9 +2019,6 @@ settings:
             -
                label: Biscuit
                value: biscuit-dark
-            -
-               label: Obsidian default
-               value: obsidian-dark
             -
                label: 🌊 Underwater Deep
                value: uw-deep
