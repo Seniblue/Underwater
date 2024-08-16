@@ -613,6 +613,37 @@
   --color-accent-hsl: 226, 31%, 42%; /*YinMn Blue*/
 
 }
+.theme-dark.obsidian-dark {
+  color-scheme: dark;
+
+  /*PALETTE*/
+  --love-rgb: 251, 70, 76; /*red*/
+  --gold-rgb: 224, 222, 113; /*yellow*/
+  --rose-rgb: 233, 151, 63; /*orange*/
+  --pine-rgb: 83, 223, 221; /*cyan*/
+  --foam-rgb: 68, 207, 110; /*green*/
+  --iris-rgb: 168, 130, 255; /*purple*/
+
+  --base: #262626; /*color-base-20*/
+  --surface: #1e1e1e; /*color-base-00*/
+  --surface-rgb: 30, 30, 30;
+  --overlay: #363636; /*color-base-30*/
+
+  --muted: #666666; /*color-base-50*/
+  --subtle: #B6A8A5; 
+  --text: #dadada; /*color-base-100*/
+
+  --highlight-low: #423939;
+  --highlight-med-rgb: 109, 95, 95;
+  --highlight-high: #978787;
+
+  /*override accent color !*/
+  --accent-h: 258 !important;
+  --accent-s: 88% !important;
+  --accent-l: 66% !important;
+  --color-accent-hsl: 258, 88%, 66%;
+
+}
 .theme-dark.uw-deep {
   color-scheme: dark;
 
@@ -692,7 +723,7 @@
 
   --muted: #7CAB9B;
   --subtle: #A7C9C9; 
-  --text: #DEEDDD;
+  --text: #dee2b9;
 
   --highlight-low: #1F3533;
   --highlight-med-rgb: 63, 99, 96;
@@ -1203,10 +1234,10 @@ FROM https://forum.obsidian.md/t/trying-to-color-the-outline-headers-levels/7945
 
 /*Checkboxes*/
 /* Disable click */
-body:not(.checkbox-clickable) input[data-task]:not(input[data-task=" "], body:not(.checkbox-clickable) input[data-task="x"], body:not(.checkbox-clickable) input[data-task="/"]):checked,
-body:not(.checkbox-clickable) li[data-task]:not(li[data-task=" "], body:not(.checkbox-clickable) li[data-task="x"], body:not(.checkbox-clickable) li[data-task="/"])>input:checked,
+.no-click input[data-task]:not(input[data-task=" "], .no-click input[data-task="x"], .no-click input[data-task="/"]):checked,
+.no-click li[data-task]:not(li[data-task=" "], .no-click li[data-task="x"], .no-click li[data-task="/"])>input:checked,
 li[data-task]:not(li[data-task=" "], li[data-task="x"], li[data-task="/"])>p>input:checked,
-body:not(.checkbox-clickable) label.task-list-label:has(> input[data-task]:not(input[data-task=" "], body:not(.checkbox-clickable) input[data-task="x"], body:not(.checkbox-clickable) input[data-task="/"]):checked) {
+.no-click label.task-list-label:has(> input[data-task]:not(input[data-task=" "], .no-click input[data-task="x"], .no-click input[data-task="/"]):checked) {
   pointer-events: none;
 }
 /*little animation */
@@ -1420,24 +1451,8 @@ body { /*moon*/
 
 /*=========================================PLUGINS SUPPORT==============================================*/
 /*MAKE.MD*/
-body {
-  --mk-color-red: var(--color-red);
-  --mk-color-pink: var(--color-pink);
-  --mk-color-orange: var(--color-orange);
-  --mk-color-yellow: var(--color-yellow);
-  --mk-color-green: var(--color-green);
-  --mk-color-turquoise: var(--color-cyan);
-  --mk-color-teal: var(--color-blue);
-  --mk-color-blue: var(--color-blue);
-  --mk-color-purple: var(--color-purple);
-  --mk-color-brown: var(--highlight-high);
-  --mk-color-charcoal: var(--text-normal);
-  --mk-color-gray: var(--text-faint);
-
-  --mk-ui-text-secondary: var(--text-normal);
-}
 /*hide the vault title*/
-.mk-main-menu-container {
+body:not(.no-mk) .mk-main-menu-container {
   display: none;
 }
 .mk-tree-text:hover {
@@ -1651,6 +1666,7 @@ body:not(.no-calendar) #calendar-container {
 .timezone-time {
   color: var(--text-normal);
 }
+
 /*File Tree Alternative*/
 .oz-folders-action-items,
 .oz-flex-container {
@@ -1684,7 +1700,7 @@ svg.oz-folder-toggle path {
   fill: var(--pine) !important;
 }
 
-/*editing toolbar fix*/
+/*Editing toolbar fix*/
 .cMenuToolbarDefaultAesthetic {
   background-color: var(--base);
 }
@@ -1741,7 +1757,7 @@ body:not(.no-todoist) .edit-block-button.todoist-refresh-button, .markdown-readi
   background-color: rgb(var(--background-modifier-error-rgb), 0.1);
 }
 
-/*ICONIZE v.2.12.1 fix*/
+/*IMPORTANT - ICONIZE v.2.12.1 fix*/
 .iconize-inline-title-wrapper {
   justify-content: center;
 }
@@ -1751,14 +1767,6 @@ body:not(.no-todoist) .edit-block-button.todoist-refresh-button, .markdown-readi
   color: var(--latex-color);
 }
 
-/*PopKit plugin*/
-.css-zz0qod, .css-ja44k1 {
-  background-color: var(--highlight-med) !important;
-}
-.css-ja44k1:hover {
-  background-color: var(--color-blue) !important;
-}
-
 /*Meta Bind*/
 .mb-input {
   --background-modifier-border: var(--highlight-med);
@@ -1766,6 +1774,11 @@ body:not(.no-todoist) .edit-block-button.todoist-refresh-button, .markdown-readi
 }
 .mb-card {
 	background-color: var(--overlay);
+}
+
+/*Note toolbar*/
+.cg-note-toolbar-position-top, .cg-note-toolbar-reading-sticky {
+  margin-top: 10px;
 }
 
 /*STYLE SETTINGS*/
@@ -1807,8 +1820,7 @@ body:not(.no-todoist) .edit-block-button.todoist-refresh-button, .markdown-readi
   margin-top: 5px;
 }
 
-/*=============================PDF STYLING=====================================*/
-/*-----------------------*/
+/*=============================PDF STYLING - WIP =====================================*/
 @media print {
   body {
     --bold-weight: 750;
@@ -1825,7 +1837,6 @@ body:not(.no-todoist) .edit-block-button.todoist-refresh-button, .markdown-readi
       --table-row-alt-background: transparent;
       --table-row-alt-background-hover: var(--table-row-alt-background);
       --table-border-radius: 0px !important;  
-  
   }
   :is(.task-list-item, ol, li, ul, tr, td, th, thead, p, h1, h2, h3, h4, h5, h6, .callout, table) {
     font-family: "Inter" !important;
@@ -2019,6 +2030,9 @@ settings:
             -
                label: Biscuit
                value: biscuit-dark
+            -
+               label: Obsidian default
+               value: obsidian-dark
             -
                label: 🌊 Underwater Deep
                value: uw-deep
@@ -2241,6 +2255,7 @@ settings:
         title: Table header
         type: variable-text
         default: var(--iris)
+        description: Doesn't apply to "minimalistic" table
     -
         id: background-primary-alt
         title: Workspace background color
@@ -2405,8 +2420,8 @@ settings:
         type: class-toggle
         default: false
     -
-        id: checkbox-clickable
-        title: Enable checkbox click in Reading View
+        id: no-click
+        title: Disable checkbox click (allows you to use checkboxes as bullets)
         type: class-toggle
         default: false
     -
@@ -2416,6 +2431,12 @@ settings:
         type: class-toggle
         default: false
         addCommand: true
+    -
+        id: my-info-text
+        title:
+        type: info-text
+        description: "💡 You can assign a hotkey to *Full focus mode* by going to **`Hotkeys`** (in the app settings), looking for **`Style settings: Toggle 🎯 Full focus mode`** and adding your custom hotkey !"
+        markdown: true
 
 # 🖼️ Background image
     - 
@@ -2490,6 +2511,12 @@ settings:
         id: no-calendar
         title: Disable Calendar styling
         description: Weekends are highlighted
+        type: class-toggle
+        default: false
+    -
+        id: no-mk
+        title: Disable Make.md styling
+        description: Hides the name of the vault at the top of the file explorer
         type: class-toggle
         default: false
 */
