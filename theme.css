@@ -1,4 +1,8 @@
 .theme-light, .theme-dark {
+/*Font*/
+  --font-text-theme: "Lexend", "Inter";
+  --font-interface-theme: "Inter", "Lexend";
+  
   /*COLORS*/
   --color-red: var(--rose);
   --color-orange: var(--gold);
@@ -1408,9 +1412,13 @@ body {
   height: 18px;
   width: 18px;
   mask-image: var(--vault-icon);
+  -webkit-mask-image: var(--vault-icon);
   mask-size: 110%;
+  -webkit-mask-size: 110%;
   mask-position: 50% 50%;
+  -webkit-mask-position: 50% 50%;
   mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
   vertical-align: middle;
 }
 .workspace-drawer-vault-name {
