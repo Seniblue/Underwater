@@ -1,10 +1,4 @@
-
 .theme-light, .theme-dark {
-  /*Font*/
-  --font-text-theme: "Lexend", "Inter";
-  --font-interface-theme: "Inter", "Lexend";
-  --font-text-size: 15px;
-
   /*COLORS*/
   --color-red: var(--rose);
   --color-orange: var(--gold);
