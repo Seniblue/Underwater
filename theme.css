@@ -1,7 +1,3 @@
-.app-container {
-  font-family: "Lexend", "Inter";
-}
-
 .theme-light, .theme-dark {
   /*Font*/
   --font-text-theme: "Lexend", "Inter";
@@ -120,7 +116,6 @@
   --h6-variant: small-caps;
   --inline-title-size: 1.8em;
   --inline-title-color: var(--foam);
-  --inline-title-font: "Lexend";
   --inline-title-margin-bottom: 2em;
 
   /*links*/
@@ -1599,7 +1594,7 @@ body:not(.no-calendar) #calendar-container {
 }
 .Quote_Text {
   font-size: 20px;
-  font-family: "Lexend";
+  font-family: var(--font-text-theme);
   font-style: italic !important;
 }
 .Quote_Author {
