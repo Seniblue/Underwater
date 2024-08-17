@@ -1221,14 +1221,7 @@ FROM https://forum.obsidian.md/t/trying-to-color-the-outline-headers-levels/7945
   }
 }
 
-/*Checkboxes*/
-/* Disable click */
-.no-click input[data-task]:not(input[data-task=" "], .no-click input[data-task="x"], .no-click input[data-task="/"]):checked,
-.no-click li[data-task]:not(li[data-task=" "], .no-click li[data-task="x"], .no-click li[data-task="/"])>input:checked,
-li[data-task]:not(li[data-task=" "], li[data-task="x"], li[data-task="/"])>p>input:checked,
-.no-click label.task-list-label:has(> input[data-task]:not(input[data-task=" "], .no-click input[data-task="x"], .no-click input[data-task="/"]):checked) {
-  pointer-events: none;
-}
+/*CHECKBOXES*/
 /*little animation */
 input[type=checkbox] {
   transition: background 0.4s, stroke-dashoffset 0.6s;
@@ -1407,14 +1400,28 @@ body {
 
 /*Vault icon*/
 .workspace-drawer-vault-name::after {
-  background-color: currentColor;
-  mask-size: 100%;
-  mask-position: 50% 50%;
-  content: "sp!";
+  background-color: var(--iris);
   margin-left: 10px;
   color: var(--iris);
+  content: " ";
+  display: inline-block;
+  height: 18px;
+  width: 18px;
   mask-image: var(--vault-icon);
+  mask-size: 110%;
+  mask-position: 50% 50%;
+  mask-repeat: no-repeat;
+  vertical-align: middle;
 }
+.workspace-drawer-vault-name {
+  display: inline-flex;
+  align-items: center;
+}
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher {
+  align-items: center;
+  align-content: center;
+}
+
 body { /*moon*/
   --vault-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%235f6368'%3E%3Cpath d='M240-400q48 0 88 26t59 71l10 23h25q42 0 70 29.5t28 70.5q0 42-29 71t-71 29H240q-66 0-113-47T80-240q0-67 47-113.5T240-400Zm321-81q60 60 138.5 90.5T863-366q11-1 19.5 3t14.5 12q6 8 8 17t-1 19q-35 121-140.5 197T533-40q32-26 49.5-62.5T600-180q0-68-42.5-117.5T449-357q-32-57-87.5-90T240-480q-32 0-62.5 8T120-448q2-131 76.5-232T394-822q10-3 19.5-1t17.5 8q8 6 12.5 14.5T447-781q-5 86 24 162.5T561-481Z'/%3E%3C/svg%3E");
 }
@@ -1949,6 +1956,14 @@ body:not(.no-todoist) .edit-block-button.todoist-refresh-button, .markdown-readi
 /*Allow properties to be visible in reading mode*/
 .visible-properties {
 --metadata-display-reading: block;
+}
+
+/* Disable click */
+.no-click input[data-task]:not(input[data-task=" "], .no-click input[data-task="x"], .no-click input[data-task="/"]):checked,
+.no-click li[data-task]:not(li[data-task=" "], .no-click li[data-task="x"], .no-click li[data-task="/"])>input:checked,
+li[data-task]:not(li[data-task=" "], li[data-task="x"], li[data-task="/"])>p>input:checked,
+.no-click label.task-list-label:has(> input[data-task]:not(input[data-task=" "], .no-click input[data-task="x"], .no-click input[data-task="/"]):checked) {
+  pointer-events: none;
 }
 
 /*Background image*/
