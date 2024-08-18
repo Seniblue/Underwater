@@ -164,7 +164,7 @@
   /*status bar*/
   --status-bar-background: var(--overlay);
   --status-bar-font-size: 11px;
-  --status-bar-radius: 12px 0px 0px 0px;
+  --status-bar-radius: 12px 0 0 12px;
 
   /*Horizontal rule*/
   --hr-color: var(--highlight-med);
@@ -384,7 +384,37 @@
   --accent-s: 64% !important;
   --accent-l: 49% !important;
   --color-accent-hsl: 324, 64%, 49%; /*Red violet*/
+}
 
+.theme-light.obsidian-light {
+  color-scheme: light;
+
+  /*PALETTE*/
+  --love-rgb: 233, 49, 71; /*red*/
+  --gold-rgb: 224, 172, 0; /*yellow*/
+  --rose-rgb: 236, 117, 0; /*orange*/
+  --pine-rgb: 8, 109, 221	; /*blue*/
+  --foam-rgb: 8, 185, 78; /*green*/
+  --iris-rgb: 120, 82, 238; /*purple*/
+
+  --base: #f6f6f6; /*color-base-20*/
+  --surface: #ffffff; /*color-base-00*/
+  --surface-rgb: 255, 255, 255;
+  --overlay: #e3e3e3; /*color-base-25*/
+
+  --muted: #ababab; /*color-base-50*/
+  --subtle: #707070; /*color-base-60*/
+  --text: #222222; /*color-base-100*/
+
+  --highlight-low: #fafafa; /*color-base-10*/
+  --highlight-med-rgb: 224, 224, 224; /*e0e0e0*/  /*color-base-30*/
+  --highlight-high: #d4d4d4; /*color-base-35*/
+
+  /*override accent color !*/
+  --accent-h: 258 !important;
+  --accent-s: 88% !important;
+  --accent-l: 66% !important;
+  --color-accent-hsl: 258, 88%, 66%; /*default purple*/
 }
 
 .theme-light.uw-octopus {
@@ -416,8 +446,8 @@
   --accent-s: 53% !important;
   --accent-l: 59% !important;
   --color-accent-hsl: 6, 53%, 59%; /*foam*/
-
 }
+
 
 .theme-dark /*Rosé Pine*/ {
   color-scheme: dark;
@@ -613,7 +643,7 @@
   --love-rgb: 251, 70, 76; /*red*/
   --gold-rgb: 224, 222, 113; /*yellow*/
   --rose-rgb: 233, 151, 63; /*orange*/
-  --pine-rgb: 83, 223, 221; /*cyan*/
+  --pine-rgb: 2, 122, 255  ; /*blue*/
   --foam-rgb: 68, 207, 110; /*green*/
   --iris-rgb: 168, 130, 255; /*purple*/
 
@@ -623,19 +653,18 @@
   --overlay: #363636; /*color-base-30*/
 
   --muted: #666666; /*color-base-50*/
-  --subtle: #B6A8A5; 
+  --subtle: #bababa; /*color-base-70*/
   --text: #dadada; /*color-base-100*/
 
-  --highlight-low: #423939;
-  --highlight-med-rgb: 109, 95, 95;
-  --highlight-high: #978787;
+  --highlight-low: #2a2a2a; /*--color-base-25*/
+  --highlight-med-rgb: 63, 63, 63; /*3f3f3f*/  /*color-base-35*/
+  --highlight-high: #555555; /*color-base-40*/
 
   /*override accent color !*/
   --accent-h: 258 !important;
   --accent-s: 88% !important;
   --accent-l: 66% !important;
-  --color-accent-hsl: 258, 88%, 66%;
-
+  --color-accent-hsl: 258, 88%, 66%; /*default purple*/
 }
 .theme-dark.uw-deep {
   color-scheme: dark;
@@ -814,13 +843,12 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 
 /*Rounded Highlight style*/
 .cm-s-obsidian span.cm-highlight, mark {
-  border-radius: 10px 5px ;
-  padding: 0px 4px ;
-  margin: 0 0px ;
+  border-radius: 10px 5px;
+  padding: 0px 4px;
+  margin: 0 0px;
   background-color: var(--text-highlight-bg);
   color: var(--text-normal);
 }
-
 
 /*inline title center*/
 .inline-title {
@@ -831,7 +859,8 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 /*status bar styling*/
 .status-bar {
   border: 1px solid var(--highlight-high);
-  border-width: 1px 0px 0px 1px;
+  border-width: 1px 0px 1px 1px;
+  margin-bottom: 8px;
 }
 
 /*cursor color -> new css class*/
@@ -2081,6 +2110,9 @@ settings:
             -
                label: Biscuit
                value: biscuit-light
+            -
+               label: Obsidian default
+               value: obsidian-light
             -
                label: 🌊 Underwater Octopus
                value: uw-octopus
