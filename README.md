@@ -2,6 +2,11 @@
 ![Stars](https://img.shields.io/github/stars/Seniblue/Underwater?style=for-the-badge&color=c4a7e7&labelColor=26233a)
 ![Issues](https://img.shields.io/github/issues/Seniblue/Underwater?style=for-the-badge&color=ebbcba&labelColor=26233a)
 
+> ### Recent features ✨
+> - 🎨 New color scheme : Obsidian (light and dark) using the default colors of the app !
+> - 🖼️ Custom background image (+ image blur, image opacity, and layout opacity)
+> - New style settings styling and more options !
+
 
 ![uw](img/thumbnail.png)
 
@@ -61,6 +66,11 @@
         <tr>
             <td></td>
             <td>Rosé Pine Moon</td>
+            <td></td>
+            <td></td        </tr>
+        <tr>
+            <td>Obsidian default</td>
+            <td>Obsidian default</td>
             <td></td>
             <td></td>
         </tr>
