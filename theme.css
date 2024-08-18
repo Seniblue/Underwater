@@ -814,12 +814,13 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 
 /*Rounded Highlight style*/
 .cm-s-obsidian span.cm-highlight, mark {
-  border-radius: 10px 5px !important;
-  padding: 0px 4px !important;
-  margin: 0 0px !important;
+  border-radius: 10px 5px ;
+  padding: 0px 4px ;
+  margin: 0 0px ;
   background-color: var(--text-highlight-bg);
   color: var(--text-normal);
 }
+
 
 /*inline title center*/
 .inline-title {
@@ -1458,6 +1459,9 @@ body { /*moon*/
 /*hide the vault title*/
 body:not(.no-mk) .mk-main-menu-container {
   display: none;
+}
+.mk-tree-text {
+  color: var(--text-normal);
 }
 .mk-tree-text:hover {
   color: var(--nav-item-color-hover);
