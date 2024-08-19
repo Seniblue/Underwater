@@ -158,6 +158,7 @@ Credit to these themes for certain elements and inspiration !
 - [Border](https://github.com/Akifyss/obsidian-border)
 - [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin)
 - [Minimal](https://github.com/kepano/obsidian-minimal)
+- Default tab image by [karyative](https://www.flaticon.com/fr/auteurs/karyative) on [Flaticon](https://www.flaticon.com/).
 
 # Tasks
 - [x] Add more options for settings with style settings
