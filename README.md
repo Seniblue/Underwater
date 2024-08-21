@@ -155,9 +155,9 @@
 
 # Credit
 Credit to these themes for certain elements and inspiration !
-- [Border](https://github.com/Akifyss/obsidian-border)
-- [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin)
-- [Minimal](https://github.com/kepano/obsidian-minimal)
+- [Border](https://github.com/Akifyss/obsidian-border) by [@Akifyss](https://github.com/Akifyss)
+- [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin) by [@Anubis](https://github.com/AnubisNekhet)
+- [Minimal](https://github.com/kepano/obsidian-minimal) by [@Kepano](https://github.com/kepano)
 - Default tab image by [karyative](https://www.flaticon.com/fr/auteurs/karyative) on [Flaticon](https://www.flaticon.com/).
 
 # Tasks
