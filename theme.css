@@ -1,6 +1,6 @@
 .theme-light, .theme-dark {
 /*Font*/
-  --font-text-theme: "Lexend", "Inter";
+  --font-text-theme: var(--font-text-override), "Lexend", "Inter";
   --font-interface-theme: "Inter", "Lexend";
   
   /*COLORS*/
@@ -112,6 +112,14 @@
   --h5-size: 1em;
   --h6-size: 1em;
   --h6-variant: small-caps;
+  --headings-font: var(--font-text-override), var(--font-text-theme);
+  --h1-font: var(--headings-font);
+  --h2-font: var(--headings-font);
+  --h3-font: var(--headings-font);
+  --h4-font: var(--headings-font);
+  --h5-font: var(--headings-font);
+  --h6-font: var(--headings-font);
+  --inline-title-font: var(--font-text-override), var(--font-text-theme);
   --inline-title-size: 1.8em;
   --inline-title-color: var(--foam);
   --inline-title-margin-bottom: 2em;
@@ -836,6 +844,10 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   margin: 5px 20px;
 }
 
+.menu-separator {
+  border-bottom: 1px dashed var(--overlay);
+}
+
 /*Justify text*/
 .markdown-preview-section, .cm-s-obsidian, .markdown-preview-view, .cm-s-obsidian {
   text-align: justify;
@@ -861,15 +873,6 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   border: 1px solid var(--highlight-high);
   border-width: 1px 0px 1px 1px;
   margin-bottom: 8px;
-}
-
-/*cursor color -> new css class*/
-.markdown-source-view.mod-cm6 div.cm-editor div {
-  caret-color: var(--love);
-}
-.markdown-source-view.mod-cm6 div.cm-editor .cm-cursor {
-  border-left-color: var(--love);
-  border-width: 2px;
 }
 
 /*=======icons background=======*/
@@ -940,8 +943,7 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover, body:not(.is-grabbing) .
   border-inline-end: var(--indentation-guide-width) dashed var(--indentation-guide-color);
 }
 
-
-/*smaller pinned tab*/
+/*smaller pinned tabs*/
 .workspace-tab-header:has(.mod-pinned) {
   max-width: 55px !important;
 }
@@ -1613,42 +1615,42 @@ body:not(.no-calendar) #calendar-container {
 }
 
 /*WIDGETS plugin*/
-.Clock_Divider {
+body:not(.no-widgets) .Clock_Divider {
   height: 4px;
   border-radius: 20px;
   background: var(--iris);
   margin: 10px 0px;
   display: block;
 }
-.Clock_Face {
+body:not(.no-widgets) .Clock_Face {
   font-size: 45px;
 }
-.Clock_Date {
+body:not(.no-widgets) .Clock_Date {
   color: var(--subtle);
   font-size: 15px;
 }
-.Quote_Container {
+body:not(.no-widgets) .Quote_Container {
   padding: 20px;
   text-align: center;
   background: transparent;
   border: 4px solid var(--foam);
   border-radius: 10px;
 }
-.Quote_Text {
+body:not(.no-widgets) .Quote_Text {
   font-size: 20px;
   font-family: var(--font-text-theme);
   font-style: italic !important;
 }
-.Quote_Author {
+body:not(.no-widgets) .Quote_Author {
   font-size: 12px;
   color: var(--subtle);
 }
-.Countdown_Container {
+body:not(.no-widgets) .Countdown_Container {
   display: flex;
   justify-content: space-between;
   gap: 5px;
 }
-.Countdown_Item {
+body:not(.no-widgets) .Countdown_Item {
   text-align: center;
   border: 4px solid var(--gold);
   border-radius: 10px;
@@ -1658,17 +1660,17 @@ body:not(.no-calendar) #calendar-container {
   flex-direction: column;
   gap: 8px;
 }
-.Countdown_Item h3 {
+body:not(.no-widgets) .Countdown_Item h3 {
   font-size: 30px;
   line-height: 20px;
   margin: 0px;
   color: var(--text-normal);
 }
-.Countdown_Item small {
+body:not(.no-widgets) .Countdown_Item small {
   color: var(--subtle);
   font-size: 10px;
 }
-.Countdown_To {
+body:not(.no-widgets) .Countdown_To {
   text-align: center;
   margin-top: 12px;
   color: var(--subtle);
@@ -1813,9 +1815,15 @@ body:not(.no-todoist) .edit-block-button.todoist-refresh-button, .markdown-readi
 	background-color: var(--overlay);
 }
 
-/*Note toolbar - fix*/
+/*Note toolbar - fixes*/
 .cg-note-toolbar-position-top, .cg-note-toolbar-reading-sticky {
   margin-top: 10px;
+}
+.cg-note-toolbar-fab-container {
+  top: calc(var(--cg-nt-fab-pos-y-desktop) - 6em);
+}
+body {
+  --cg-nt-item-sep-color: var(--highlight-med) !important;
 }
 
 /*Support for https://github.com/HandaArchitect/obsidian-banner-snippet*/
@@ -2028,6 +2036,11 @@ body:not(.no-todoist) .edit-block-button.todoist-refresh-button, .markdown-readi
 li[data-task]:not(li[data-task=" "], li[data-task="x"], li[data-task="/"])>p>input:checked,
 .no-click label.task-list-label:has(> input[data-task]:not(input[data-task=" "], .no-click input[data-task="x"], .no-click input[data-task="/"]):checked) {
   pointer-events: none;
+}
+
+/*Remove tooltips*/
+.no-tooltips .tooltip {
+  display: none;
 }
 
 /*Background image*/
@@ -2462,6 +2475,13 @@ settings:
             -
                label: Rocket
                value: vault-rocket
+    -
+        id: headings-font
+        title: Specific font for headings (H1 to H6)
+        description: Just write the name of the font, or leave blank for default
+        type: variable-text
+        default: Default text font
+        quotes: true
 
 # 🔍 Options      
     -
@@ -2498,6 +2518,11 @@ settings:
     -
         id: no-activeline
         title: Disable active line higlight
+        type: class-toggle
+        default: false
+    -
+        id: no-tooltips
+        title: Remove tooltips
         type: class-toggle
         default: false
     -
@@ -2593,6 +2618,12 @@ settings:
         id: no-mk
         title: Disable Make.md styling
         description: Hides the name of the vault at the top of the file explorer
+        type: class-toggle
+        default: false
+    -
+        id: no-widgets
+        title: Disable Widgets styling
+        description: Colorful widgets, smaller so they can fit in a pane
         type: class-toggle
         default: false
 */
