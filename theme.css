@@ -2048,7 +2048,6 @@ li[data-task]:not(li[data-task=" "], li[data-task="x"], li[data-task="/"])>p>inp
   background-image: var(--bg-url);
   opacity: var(--bg-opacity, 0.8);
   filter: blur(var(--bg-blur, 4px));
-
   background-color: var(--background-primary-alt);
   background-position: center;
   background-repeat: no-repeat;
@@ -2065,17 +2064,11 @@ li[data-task]:not(li[data-task=" "], li[data-task="x"], li[data-task="/"])>p>inp
     &.workspace, .workspace-tabs, .workspace-split, .horizontal-main-container {
     background-color: transparent;
 }}
-/*initial code
+/*initial code*/
 .workspace-bg .workspace-tabs .workspace-leaf, .workspace-bg .workspace-sidedock-vault-profile {
   --background-primary: rgba(var(--surface-rgb),var(--layout-opacity, 0.8));
   background-color: var(--background-primary) !important;
-}*/
-
-/*middle pane only
-.workspace-bg .workspace-tabs {
-  --background-primary: rgba(var(--surface-rgb),var(--layout-opacity, 0.8));
-}*/
-
+}
 .workspace-bg .mod-right-split .view-content, .workspace-bg .mod-left-split .view-content   {
   --background-primary: rgba(var(--surface-rgb),var(--layout-opacity, 0.8)) !important;
   background-color: var(--background-primary) !important;
