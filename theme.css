@@ -848,6 +848,10 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   border-bottom: 1px dashed var(--overlay);
 }
 
+.file-embed {
+  background-color: var(--overlay);
+}
+
 /*Justify text*/
 .markdown-preview-section, .cm-s-obsidian, .markdown-preview-view, .cm-s-obsidian {
   text-align: justify;
@@ -1158,15 +1162,14 @@ progress::-webkit-progress-bar {
   width: 200px;
 }
 
-/*-----center h5-------*/
+/*-----center h5, underline h1-------*/
 body:not(.no-h5) .HyperMD-header.HyperMD-header-5, body:not(.no-h5) h5 {
   text-align: center !important;
 }
-.HyperMD-header.HyperMD-header-1,
-h1 {
+.HyperMD-header.HyperMD-header-1, h1 {
   display: block;
-  padding-bottom: 2px;
-  border-bottom: 1px solid var(--h1-color);
+  padding-bottom: 4px !important;
+  border-bottom: 2px solid var(--h1-color);
 }
 
 /*---center + radius for img and embeds---*/
@@ -1792,6 +1795,9 @@ body:not(.no-todoist) .edit-block-button.todoist-refresh-button, .markdown-readi
   border: transparent;
   padding: 5px 20px;
   background-color: rgb(var(--background-modifier-error-rgb), 0.1);
+}/*No tasks*/
+.todoist-success.todoist-no-tasks {
+  color: var(--color-green);
 }
 
 /*IMPORTANT - ICONIZE v.2.12.1 fix*/
@@ -2001,10 +2007,6 @@ body {
   border-color: rgba(var(--callout-color));
   border-radius: 0px;
   background-color: transparent;
-  page-break-inside: avoid;
-  font-size: 14px;
-  padding: 12px 12px;
-  --callout-title: center;
 }
 
 /*Alternative table*/
@@ -2063,14 +2065,23 @@ li[data-task]:not(li[data-task=" "], li[data-task="x"], li[data-task="/"])>p>inp
     &.workspace, .workspace-tabs, .workspace-split, .horizontal-main-container {
     background-color: transparent;
 }}
-.workspace-bg {
-  &.mod-left-split, .workspace-tab-container {
-  --background-primary: transparent;
-}}
+/*initial code
 .workspace-bg .workspace-tabs .workspace-leaf, .workspace-bg .workspace-sidedock-vault-profile {
   --background-primary: rgba(var(--surface-rgb),var(--layout-opacity, 0.8));
   background-color: var(--background-primary) !important;
+}*/
+
+/*middle pane only
+.workspace-bg .workspace-tabs {
+  --background-primary: rgba(var(--surface-rgb),var(--layout-opacity, 0.8));
+}*/
+
+.workspace-bg .mod-right-split .view-content, .workspace-bg .mod-left-split .view-content   {
+  --background-primary: rgba(var(--surface-rgb),var(--layout-opacity, 0.8)) !important;
+  background-color: var(--background-primary) !important;
+
 }
+
 
 /* @settings
 
