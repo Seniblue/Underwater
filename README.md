@@ -3,9 +3,9 @@
 ![Issues](https://img.shields.io/github/issues/Seniblue/Underwater?style=for-the-badge&color=ebbcba&labelColor=26233a)
 
 > ### Recent features ✨
-> - 🎨 New color scheme : Obsidian (light and dark) using the default colors of the app !
+> - 🎨 New color schemes : 🌊 _Underwater Sand_ (dark) and 🌊 _Underwater Coral_ (light)
+> - 🎨 New color scheme : _Obsidian_ (light and dark) using the default colors of the app !
 > - 🖼️ Custom background image (+ image blur, image opacity, and layout opacity)
-> - New style settings styling and more options !
 
 
 ![uw](img/thumbnail.png)
