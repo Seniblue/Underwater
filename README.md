@@ -42,7 +42,7 @@
         <tr>
             <td>Catppuccin Latte</td>
             <td>Catppuccin Mocha</td>
-            <td></td>
+            <td>Coral</td>
             <td>Blue Ocean</td>
         </tr>
         <tr>
@@ -52,10 +52,10 @@
             <td>Seaweed</td>
         </tr>
         <tr>
-            <td>Biscuit</td>
+            <td>Gruvbox</td>
             <td>Biscuit</td>
             <td></td>
-            <td></td>
+            <td>Sand</td>
         </tr>
         <tr>
             <td>Rosé Pine Dawn</td>
@@ -83,7 +83,6 @@
 # Cssclasses
 
 - **no-title** : removes inline title
-- **inline-space** : removes spacing between inline title and file content
 - **no-embed** : seamless embeds
 - **notebook** : adds notebook-like background to current note
 - **write** : monospace font + bigger first letter for each paragraph
@@ -95,7 +94,7 @@
 ![formatting](img/formatting.png)
 
 - Checkboxes
-- Custom callouts : timeline, bookmark, media
+- Custom callouts : timeline, person, bookmark, media + "center" callout metadata
 - Scrollbar on hover (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
 - Active line highlight
 - Slight image animation on hover
