@@ -27,9 +27,9 @@
   --text-muted: var(--muted);
   --text-on-accent: var(--surface);
   --text-on-accent-inverted: var(--surface);
-  --text-success: var(--text-normal);
-  --text-warning: var(--text-normal);
-  --text-error: var(--text-normal);
+  --text-success: var(--color-green);
+  --text-warning: var(--color-orange);
+  --text-error: var(--color-red);
   --text-accent: var(--rose);
   --text-selection: rgb(var(--highlight-med-rgb), 0.6);
   /*---interactive elements---*/
@@ -74,7 +74,6 @@
   --nav-collapse-icon-color: var(--pine);
 
   /*---blockquote----*/
-  --blockquote-background-color: var(--code-background);
   --blockquote-border-color: var(--gold);
   --blockquote-border-thickness: 3px;
 
@@ -211,10 +210,6 @@
 
   /*properties*/
   --metadata-display-reading: none;
-  /*properties visible even with notebook css class*/
-  --metadata-background: var(--background-secondary);
-  --metadata-padding: 0px 5px;
-  --metadata-border-radius: 12px;
 
   --color-accent-1: var(--rose);
   --color-accent-2: var(--foam);
@@ -890,6 +885,14 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   background-color: var(--overlay);
 }
 
+/*Properties*/
+.metadata-property:hover {
+  border: 1px solid var(--highlight-med);
+}
+.metadata-property {
+  border: 1px solid transparent;
+}
+
 /*Justify text*/
 .cm-s-obsidian, .markdown-preview-view {
   text-align: justify;
@@ -1064,6 +1067,9 @@ th .MJX-TEX { /*no color for table headers*/
 a {
   color: var(--external-link-color);
 }
+a, .external-link {
+  transition: color 0.5s ease;
+}
 body:not(.no-links) .markdown-source-view.mod-cm6 .cm-hmd-internal-link,
 body:not(.no-links) .markdown-rendered .internal-link {
   background-color: var(--overlay);
@@ -1084,6 +1090,7 @@ body:not(.no-links) .markdown-rendered .internal-link:hover {
 .no-links .markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover,
 .no-links .markdown-rendered .internal-link:hover {
   --link-color-hover: var(--love);
+  transition: color 0.3s ease-out;
 }
 
 /*Embeds : Remove embed icon*/
@@ -1203,6 +1210,12 @@ body:not(.no-animation) img {
 body:not(.no-animation) img:hover {
   transform: scale(1.04);
 }
+
+button {
+  transition: all 0.5s ease-out;
+  &:hover {
+    transform: scale(1.05);
+}}
 
 /*==========================CSSCLASSES=================================*/
 /*no-title*/
@@ -2530,7 +2543,7 @@ settings:
         id: my-info-text
         title:
         type: info-text
-        description: "🎨 If you prefer to apply a custom color to the background, you can go to *`✏️ Editor colors`* → *`Workspace background color`*. </br> You can also enable the background image and reduce the background opacity in order to lower the saturations of your custom color."
+        description: "🎨 If you prefer to apply a custom color to the background, you can go to *`✏️ Editor colors`* → *`Workspace background color`*. </br> You can also enable the background image and reduce the background opacity in order to lower the saturation of your custom color."
         markdown: true
     -
         id: workspace-bg
