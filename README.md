@@ -3,8 +3,8 @@
 ![Issues](https://img.shields.io/github/issues/Seniblue/Underwater?style=for-the-badge&color=ebbcba&labelColor=26233a)
 
 > ### Recent features ✨
-> - 🎨 New color schemes : 🌊 _Underwater Sand_ (dark) and 🌊 _Underwater Coral_ (light)
-> - 🎨 New color scheme : _Obsidian_ (light and dark) using the default colors of the app !
+> - 🎨 New color schemes: 🌊 _Underwater Sand_ (dark) and 🌊 _Underwater Coral_ (light)
+> - 🎨 New color scheme: _Obsidian_ (light and dark) using the default colors of the app!
 > - 🖼️ Custom background image (+ image blur, image opacity, and layout opacity)
 
 
@@ -82,19 +82,22 @@
 
 # Cssclasses
 
-- **no-title** : removes inline title
-- **no-embed** : seamless embeds
-- **notebook** : adds notebook-like background to current note
-- **write** : monospace font + bigger first letter for each paragraph
+- **no-title**: removes inline title
+- **no-embed**: seamless embeds
+- **notebook**: adds notebook-like background to current note
+- **write**: monospace font + bigger first letter for each paragraph
 
 
 # Formatting
-**🌅 Looks nice with [Lexend](https://www.lexend.com/) font**
+**🌅 Nice fonts:**
+- Text font: [Lexend](https://www.lexend.com/)
+- Interface font: [Inter](https://rsms.me/inter/)
+- Monospace font: [Recursive Monospace](https://www.recursive.design/) or [Recursive Monospace Casual](https://www.recursive.design/)
 
 ![formatting](img/formatting.png)
 
 - Checkboxes
-- Custom callouts : timeline, person, bookmark, media + "center" callout metadata
+- Custom callouts: timeline, person, bookmark, media + "center" callout metadata
 - Scrollbar on hover (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
 - Active line highlight
 - Slight image animation on hover
@@ -153,7 +156,7 @@
 - Wypst
 
 # Credit
-Credit to these themes for certain elements and inspiration !
+Credit to these themes for certain elements and inspiration!
 - [Border](https://github.com/Akifyss/obsidian-border) by [@Akifyss](https://github.com/Akifyss)
 - [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin) by [@Anubis](https://github.com/AnubisNekhet)
 - [Minimal](https://github.com/kepano/obsidian-minimal) by [@Kepano](https://github.com/kepano)
