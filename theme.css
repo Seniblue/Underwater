@@ -46,8 +46,8 @@
   --italic-color: var(--foam);
 
   /*---titlebar---*/
-  --titlebar-background: transparent; /*var(--overlaty)*/
-  --titlebar-background-focused: transparent; /*var(--titlebar-background)*/
+  --titlebar-background: transparent;
+  --titlebar-background-focused: transparent;
   --titlebar-border-width: 0px;
   
   /*---icons---*/
@@ -153,7 +153,6 @@
   --table-header-background-hover: var(--table-header-background);
   --table-header-color: var(--surface);
   --table-border-color: var(--highlight-med);
-  --table-selection-border-radius: 7px;
   --table-row-alt-background: var(--highlight-low);
   --table-row-alt-background-hover: var(--table-row-alt-background);
 
@@ -193,7 +192,6 @@
   --background-secondary-alt: var(--background-primary-alt);
   --background-modifier-border: transparent;
   --background-modifier-error: var(--color-red);
-  --background-modifier-message: var(--text-muted);
   --background-modifier-form-field: var(--overlay);
   --divider-width: 0px;
   --border-width: 0px;
@@ -213,7 +211,7 @@
   --tag-color: var(--rose);
   --tag-color-hover: var(--love);
 
-  --file-header-border: 1px dashed var(--highlight-high);
+  --file-header-border: 1px dashed var(--highlight-med);
 
   /*properties*/
   --metadata-display-reading: none;
@@ -420,17 +418,24 @@
   color-scheme: light;
 
   /*PALETTE*/
-  --love-rgb: 86, 139, 187;/*Ocean*/
-  --gold-rgb: 230, 161, 73;/*Sand*/
-  --rose-rgb: 106, 168, 149;/*green water*/
-  --pine-rgb: 205, 106, 94;/**/
-  --foam-rgb: 127, 111, 134;/**/
-  --iris-rgb: 204, 135, 90;/**/
+  --love-rgb: 205, 106, 94;
+  --gold-rgb: 230, 161, 73;
+  --rose-rgb: 127, 111, 134;
+  --pine-rgb: 86, 139, 187;
+  --foam-rgb: 106, 168, 149;
+  --iris-rgb: 204, 135, 90;
+
+/*  --love-rgb: 86, 139, 187;
+  --gold-rgb: 230, 161, 73;
+  --rose-rgb: 106, 168, 149;
+  --pine-rgb: 205, 106, 94;
+  --foam-rgb: 127, 111, 134;
+  --iris-rgb: 204, 135, 90;*/
 
   --base: #F2EDF4; 
-  --surface: #FBF6FE;
-  --surface-rgb: 251, 246, 254;
-  --overlay: #DFD9E2;
+  --surface: #fcfbfa;
+  --surface-rgb: 252, 251, 250;
+  --overlay: #eee9f0;
 
   --muted: #798094;
   --subtle: #616980;
@@ -450,17 +455,17 @@
   color-scheme: light;
 
   /*PALETTE*/
-  --love-rgb: 163, 133, 90;
+  --love-rgb: 145, 121, 123;
   --gold-rgb: 242, 154, 99;
   --rose-rgb: 145, 166, 204;
-  --pine-rgb: 59, 160, 128;
+  --pine-rgb: 119, 166, 155;
   --foam-rgb: 138, 182, 189;
   --iris-rgb: 222, 152, 137;
 
   --base: #F3E9E2; 
   --surface: #FFF4ED;
   --surface-rgb: 255, 244, 237;
-  --overlay: #FBE9DB;
+  --overlay: #FBE1DB;
 
   --muted: #A79A8C;
   --subtle: #928577;
@@ -475,6 +480,36 @@
   --accent-s: 56%;
   --accent-l: 70%;
   --color-accent-hsl: 11, 56%, 70%; /*iris*/
+}
+.theme-light.uw-aqua {
+  color-scheme: light;
+
+  /*PALETTE*/
+  --love-rgb: 194, 105, 128;
+  --gold-rgb: 179, 189, 129;
+  --rose-rgb: 206, 151, 127;
+  --pine-rgb: 123, 168, 149;
+  --foam-rgb: 113, 185, 194;
+  --iris-rgb: 154, 152, 188;
+
+  --base: #EFEEE5; 
+  --surface: #FFFDF1;
+  --surface-rgb: 255, 253, 241;
+  --overlay: #e1ebe9;
+
+  --muted: #B0A49B;
+  --subtle: #978B83;
+  --text: #47403B; 
+
+  --highlight-low: #DFE3E5; 
+  --highlight-med-rgb: 200, 211, 214; 
+  --highlight-high: #bdc9ce;
+
+  /*override accent color !*/
+  --accent-h: 187;
+  --accent-s: 40%;
+  --accent-l: 60%;
+  --color-accent-hsl: 187, 40%, 60%; /*foam*/
 }
 .theme-dark /*Rosé Pine*/ {
   color-scheme: dark;
@@ -565,10 +600,6 @@
   --accent-s: 53%;
   --accent-l: 72%;
   --color-accent-hsl: 196, 53%, 72%;
-
-  .notice, .tooltip {
-    color: var(--surface);
-  }
 }
 .theme-dark.catpuccin-mocha {
   color-scheme: dark;
@@ -921,7 +952,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 /*center inline title*/
 .inline-title {
   text-align: center;         
-}/*doesnt work with MakeMD*/
+}
 
 /*status bar styling*/
 .status-bar {
@@ -1013,7 +1044,7 @@ body:not(.is-phone) div:has(>input.prompt-input) {
 .search-result:not(.is-collapsed) .search-result-file-title {
   color: var(--text-normal);
 }
-.embedded-backlinks {
+:not(.mk-inline-context).embedded-backlinks {
   border: 1px dashed var(--highlight-med);
   padding: 20px;
   border-radius: 10px;
@@ -1046,6 +1077,9 @@ tr:last-child td:first-child {
 }
 tr:last-child td:last-child {
   border-bottom-right-radius: var(--table-border-radius)
+}
+.cm-s-obsidian .HyperMD-table-row-0 {/*fix header color in source mode*/
+  color: var(--text-normal);
 }
 /*center tables*/
 table, .table-wrapper {
@@ -1140,14 +1174,14 @@ body:not(.no-links) .markdown-rendered .internal-link:hover {
   display: none;
 }
 
-/*----CUSTOM CALLOUTS -----------------------*/
+/*---- CUSTOM CALLOUTS ----*/
 .callout[data-callout="bookmark"] {
   --callout-color: var(--color-pink-rgb);
   --callout-icon: bookmark;
 }
-.callout[data-callout="timeline"] {
-  --callout-color: var(--color-green-rgb);
-  --callout-icon: lucide-flag-triangle-right;
+.callout[data-callout="time"] {
+  --callout-color: var(--color-purple-rgb);
+  --callout-icon: lucide-timer;
 }
 .callout[data-callout="person"] {
   --callout-color: var(--color-cyan-rgb);
@@ -1202,6 +1236,10 @@ progress::-webkit-progress-bar {
   height: 8px;
   width: 200px;
 }
+/*from Minimal theme*/.markdown-rendered progress[value^='1']::-webkit-progress-value, 
+.markdown-source-view.is-live-preview progress[value^='1']::-webkit-progress-value,
+.markdown-preview-view progress[value^='1']::-webkit-progress-value {
+  background-color: var(--color-green); }
 
 /*-----center h5, underline h1-------*/
 body:not(.no-h5) .HyperMD-header.HyperMD-header-5, body:not(.no-h5) h5 {
@@ -1212,7 +1250,7 @@ body:not(.no-h5) .HyperMD-header.HyperMD-header-5, body:not(.no-h5) h5 {
   padding-bottom: 4px !important;
   border-bottom: 2px solid var(--h1-color);
 }
-.cm-s-obsidian .cm-inline-code:not(.cm-formatting), .cm-s-obsidian span.cm-inline-code {
+.cm-s-obsidian .cm-inline-code:not(.cm-formatting), .cm-s-obsidian span.cm-inline-code, .markdown-source-view.mod-cm6.is-live-preview .cm-hashtag.cm-meta {
   font-size: var(--code-size) !important;
 }
 
@@ -1302,8 +1340,12 @@ FROM https://forum.obsidian.md/t/trying-to-color-the-outline-headers-levels/7945
   }
   .tree-item .tree-item .tree-item .tree-item .tree-item .tree-item > .tree-item-self {
     color: var(--h6-color);
-  }
+  }}
+/*File explorer editing content color fix*/
+.tree-item-inner[contenteditable="true"], .tree-item-inner-text[contenteditable="true"] {
+  color: var(--text-normal) !important;
 }
+
 
 /*CHECKBOXES*/
 /*little animation */
@@ -1895,61 +1937,42 @@ body {
 /*=============================PDF STYLING - WIP =====================================*/
 @media print {
   body {
+    --print-font-size: 14px;
+
+    --text-normal: black !important;
+    --text: black !important;
     --bold-weight: 750;
-    --font-default: "Inter" !important;
-    font-family: "Inter" !important;
     text-align: justify;
-    font-size: 14px !important;
-    --font-text-size: 14px !important;
+    font-size: var(--print-font-size) !important;
+    --font-text-size: var(--print-font-size) !important;
   
-    --table-header-background: transparent;
-      --table-header-background-hover: var(--table-header-background);
-      --table-header-color: var(--text-normal);
-      --table-selection-border-radius: 7px;
-      --table-row-alt-background: transparent;
-      --table-row-alt-background-hover: var(--table-row-alt-background);
-      --table-border-radius: 0px !important;  
-  }
-  :is(.task-list-item, ol, li, ul, tr, td, th, thead, p, h1, h2, h3, h4, h5, h6, .callout, table) {
-    font-family: "Inter" !important;
+    --table-header-background: transparent !important;
+    --table-header-color: var(--text-normal) !important;
+    --table-row-alt-background: transparent !important;
+    --table-border-color: var(--text-normal);
   }
   /*headings*/
-  h1:first-of-type {
-    color: var(--foam);
-    text-align: center !important;
-    font-size: 22px;
-    background-color: transparent;
-    display: block;
-    border: 0px;
-    padding-top: 0px;
-  }
   h1 {
-    font-size: 18px;
+    font-size: 19px;
     page-break-after: avoid;
-    padding-top: 50px;
   }
   h2 {
-    font-size: 16px;
+    font-size: 17px;
     margin-left: 15px;
-    border: none;
     page-break-after: avoid;
-    padding-top: 30px;
   }
   h3 {
-    font-size: 15px;
+    font-size: 16px;
     margin-left: 30px;
-    border: none;
     page-break-after: avoid;
-    padding-top: 25px;
   }
   h4 {
-    font-size: 14px;
+    font-size: var(--print-font-size);
     margin-left: 50px;
     page-break-after: avoid;
-    padding-top: 20px;
   }
   h5 {
-    font-size: 14px;
+    font-size: var(--print-font-size);
   }
   .markdown-embed {
     page-break-after: avoid;
@@ -1957,12 +1980,20 @@ body {
   .callout {
     border-width: 2px;
     border-color: rgba(var(--callout-color));
-    border-radius: 0px;
     background-color: transparent;
     page-break-inside: avoid;
-    font-size: 14px;
-    padding: 12px 12px;
-    --callout-title: center;
+    font-size: var(--print-font-size);
+    --callout-content-padding: 0px var(--size-4-6);
+    padding: 0px;
+  }
+  .callout-title {
+    padding: 7px 20px;
+    border-bottom: 2px rgba(var(--callout-color)) solid;
+    text-align: center !important;
+    background-color: rgba(var(--callout-color), 0.1);
+  }
+  .callout-fold.is-collapsed .svg-icon {
+    display: none;
   }
   :is(td, th, thead tr) {
     border-width: 1px 0px 0px 1px;
@@ -1973,10 +2004,6 @@ body {
     padding: 0px 2px;
     margin: 0 0px;
   }
-    @page {
-      margin: 0.5in;
-      size: 8.5in 11in;
-    }
 }
 
 /*========================Style settings options==========================*/
@@ -2013,7 +2040,6 @@ body {
   --table-header-background: transparent;
   --table-header-background-hover: var(--table-header-background);
   --table-header-color: var(--text-normal);
-  --table-selection-border-radius: 7px;
   --table-row-alt-background: transparent;
   --table-row-alt-background-hover: var(--table-row-alt-background);
   --table-border-radius: 0px !important;  
@@ -2065,20 +2091,23 @@ li[data-task]:not(li[data-task=" "], li[data-task="x"], li[data-task="/"])>p>inp
   bottom: 0;
 }
 .workspace-bg .app-container {
-    &.workspace, .workspace-tabs, .workspace-split, .horizontal-main-container {
-    background-color: transparent;
+  &.workspace, .workspace-tabs, .workspace-split, .horizontal-main-container {
+  background-color: transparent;
 }}
-/*initial code*/
-.workspace-bg .workspace-tabs .workspace-leaf, .workspace-bg .workspace-sidedock-vault-profile {
+.workspace-bg .workspace-leaf, .workspace-bg .workspace-sidedock-vault-profile {
   --background-primary: rgba(var(--surface-rgb),var(--layout-opacity, 0.8));
   background-color: var(--background-primary) !important;
 }
-.workspace-bg .mod-right-split .view-content, .workspace-bg .mod-left-split .view-content   {
+.workspace-bg .mod-right-split, .workspace-bg .mod-left-split {
   --background-primary: rgba(var(--surface-rgb),var(--layout-opacity, 0.8)) !important;
   background-color: var(--background-primary) !important;
-
 }
-
+.workspace-bg .workspace-split.mod-left-split, .workspace-bg .workspace-split.mod-right-split {
+  background-color: transparent !important;
+}
+.workspace-bg .workspace-split.mod-root .view-content, .workspace-bg .workspace-leaf.mod-active .view-header {
+  background-color: transparent;
+}
 
 /* @settings
 
@@ -2089,7 +2118,7 @@ settings:
     - 
         id: my-info-text
         title:
-        description: "💫 **Star the theme on Github: [Underwater on Github](https://github.com/Seniblue/Underwater)!** </br></br> ✨ Theme updates and new features: [Changelog](https://github.com/Seniblue/Underwater/commits/main/) </br></br> **💡** The theme looks nice with [Lexend](https://www.lexend.com/) font!"
+        description: "💫 **Star the theme on Github: [Underwater on Github](https://github.com/Seniblue/Underwater)!** </br></br> ✨ Theme updates and new features: [Releases](https://github.com/Seniblue/Underwater/releases) </br></br> **💡** The theme looks nice with [Lexend](https://www.lexend.com/) font!"
         type: info-text
         markdown: true
     -
@@ -2163,6 +2192,9 @@ settings:
             -
                label: 🌊 Underwater Coral
                value: uw-coral
+            -
+               label: 🌊 Underwater Aqua - WIP
+               value: uw-aqua
 
 # 🎨 Theme colors
     -
@@ -2493,7 +2525,7 @@ settings:
     -
         id: headings-font
         title: Specific font for headings (H1 to H6)
-        description: Just write the name of the font, or leave blank for default
+        description: Just write the name of the font, or leave it blank for default font
         type: variable-text
         default: Default text font
         quotes: true
