@@ -2,11 +2,9 @@
 ![Stars](https://img.shields.io/github/stars/Seniblue/Underwater?style=for-the-badge&color=c4a7e7&labelColor=26233a)
 ![Issues](https://img.shields.io/github/issues/Seniblue/Underwater?style=for-the-badge&color=ebbcba&labelColor=26233a)
 
-> ### Recent features ✨
-> Theme updates and new features: [Releases](https://github.com/Seniblue/Underwater/releases)
-> - 🎨 New color schemes: 🌊 _Underwater Sand_ (dark) and 🌊 _Underwater Coral_ (light)
-> - 🎨 New color scheme: _Obsidian_ (light and dark) using the default colors of the app!
-> - 🖼️ Custom background image (+ image blur, image opacity, and layout opacity)
+
+> - Theme updates and new features: [Releases](https://github.com/Seniblue/Underwater/releases)
+> - NEW: [🐠 Snippets folder](https://github.com/Seniblue/Underwater/tree/main/%F0%9F%90%A0%20SNIPPETS) featuring [🌊 Minimal_cards](https://github.com/Seniblue/Underwater/blob/main/%F0%9F%90%A0%20SNIPPETS/%F0%9F%8C%8A%20Minimal_cards.css) and  [🚩 Timeline callout](https://github.com/Seniblue/Underwater/blob/main/%F0%9F%90%A0%20SNIPPETS/%F0%9F%9A%A9%20Timeline%20callout.css) snippets
 
 
 ![uw](img/thumbnail.png)
@@ -161,6 +159,7 @@ Credit to these themes for certain elements and inspiration!
 - [Border](https://github.com/Akifyss/obsidian-border) by [@Akifyss](https://github.com/Akifyss)
 - [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin) by [@Anubis](https://github.com/AnubisNekhet)
 - [Minimal](https://github.com/kepano/obsidian-minimal) by [@Kepano](https://github.com/kepano)
+- The Obsidian [Forum](https://forum.obsidian.md/)
 - Default tab image by [karyative](https://www.flaticon.com/fr/auteurs/karyative) on [Flaticon](https://www.flaticon.com/).
 
 # Tasks
