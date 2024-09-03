@@ -96,7 +96,7 @@
 ![formatting](img/formatting.png)
 
 - Checkboxes
-- Custom callouts: timeline, person, bookmark, media + "center" callout metadata
+- Custom callouts: time, person, bookmark, media + "center" callout metadata
 - Scrollbar on hover (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
 - Active line highlight
 - Slight image animation on hover
