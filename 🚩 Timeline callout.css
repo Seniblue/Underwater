@@ -1,0 +1,83 @@
+/* 🚩 Timeline callout
+author: FireIsGood
+source: https://discord.com/channels/686053708261228577/702656734631821413/1156868388249935883
+Tweaked by @Seniblue for the Underwater theme (https://github.com/Seniblue/Underwater/)
+*/
+
+
+/* Timeline Callout settings */
+body {
+  --timeline-title-color: var(--color-blue);
+  --timeline-title-size: var(--h4-size);
+  --timeline-title-width: 120px;
+  --timeline-title-margin-top: 8px;
+  --timeline-line-color: var(--text-muted);
+  --timeline-line-margin: 16px;
+  --timeline-line-width: 2px;
+  --timeline-line-style: dashed;
+  --timeline-dot-color: var(--background-primary);
+  --timeline-dot-size: 15px;
+  --timeline-dot-radius: 40%;
+  --timeline-dot-border-color: var(--color-blue);
+  --timeline-dot-border-size: 2px;
+  --timeline-dot-offset-x: -9px;
+  --timeline-dot-offset-y: -2px;
+  --timeline-card-margin: 10px;
+  --timeline-card-background-color: var(--background-primary-alt);
+  --timeline-card-padding-x: 2px;
+  --timeline-card-padding-y: 15px;
+}
+/* Timeline styling */
+[data-callout="timeline"] {
+  order: 1;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  mix-blend-mode: normal;
+  background-color: unset;
+  grid-template-columns: var(--timeline-title-width, 150px) auto;
+  --dot-offset: calc(var(--timeline-dot-offset-y) + var(--timeline-card-padding-y));
+  .callout-title-inner {
+    width: 100%;
+    text-align: right;
+    color: var(--timeline-title-color);
+    font-size: var(--timeline-title-size);
+    margin-top: var(--timeline-title-margin-top);
+  }
+  .callout-icon {
+    order: 2;
+    margin-inline: var(--timeline-line-margin);
+    border-left: var(--timeline-line-width) var(--timeline-line-style) var(--timeline-line-color);
+    height: 100%;
+    position: relative;
+    &::after {
+      content: "";
+      box-sizing: border-box;
+      background-color: var(--timeline-dot-color);
+      position: absolute;
+      border: var(--timeline-dot-border-size) solid var(--timeline-dot-border-color);
+      border-radius: var(--timeline-dot-radius);
+      width: var(--timeline-dot-size);
+      height: var(--timeline-dot-size);
+      top: var(--dot-offset);
+      left: var(--timeline-dot-offset-x);
+    }
+  }
+  .svg-icon {
+    display: none;
+  }
+  .callout-content {
+    order: 3;
+    --p-spacing: 0.5rem;
+    background-color: var(--timeline-card-background-color);
+    border-radius: 1rem;
+    margin-bottom: var(--timeline-card-margin);
+    padding: var(--timeline-card-padding-x) var(--timeline-card-padding-y);
+  }}
+/* Stacking multiple timelines */
+div:not(:has(> [data-callout="timeline"])) + div > [data-callout="timeline"] {
+  margin-top: var(--p-spacing);
+}
+div:has(> [data-callout="timeline"]) + div:not(> [data-callout="timeline"]) {
+  margin-bottom: 1rem;
+}
