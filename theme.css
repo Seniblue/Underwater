@@ -475,17 +475,17 @@
   --foam-rgb: 96, 161, 169;
   --iris-rgb: 128, 127, 152;
 
-  --base: #EFEEE5; 
+  --base: #f0efec; 
   --surface-rgb: 255, 251, 245;
-  --overlay: #d2e6de;
+  --overlay: #e6eeec;
 
-  --muted: #B0A49B;
-  --subtle: #978B83;
-  --text: #47403B; 
+  --muted: #80766f;
+  --subtle: #7c726b;
+  --text: #4e4c49; 
 
-  --highlight-low: #DFE3E5; 
-  --highlight-med-rgb: 200, 211, 214; 
-  --highlight-high: #bdc9ce;
+  --highlight-low: #e9eef0; 
+  --highlight-med-rgb: 220, 227, 230; 
+  --highlight-high: #cfdadf;
 
   /*override accent color !*/
   --accent-h: 187;
@@ -1872,6 +1872,11 @@ body {
   transform: none !important;
 }
 
+/*Excalidraw*/
+.excalidraw {
+  background-color: var(--surface);
+}
+
 /*STYLE SETTINGS*/
 .style-settings-info-text .style-settings-markdown {
   background-color: var(--base);
@@ -2174,7 +2179,7 @@ settings:
                label: 🌊 Underwater Coral
                value: uw-coral
             -
-               label: 🌊 Underwater Aqua - WIP
+               label: 🌊 Underwater Aqua
                value: uw-aqua
 
 # 🎨 Theme colors
