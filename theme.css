@@ -176,7 +176,7 @@
   --scrollbar-active-thumb-bg: var(--highlight-high);
 
   /*status bar*/
-  --status-bar-background: var(--overlay);
+  --status-bar-background: var(--base);
   --status-bar-font-size: 11px;
   --status-bar-radius: 12px 0 0 12px;
 
@@ -910,6 +910,9 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 .cm-s-obsidian, .markdown-preview-view {
   text-align: justify;
 }
+.markdown-source-view ol > li, .markdown-source-view ul > li, .markdown-preview-view ol > li, .markdown-preview-view ul > li, .mod-cm6 .HyperMD-list-line.cm-line {
+  text-align: left;
+}
 
 /*Rounded Highlight style*/
 .cm-s-obsidian span.cm-highlight, mark {
@@ -1295,12 +1298,19 @@ body:not(.no-activeline) .cm-active.cm-line {
   box-shadow: -25vw 0px rgb(var(--rose-rgb), 0.08), 25vw 0 rgb(var(--rose-rgb), 0.08);
 }
 
-/*Outline pane styling
+/*Outline pane styling - WIP
 FROM https://forum.obsidian.md/t/trying-to-color-the-outline-headers-levels/79451/3 */
 [data-type="outline"] {
   .tree-item > .tree-item-self {
     color: var(--h1-color);
     font-weight:500;
+  }
+  .tree-item > .tree-item-self::before {
+  content: "⏵";
+  margin-right: 10px;
+  }
+  .tree-item > .tree-item-self.is-active {
+    color: var(--surface);
   }
   .tree-item .tree-item > .tree-item-self {
     color: var(--h2-color);
@@ -1323,13 +1333,11 @@ FROM https://forum.obsidian.md/t/trying-to-color-the-outline-headers-levels/7945
   color: var(--text-normal) !important;
 }
 
-
 /*CHECKBOXES*/
 /*little animation */
 input[type=checkbox] {
   transition: background 0.4s, stroke-dashoffset 0.6s, border-color 0.2s ease-out;
 }
-
 /*CHECKBOXES: from minimal, tweaked*/
 input[data-task="/"]:checked,
 input[data-task="i"]:checked,
@@ -1875,6 +1883,10 @@ body {
 /*Excalidraw*/
 .excalidraw {
   background-color: var(--surface);
+}
+.excalidraw-embedded-img, .excalidraw-embedded-img:hover { /*disable animation on Excalidraw drawings*/
+  transition: none !important;
+  transform: none !important;
 }
 
 /*STYLE SETTINGS*/
