@@ -1,15 +1,14 @@
 /* 🚩 Timeline callout
-author: FireIsGood 
+author: FireIsGood
 source: https://discord.com/channels/686053708261228577/702656734631821413/1156868388249935883
 Tweaked by @Seniblue for the Underwater theme (https://github.com/Seniblue/Underwater/)
 */
-
 
 /* Timeline Callout settings */
 body {
   --timeline-title-color: var(--color-blue);
   --timeline-title-size: var(--h4-size);
-  --timeline-title-width: 120px;
+  --timeline-title-width: 150px;
   --timeline-title-margin-top: 8px;
   --timeline-line-color: var(--text-muted);
   --timeline-line-margin: 16px;
@@ -23,7 +22,7 @@ body {
   --timeline-dot-offset-x: -9px;
   --timeline-dot-offset-y: -2px;
   --timeline-card-margin: 10px;
-  --timeline-card-background-color: var(--background-primary-alt);
+  --timeline-card-background-color: var(--overlay);
   --timeline-card-padding-x: 2px;
   --timeline-card-padding-y: 15px;
 }
@@ -43,6 +42,8 @@ body {
     color: var(--timeline-title-color);
     font-size: var(--timeline-title-size);
     margin-top: var(--timeline-title-margin-top);
+    overflow: hidden;
+    word-wrap: break-word;
   }
   .callout-icon {
     order: 2;
