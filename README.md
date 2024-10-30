@@ -1,85 +1,43 @@
-**📅 PLANNED: New Readme for Obsidian October!**
-
 ![Version](https://img.shields.io/github/manifest-json/v/Seniblue/Underwater?style=for-the-badge&color=9ccfd8&labelColor=26233a)
 ![Stars](https://img.shields.io/github/stars/Seniblue/Underwater?style=for-the-badge&color=c4a7e7&labelColor=26233a)
 ![Issues](https://img.shields.io/github/issues/Seniblue/Underwater?style=for-the-badge&color=ebbcba&labelColor=26233a)
 
-
-> - Theme updates and new features: [Releases](https://github.com/Seniblue/Underwater/releases)
-> - NEW: [🐠 Snippets folder](https://github.com/Seniblue/Underwater/tree/main/%F0%9F%90%A0%20SNIPPETS) featuring [🌊 Minimal_cards](https://github.com/Seniblue/Underwater/blob/main/%F0%9F%90%A0%20SNIPPETS/%F0%9F%8C%8A%20Minimal_cards.css) and  [🚩 Timeline callout](https://github.com/Seniblue/Underwater/blob/main/%F0%9F%90%A0%20SNIPPETS/%F0%9F%9A%A9%20Timeline%20callout.css) snippets
-
+[✨ Theme updates](https://github.com/Seniblue/Underwater/releases)
 
 ![uw](img/thumbnail.png)
 
 > [!IMPORTANT]
-> 🐳 This theme works best with the **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin**, which allows you to choose a **color scheme**, to customize all of the **colors** and to choose alternate **stylings**.
+> 🐳 This theme works best with the **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin**, which allows you to choose a **color scheme**, to customize all the **colors** and to choose alternate **stylings**.
 
 ---
 
 # Color schemes
 
 ![colorschemes](img/colorschemes.png)
+### Popular color schemes
+| Dark                                                | Light                                               |
+| --------------------------------------------------- | --------------------------------------------------- |
+| [Rosé Pine](https://rosepinetheme.com/)             | [Rosé Pine](https://rosepinetheme.com/)             |
+| [Rosé Pine Moon](https://rosepinetheme.com/)        |                                                     |
+| [Nord](https://www.nordtheme.com/)                  | [Nord](https://www.nordtheme.com/)                  |
+| [Catpuccin Mocha](https://catppuccin.com/)          | [Catpuccin Latte](https://catppuccin.com/)          |
+| [Everforest](https://github.com/sainnhe/everforest) | [Everforest](https://github.com/sainnhe/everforest) |
+| [Biscuit](https://github.com/Biscuit-Theme/biscuit) | [Gruvbox](https://github.com/morhetz/gruvbox)       |
+| Obsidian default                                    | Obsidian default                                    |
 
-<table align="center">
-    <thead>
-        <tr>
-            <th colspan="2">Popular color schemes</th>
-            <th colspan="2">🌊 Underwater color schemes</th>
-        </tr>
-    </thead>
-    <tbody align="center">
-        <tr>
-            <td><b>Light</b></td>
-            <td><b>Dark</b></td>
-            <td><b>Light</b></td>
-            <td><b>Dark</b></td>
-        </tr>
-        <tr>
-            <td>Nord</td>
-            <td>Nord</td>
-            <td>Octopus</td>
-            <td>Deep๋࣭</td>
-        </tr>
-        <tr>
-            <td>Catppuccin Latte</td>
-            <td>Catppuccin Mocha</td>
-            <td>Coral</td>
-            <td>Blue Ocean</td>
-        </tr>
-        <tr>
-            <td>Everforest</td>
-            <td>Everforest</td>
-            <td></td>
-            <td>Seaweed</td>
-        </tr>
-        <tr>
-            <td>Gruvbox</td>
-            <td>Biscuit</td>
-            <td></td>
-            <td>Sand</td>
-        </tr>
-        <tr>
-            <td>Rosé Pine Dawn</td>
-            <td>Rosé Pine</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>Rosé Pine Moon</td>
-            <td></td>
-            <td></td        </tr>
-        <tr>
-            <td>Obsidian default</td>
-            <td>Obsidian default</td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
+### 🌊 Underwater color schemes
+| Dark       | Light   |
+| ---------- | ------- |
+| Deep       | Octopus |
+| Blue ocean | Coral   |
+| Seaweed    | Aqua    |
+| Sand       | Oyster  |
 
-<img src="https://github.com/Seniblue/Underwater/blob/main/img/cssclasses.png" alt="cssclasses" align="right"/>
-
+# Formatting
+**🪼 Recommended fonts:**
+- Text font: [Lexend](https://www.lexend.com/)
+- Interface font: [Inter](https://rsms.me/inter/)
+- Monospace font: [Recursive Monospace](https://www.recursive.design/) or [Recursive Monospace Casual](https://www.recursive.design/)
 
 # Cssclasses
 
@@ -88,63 +46,32 @@
 - **notebook**: adds notebook-like background to current note
 - **write**: monospace font + bigger first letter for each paragraph
 
+![|300](https://github.com/Seniblue/Underwater/blob/main/img/checkboxes.png)
 
-# Formatting
-**🌅 Nice fonts:**
-- Text font: [Lexend](https://www.lexend.com/)
-- Interface font: [Inter](https://rsms.me/inter/)
-- Monospace font: [Recursive Monospace](https://www.recursive.design/) or [Recursive Monospace Casual](https://www.recursive.design/)
-
-![formatting](img/formatting.png)
-
-- Checkboxes
-- Custom callouts: time, person, bookmark, media + "center" callout metadata
+# Features
+- Custom checkboxes
+- Custom callouts: `time`, `person`, `bookmark`, `media`, and "`center`" metadata
 - Scrollbar on hover (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
 - Active line highlight
 - Slight image animation on hover
-- Special window styling (best suited for Windows)
-- Rounded highlighting style + internal links special style
+- Rounded highlighting style
 - New tab custom image & styling
 - FULL FOCUS MODE (can be toggled via a hotkey)
 - VAULT ICON (icon can be chosen via Style settings)
-- Background image
+- Custom background image
+- Print styling
 
-<details>
-    <summary>✅ Click to see <b>checkboxes</b></summary>
-    <p>
-        <table>
-    <tr>
-        <td><pre>
-- [ ] task 
-- [x] done
-- [-] canceled
-- [/] in progress
-- [i] info
-- [!] important
-- [l] location
-- [*] star
-- [H] heart
-- [b] bookmark
-- [<] scheduled
-- [e] energy
-- [T] timer
-- [I] idea
-- [s] sparkles
-- [w] wave</pre></td>
-        <td><img src="https://github.com/Seniblue/Underwater/blob/main/img/checkboxes.png" alt="checkboxes"/>
-</td>
-    </tr>
-</table>
+![](https://github.com/Seniblue/Underwater/blob/main/img/ffmode.png)
+![](https://github.com/Seniblue/Underwater/blob/main/img/bgimg.png)
 
-</p>
-</details>
+# Snippets
 
-
-
-<img src="https://github.com/Seniblue/Underwater/blob/main/img/plugins.png" alt="plugins" align="right"/>
-
+[🐠 Snippets folder](https://github.com/Seniblue/Underwater/tree/main/%F0%9F%90%A0%20SNIPPETS) featuring :
+- [🌊 Minimal_cards](https://github.com/Seniblue/Underwater/blob/main/%F0%9F%90%A0%20SNIPPETS/%F0%9F%8C%8A%20Minimal_cards.css) (adapted version of [@Kepano](https://github.com/kepano)'s minimal cards.)
+-   [🚩 Timeline callout](https://github.com/Seniblue/Underwater/blob/main/%F0%9F%90%A0%20SNIPPETS/%F0%9F%9A%A9%20Timeline%20callout.css) (tweaked from [@FireIsGood](https://discord.com/channels/686053708261228577/702656734631821413/1156868388249935883)'s timeline callout)
 
 # Plugins support
+![|300](https://github.com/Seniblue/Underwater/blob/main/img/plugins.png)
 
 - Make.MD
 - Kanban
@@ -153,8 +80,9 @@
 - Widgets
 - Tokei
 - File Tree Alternative
-- Todoist Sync
 - Wypst
+- Dataview
+- Meta Bind
 
 # Credit
 Credit to these themes for certain elements and inspiration!
@@ -162,11 +90,9 @@ Credit to these themes for certain elements and inspiration!
 - [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin) by [@Anubis](https://github.com/AnubisNekhet)
 - [Minimal](https://github.com/kepano/obsidian-minimal) by [@Kepano](https://github.com/kepano)
 - The Obsidian [Forum](https://forum.obsidian.md/)
-- Default tab image by [karyative](https://www.flaticon.com/fr/auteurs/karyative) on [Flaticon](https://www.flaticon.com/).
 
 # Tasks
 - [x] Add more options for settings with style settings
 - [x] Work on README
 - [x] Add custom color schemes
-- [x] Submit theme
-- [ ] 📱 Mobile support
+- [x] 📱 Mobile support
