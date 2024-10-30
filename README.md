@@ -44,7 +44,7 @@
 - **no-title**: removes inline title
 - **no-embed**: seamless embeds
 - **notebook**: adds notebook-like background to current note
-- **write**: monospace font + bigger first letter for each paragraph
+- **write**: monospace font + bigger first letter at the beginning of each paragraph
 
 ![](https://github.com/Seniblue/Underwater/blob/main/img/checkboxes.png)
 
