@@ -13,7 +13,7 @@
 
 # Color schemes
 
-![colorschemes](img/colorschemes.png)
+![colorschemes|300](img/colorschemes.png)
 ### Popular color schemes
 | Dark                                                | Light                                               |
 | --------------------------------------------------- | --------------------------------------------------- |
@@ -61,8 +61,8 @@
 - Custom background image
 - Print styling
 
-![](https://github.com/Seniblue/Underwater/blob/main/img/ffmode.png)
-![](https://github.com/Seniblue/Underwater/blob/main/img/bgimg.png)
+![|300](https://github.com/Seniblue/Underwater/blob/main/img/ffmode.png)
+![|300](https://github.com/Seniblue/Underwater/blob/main/img/bgimg.png)
 
 # Snippets
 
