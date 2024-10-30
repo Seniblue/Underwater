@@ -13,7 +13,7 @@
 
 # Color schemes
 
-![colorschemes|600](img/colorschemes.png)
+![colorschemes](img/colorschemes.png)
 ### Popular color schemes
 | Dark                                                | Light                                               |
 | --------------------------------------------------- | --------------------------------------------------- |
@@ -46,7 +46,7 @@
 - **notebook**: adds notebook-like background to current note
 - **write**: monospace font + bigger first letter for each paragraph
 
-![|600](https://github.com/Seniblue/Underwater/blob/main/img/checkboxes.png)
+![](https://github.com/Seniblue/Underwater/blob/main/img/checkboxes.png)
 
 # Features
 - Custom checkboxes
@@ -61,8 +61,8 @@
 - Custom background image
 - Print styling
 
-![|600](https://github.com/Seniblue/Underwater/blob/main/img/ffmode.png)
-![|600](https://github.com/Seniblue/Underwater/blob/main/img/bgimg.png)
+![](https://github.com/Seniblue/Underwater/blob/main/img/ffmode.png)
+![](https://github.com/Seniblue/Underwater/blob/main/img/bgimg.png)
 
 # Snippets
 
@@ -71,7 +71,7 @@
 -   [🚩 Timeline callout](https://github.com/Seniblue/Underwater/blob/main/%F0%9F%90%A0%20SNIPPETS/%F0%9F%9A%A9%20Timeline%20callout.css) (tweaked from [@FireIsGood](https://discord.com/channels/686053708261228577/702656734631821413/1156868388249935883)'s timeline callout)
 
 # Plugins support
-![|600](https://github.com/Seniblue/Underwater/blob/main/img/plugins.png)
+![](https://github.com/Seniblue/Underwater/blob/main/img/plugins.png)
 
 - Make.MD
 - Kanban
