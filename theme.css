@@ -152,9 +152,11 @@
   --table-header-background: var(--iris);
   --table-header-background-hover: var(--table-header-background);
   --table-header-color: var(--surface);
-  --table-border-color: var(--highlight-med);
+  --table-border-color: var(--highlight-high);
   --table-row-alt-background: var(--highlight-low);
   --table-row-alt-background-hover: var(--table-row-alt-background);
+  --table-add-button-border-color: transparent;
+  --table-border-radius: 7px;
 
   /*canvas*/
   --canvas-dot-pattern: var(--text-faint);
@@ -182,7 +184,7 @@
   --status-bar-radius: 12px 0 0 12px;
 
   /*Horizontal rule*/
-  --hr-color: var(--highlight-med);
+  --hr-color: var(--background-modifier-border);
   --hr-thickness: 2px;
 
   /*--WORKSPACE colors-----*/
@@ -190,7 +192,10 @@
   --background-primary-alt: var(--overlay);
   --background-secondary: var(--background-primary);
   --background-secondary-alt: var(--background-primary-alt);
-  --background-modifier-border: var(--highlight-med);
+  --background-modifier-border: rgba(var(--highlight-med-rgb), 0.6);
+  --background-modifier-border-hover: var(--highlight-med);
+  --background-modifier-border-focus: var(--background-modifier-border);
+  --embed-block-shadow-hover: transparent;
   --background-modifier-error: var(--color-red);
   --background-modifier-form-field: var(--overlay);
   --divider-width: 0px;
@@ -232,7 +237,7 @@
   --highlight-med: rgb(var(--highlight-med-rgb));
   --surface: rgb(var(--surface-rgb));
   
-  --color-base-00: var(--base); --color-base-05: var(--base); --color-base-10: var(--surface); --color-base-20: var(--surface); --color-base-25: var(--overlay); --color-base-30: var(--highlight-high); --color-base-35: var(--highlight-med); --color-base-40: var(--highlight-med); --color-base-50: var(--highlight-low); --color-base-60: var(--muted); --color-base-70: var(--subtle); --color-base-100: var(--text);
+  --color-base-00: var(--base); --color-base-05: var(--base); --color-base-10: var(--surface); --color-base-20: var(--surface); --color-base-25: var(--overlay); --color-base-30: var(--highlight-high); --color-base-35: var(--background-modifier-border); --color-base-40: var(--highlight-med); --color-base-50: var(--highlight-low); --color-base-60: var(--muted); --color-base-70: var(--subtle); --color-base-100: var(--text);
 }
 
 .theme-light /*Rosé Pine dawn*/ {
@@ -873,19 +878,11 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 }
 
 .menu-separator {
-  border-bottom: 1px dashed var(--overlay);
+  border-bottom: 1px dashed var(--background-modifier-border);
 }
 
 .file-embed {
   background-color: var(--overlay);
-}
-
-/*Properties*/
-.metadata-property:hover {
-  border: 1px solid var(--highlight-med);
-}
-.metadata-property {
-  border: 1px solid transparent;
 }
 
 /*Justify text*/
@@ -1014,24 +1011,20 @@ body:not(.is-phone) div:has(>input.prompt-input) {
 }
 
 /*-----------Rounded corners for tables--------*/
+/*By @FireIsGood : https://forum.obsidian.md/t/adding-rounded-corners-to-markdown-tables-with-snippets-a-clean-solution/60551*/
 :root table {
-  --table-border-radius: 8px;
   border-collapse: separate;
   border-spacing: 0;
 }
-th:first-child {
-  border-top-left-radius: var(--table-border-radius)
+th:first-child {border-top-left-radius: var(--table-border-radius)}
+th:last-child {border-top-right-radius: var(--table-border-radius)}
+tr:last-child td:first-child {border-bottom-left-radius: var(--table-border-radius)}
+tr:last-child td:last-child {border-bottom-right-radius: var(--table-border-radius)}
+:root :is(td, th) {
+  border-width: 0 var(--table-border-width) var(--table-border-width) 0;
 }
-th:last-child {
-  border-top-right-radius: var(--table-border-radius)
-}
-tr:last-child td:first-child {
-  border-bottom-left-radius: var(--table-border-radius)
-}
-tr:last-child td:last-child {
-  border-bottom-right-radius: var(--table-border-radius)
-}
-.cm-s-obsidian .HyperMD-table-row-0 {/*fix header color in source mode*/
+/*fix header color in source mode*/
+.cm-s-obsidian .HyperMD-table-row-0 {
   color: var(--text-normal);
 }
 /*center tables*/
@@ -1614,12 +1607,10 @@ button.kanban-plugin__new-item-button {
   border-radius: 10px;
   border: 1px solid var(--highlight-high);
   padding: 10px;
-  box-shadow: a;
-  box-sizing: border-box;
   transition-duration: .3s;
   transition-property: border-color, box-shadow, background-color;
 }
-.kanban-modern .kanban-plugin__item:has(.markdown-source-view) /*fix*/ {
+.kanban-modern .kanban-plugin__item:has(.markdown-source-view), .kanban-plugin__item, .kanban-plugin__item-button-wrapper, .kanban-plugin__item-form /*fix*/ {
   outline: none;
   border: none;
 }
@@ -1650,11 +1641,6 @@ button.kanban-plugin__new-item-button {
 }
 .circle_timer {
   stroke-width: 10px;
-}
-.pomodoro-tasks-item-desc {
-  background-color: var(--text-selection);
-  border-radius: 7px;
-  padding: 0px 10px;
 }
 
 /*CALENDAR*/
@@ -1803,9 +1789,6 @@ ul.todoist-task-list {
 /*Note toolbar - fixes*/
 .cg-note-toolbar-fab-container {
   top: calc(var(--cg-nt-fab-pos-y-desktop) - 6em);
-}
-body {
-  --cg-nt-item-sep-color: var(--highlight-med);
 }
 
 /*Support for https://github.com/HandaArchitect/obsidian-banner-snippet*/
@@ -2664,7 +2647,7 @@ settings:
         default: false
     -
         id: seamless-dataview
-        title: Enable seamless dataview tables
+        title: Enable seamless Dataview tables
         description: Dataview tables have the same styling as markdown tables
         type: class-toggle
         default: false
