@@ -79,6 +79,7 @@
 - Calendar
 - Widgets
 - Tokei
+- Todoist Sync
 - File Tree Alternative
 - Wypst
 - Dataview
