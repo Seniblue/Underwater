@@ -1,7 +1,7 @@
 /* 🌊 Cards snippet for Obsidian*/
 /* MIT License | Copyright (c) Stephan Ango (@kepano)
-   author: @kepano : https://github.com/sponsors/kepano (version: 3.0.1)
-   Tweaked by @Seniblue for the Underwater theme : (https://github.com/Seniblue/Underwater/)
+    author: @kepano : https://github.com/sponsors/kepano (version: 3.0.1)
+    Tweaked by @Seniblue for the Underwater theme : (https://github.com/Seniblue/Underwater/)
 */
 
 body {
@@ -42,7 +42,7 @@ body {
 }
 .cards table.dataview > tbody > tr {
     background-color: var(--cards-background) !important;
-    border: var(--cards-border-width) solid var(--background-modifier-border);
+    border: 1px solid transparent;
     display: flex;
     flex-direction: column;
     margin: 2px;
@@ -55,9 +55,14 @@ body {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .cards table.dataview > tbody > tr:hover {
-    border: var(--cards-border-width) solid var(--highlight-med);
-    box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.025);
+    border: var(--cards-border-width) solid var(--background-modifier-border);
     transition: box-shadow 0.15s linear;
+}
+.theme-light .cards table.dataview > tbody > tr:hover {
+    box-shadow: 0 4px 6px 0px rgba(0, 0, 0, 0.05), 0 1px 3px 1px rgba(0, 0, 0, 0.025);
+}
+.theme-dark .cards table.dataview > tbody > tr:hover {
+    box-shadow: 0 4px 6px 0px rgba(150, 150, 150, 0.05), 0 1px 3px 1px rgba(150, 150, 150, 0.025);
 }
 .cards table.dataview tbody > tr > td:first-child a {
     text-align: center;
@@ -76,7 +81,6 @@ body {
 }
 .cards table.dataview tbody > tr > td:not(:last-child):not(:first-child) {
     padding: 4px 0;
-    border-bottom: 1px solid var(--background-modifier-border);
     width: calc(100% - var(--cards-padding));
     margin: 0 calc(var(--cards-padding)/2);
 }
