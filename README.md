@@ -65,6 +65,7 @@
 ![](https://github.com/Seniblue/Underwater/blob/main/img/bgimg.png)
 
 # Snippets
+![](https://github.com/Seniblue/Underwater/blob/main/img/snippets.png)
 
 [🐠 Snippets folder](https://github.com/Seniblue/Underwater/tree/main/%F0%9F%90%A0%20SNIPPETS) featuring :
 - [🌊 Minimal_cards](https://github.com/Seniblue/Underwater/blob/main/%F0%9F%90%A0%20SNIPPETS/%F0%9F%8C%8A%20Minimal_cards.css) (adapted version of [@Kepano](https://github.com/kepano)'s minimal cards.)
