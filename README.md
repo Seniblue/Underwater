@@ -17,7 +17,7 @@
 ### Popular color schemes
 | Dark                                                | Light                                               |
 | --------------------------------------------------- | --------------------------------------------------- |
-| [Rosé Pine](https://rosepinetheme.com/)             | [Rosé Pine](https://rosepinetheme.com/)             |
+| [Rosé Pine](https://rosepinetheme.com/)             | [Rosé Pine Dawn](https://rosepinetheme.com/)             |
 | [Rosé Pine Moon](https://rosepinetheme.com/)        |                                                     |
 | [Nord](https://www.nordtheme.com/)                  | [Nord](https://www.nordtheme.com/)                  |
 | [Catpuccin Mocha](https://catppuccin.com/)          | [Catpuccin Latte](https://catppuccin.com/)          |
