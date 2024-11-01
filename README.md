@@ -11,7 +11,7 @@
 
 ---
 
-# Color schemes
+# 🎨 Color schemes
 
 ![colorschemes](img/colorschemes.png)
 ### Popular color schemes
@@ -48,7 +48,7 @@
 
 ![](https://github.com/Seniblue/Underwater/blob/main/img/checkboxes.png)
 
-# Features
+# ✨ Features
 - Custom checkboxes
 - Custom callouts: `time`, `person`, `bookmark`, `media`, and "`center`" metadata
 - Scrollbar on hover (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
@@ -71,20 +71,20 @@
 - [🌊 Minimal_cards](https://github.com/Seniblue/Underwater/blob/main/%F0%9F%90%A0%20SNIPPETS/%F0%9F%8C%8A%20Minimal_cards.css) (adapted version of [@Kepano](https://github.com/kepano)'s minimal cards.)
 -   [🚩 Timeline callout](https://github.com/Seniblue/Underwater/blob/main/%F0%9F%90%A0%20SNIPPETS/%F0%9F%9A%A9%20Timeline%20callout.css) (tweaked from [@FireIsGood](https://discord.com/channels/686053708261228577/702656734631821413/1156868388249935883)'s timeline callout)
 
-# Plugins support
+# 🧩 Plugins support
 ![](https://github.com/Seniblue/Underwater/blob/main/img/plugins.png)
 
-- Make.MD
-- Kanban
-- Pomodoro timer
-- Calendar
-- Widgets
-- Tokei
-- Todoist Sync
-- File Tree Alternative
-- Wypst
-- Dataview
-- Meta Bind
+- [Kanban](https://github.com/mgmeyers/obsidian-kanban)
+- [Pomodoro timer](https://github.com/eatgrass/obsidian-pomodoro-timer)
+- [Calendar](https://github.com/liamcain/obsidian-calendar-plugin)
+- [Widgets](https://github.com/rafaelveiga/obsidian-widgets)
+- [Tokei](https://github.com/ms3056/Tokei)
+- [Todoist Sync](https://github.com/jamiebrynes7/obsidian-todoist-plugin)
+- [Make.MD](https://github.com/Make-md/makemd)
+- [File Tree Alternative](https://github.com/ozntel/file-tree-alternative)
+- [Wypst](https://github.com/0xpapercut/obsidian-wypst)
+- [Dataview](https://github.com/blacksmithgu/obsidian-dataview)
+- [Meta Bind](https://github.com/mProjectsCode/obsidian-meta-bind-plugin)
 
 # Credit
 Credit to these themes for certain elements and inspiration!
