@@ -1,3 +1,8 @@
+/*Obsidian 1.7.6 fix - https://forum.obsidian.md/t/folding-headers-not-working-correctly-in-reading-mode-1-7-6/91795*/
+.markdown-preview-view .collapse-indicator {
+  top: inherit;
+}
+
 .theme-light, .theme-dark {
 /*Font*/
   --font-text-theme: var(--font-text-override), "Lexend", "Inter";
@@ -189,6 +194,7 @@
   /*--WORKSPACE colors-----*/
   --background-primary: var(--surface);
   --background-primary-alt: var(--overlay);
+  --background-color: var(--background-primary-alt); /*custom variable*/
   --background-secondary: var(--background-primary);
   --background-secondary-alt: var(--background-primary-alt);
   --background-modifier-border: rgba(var(--highlight-med-rgb), 0.6);
@@ -837,10 +843,10 @@ body:not(is-mobile):not(.show-ribbon) .workspace {
   padding: 0px 0px 10px 0px;
 }
 .workspace {
-  background-color: transparent; /*var(--background-primary-alt)*/
+  background-color: transparent;
 }
 .workspace-tabs, .horizontal-main-container {
-  background-color: var(--background-primary-alt); /*important*/
+  background-color: var(--background-color); /*important*/
 }
 .workspace-ribbon, .workspace-ribbon.mod-left.is-collapsed {
   padding: 0px;
@@ -1827,7 +1833,7 @@ th.svelte-pcimu8 { /*Dataview calendar header*/
 }
 .dataview.inline-field-value {
   background-color: var(--base);
-  color: var(--iris);
+  color: var(--italic-color);
   border-radius: 0px 10px 10px 0px;
   border: 1px solid var(--highlight-med);
   border-left: none;
@@ -1835,8 +1841,9 @@ th.svelte-pcimu8 { /*Dataview calendar header*/
 .dataview.inline-field-standalone-value {
   border-radius: 10px;
   background-color: var(--base);
-  color: var(--foam);
+  color: var(--iris);
   border: 1px solid var(--highlight-med);
+  font-variant: small-caps;
 }
 
 /*STYLE SETTINGS*/
@@ -2020,7 +2027,7 @@ li[data-task]:not(li[data-task=" "], li[data-task="x"])>p>input:checked,
   background-image: var(--bg-url);
   opacity: var(--bg-opacity, 0.8);
   filter: blur(var(--bg-blur, 4px));
-  background-color: var(--background-primary-alt);
+  background-color: var(--background-color);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2036,24 +2043,13 @@ li[data-task]:not(li[data-task=" "], li[data-task="x"])>p>input:checked,
   &.workspace, .workspace-tabs, .workspace-split, .horizontal-main-container {
   background-color: transparent;
 }}
-.workspace-bg .workspace-leaf, .workspace-bg .workspace-sidedock-vault-profile {
-  --background-primary: rgba(var(--surface-rgb),var(--layout-opacity, 0.8));
-  background-color: var(--background-primary) !important;
-}
-.workspace-bg .mod-right-split, .workspace-bg .mod-left-split {
+.workspace-bg .mod-right-split, .workspace-bg .mod-left-split, .workspace-bg .workspace-leaf, .workspace-bg .workspace-sidedock-vault-profile  {
   --background-primary: rgba(var(--surface-rgb),var(--layout-opacity, 0.8));
   background-color: var(--background-primary);
 }
-.workspace-bg .workspace-split.mod-left-split, .workspace-bg .workspace-split.mod-right-split {
+.workspace-bg .workspace-split.mod-left-split, .workspace-bg .workspace-split.mod-right-split, .workspace-bg .workspace-split.mod-root .view-content, .workspace-bg .workspace-leaf.mod-active .view-header, .view-header {
   background-color: transparent;
 }
-.workspace-bg .workspace-split.mod-root .view-content, .workspace-bg .workspace-leaf.mod-active .view-header {
-  background-color: transparent;
-}
-.view-header {
-  background-color: transparent;
-}
-
 
 /* @settings
 
@@ -2333,7 +2329,7 @@ settings:
         default: var(--iris)
         description: Doesn't apply to "minimal" table
     -
-        id: background-primary-alt
+        id: background-color
         title: Workspace background color
         type: variable-text
         default: var(--overlay)
