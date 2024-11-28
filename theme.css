@@ -1,8 +1,3 @@
-/*Obsidian 1.7.6 fix - https://forum.obsidian.md/t/folding-headers-not-working-correctly-in-reading-mode-1-7-6/91795*/
-.markdown-preview-view .collapse-indicator {
-  top: inherit;
-}
-
 .theme-light, .theme-dark {
 /*Font*/
   --font-text-theme: var(--font-text-override), "Lexend", "Inter";
@@ -194,7 +189,7 @@
   /*--WORKSPACE colors-----*/
   --background-primary: var(--surface);
   --background-primary-alt: var(--overlay);
-  --background-color: var(--background-primary-alt); /*custom variable*/
+  --uw-background: var(--background-primary-alt); /*custom variable*/
   --background-secondary: var(--background-primary);
   --background-secondary-alt: var(--background-primary-alt);
   --background-modifier-border: rgba(var(--highlight-med-rgb), 0.6);
@@ -846,7 +841,7 @@ body:not(is-mobile):not(.show-ribbon) .workspace {
   background-color: transparent;
 }
 .workspace-tabs, .horizontal-main-container {
-  background-color: var(--background-color); /*important*/
+  background-color: var(--uw-background); /*important*/
 }
 .workspace-ribbon, .workspace-ribbon.mod-left.is-collapsed {
   padding: 0px;
@@ -880,6 +875,11 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   background-color: var(--text-selection);
   border-radius: 8px;
   margin: 5px 20px;
+}
+
+/*Inputs radius*/
+input[type='text'], input[type='search'], input[type='email'], input[type='password'], input[type='number'] {
+  border-radius: 30px;
 }
 
 .menu-separator {
@@ -1218,12 +1218,12 @@ body:not(.no-animation) img {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 body:not(.no-animation) img:hover {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 body:not(.no-button) button {
   transition: all 0.5s ease-out;
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }}
 
 /*==========================CSSCLASSES=================================*/
@@ -1261,6 +1261,19 @@ body:not(.no-button) button {
 .no-embed .markdown-embed {
   --embed-padding: 0px;
   border-inline-start: none;
+}
+
+/*Cloze - hidden bold text, revealed on hover*/
+.cloze strong, .cloze strong em {
+  background-color: var(--highlight-med);
+  color: transparent !important;
+  transition: color 0.6s ease-in-out, background-color 0.6s ease-in-out;
+  border-radius: 7px;
+  padding: 0px 3px;
+}
+.cloze strong:hover, .cloze strong em:hover  {
+  color: var(--text-normal) !important;
+  background-color: transparent;
 }
 
 /*====active line highlight======*/
@@ -2027,7 +2040,7 @@ li[data-task]:not(li[data-task=" "], li[data-task="x"])>p>input:checked,
   background-image: var(--bg-url);
   opacity: var(--bg-opacity, 0.8);
   filter: blur(var(--bg-blur, 4px));
-  background-color: var(--background-color);
+  background-color: var(--uw-background);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2314,7 +2327,7 @@ settings:
         default: var(--gold)
     -
         id: latex-color
-        title: Latex
+        title: Math
         type: variable-text
         default: var(--gold)
     -
@@ -2432,7 +2445,7 @@ settings:
     -
         id: tab-img
         title: New tab image
-        description: It is better when the image is small
+        description: Looks better with a small image
         type: variable-text
         default: url("")
     -
@@ -2539,18 +2552,18 @@ settings:
         type: class-toggle
         default: false
     -
+        id: my-info-text
+        title:
+        type: info-text
+        description: "💡 You can assign a hotkey to *Full focus mode* by going to **`Hotkeys`** (in the app settings), looking for **`Style settings: Toggle 🎯 Full focus mode`** and assigning your custom hotkey!"
+        markdown: true
+    -
         id: focus-mode
         title: 🎯 Full focus mode
         description: Removes tab bar, status bar, scrollbar, file header and properties heading. You can toggle it with a hotkey.
         type: class-toggle
         default: false
         addCommand: true
-    -
-        id: my-info-text
-        title:
-        type: info-text
-        description: "💡 You can assign a hotkey to *Full focus mode* by going to **`Hotkeys`** (in the app settings), looking for **`Style settings: Toggle 🎯 Full focus mode`** and assigning your custom hotkey!"
-        markdown: true
 
 # 🖼️ Background image
     - 
@@ -2563,7 +2576,7 @@ settings:
         id: my-info-text
         title:
         type: info-text
-        description: "🎨 If you prefer to apply a custom color to the background, you can go to *`✏️ Editor colors`* → *`Workspace background color`*. </br> You can also enable the background image and reduce the background opacity in order to lower the saturation of your custom color."
+        description: "🎨 If you prefer a **custom background color**, you can go to *`✏️ Editor colors`* → *`Workspace background color`*. </br> You can also enable the background image setting below and reduce the background opacity in order to lower the saturation of your custom color."
         markdown: true
     -
         id: workspace-bg
