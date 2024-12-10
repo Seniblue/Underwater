@@ -1,7 +1,7 @@
 .theme-light, .theme-dark {
 /*Font*/
-  --font-text-theme: var(--font-text-override), "Lexend", "Inter";
-  --font-interface-theme: "Inter", "Lexend";
+  --font-text-theme: var(--font-text-override), "Lexend", "Inter", sans-serif;
+  --font-interface-theme: "Inter", "Lexend", sans-serif;
   
   /*COLORS*/
   --color-red: var(--rose);
@@ -21,7 +21,7 @@
   --color-purple-rgb: var(--iris-rgb);
   --color-pink-rgb: var(--love-rgb);
 
-  /*--accent colors workspace----  */
+  /*---- workspace accent colors----  */
   --background: var(--base);
   --text-muted: var(--muted);
   --text-on-accent: var(--surface);
@@ -31,7 +31,7 @@
   --text-error: var(--color-red);
   --text-accent: var(--rose);
   --text-selection: rgb(var(--highlight-med-rgb), 0.5);
-  /*---interactive elements---*/
+  /*--- interactive elements ---*/
   --interactive-normal: var(--highlight-med);
   --interactive-hover: var(--highlight-high);
   --interactive-accent: var(--rose);
@@ -119,7 +119,7 @@
   --h5-size: 1em;
   --h6-size: 1em;
   --h6-variant: small-caps;
-  --headings-font: var(--font-text-override), var(--font-text-theme), "Inter";
+  --headings-font: var(--font-text-override), var(--font-text-theme), "Inter", sans-serif;
   --h1-font: var(--headings-font);
   --h2-font: var(--headings-font);
   --h3-font: var(--headings-font);
@@ -1016,7 +1016,7 @@ body:not(.is-phone) div:has(>input.prompt-input) {
 }
 
 /*-----------Rounded corners for tables--------*/
-/*By @FireIsGood : https://forum.obsidian.md/t/adding-rounded-corners-to-markdown-tables-with-snippets-a-clean-solution/60551*/
+/*By @FireIsGood : https://forum.obsidian.md/t/adding-rounded-corners-to-markdown-tables-with-snippets-a-clean-solution/60551 */
 :root table {
   border-collapse: separate;
   border-spacing: 0;
@@ -1101,11 +1101,6 @@ body:not(.no-links) .markdown-source-view.mod-cm6 .cm-hmd-internal-link .cm-unde
   transition: color 0.3s ease-out;
 }
 
-/*Embeds: Remove embed icon*/
-.markdown-embed-link, .file-embed-link {
-  display: none;
-}
-
 /*scrollbar - from BORDER theme*/
 ::-webkit-scrollbar {
   width: 10px !important;
@@ -1140,9 +1135,6 @@ body:not(.no-links) .markdown-source-view.mod-cm6 .cm-hmd-internal-link .cm-unde
   --callout-color: var(--color-cyan-rgb);
   --callout-icon: lucide-user-2;
 }
-.callout[data-callout="note"] {
-  --callout-icon: lucide-sticker;
-}
 .callout[data-callout="media"] {
   --callout-color: var(--color-yellow-rgb);
   --callout-icon: lucide-image;
@@ -1153,6 +1145,9 @@ body:not(.no-links) .markdown-source-view.mod-cm6 .cm-hmd-internal-link .cm-unde
     justify-content: center;
   }}
 /*Default callouts*/
+.callout[data-callout="note"] {
+  --callout-icon: lucide-sticker;
+}
 .callout[data-callout="question"] {
   --callout-color: var(--color-pink-rgb);
   --callout-icon: lucide-badge-help;
@@ -1232,7 +1227,7 @@ body:not(.no-button) button {
   display: none !important;
 }
 
-/*notebook*/ /*https://www.magicpattern.design/tools/css-backgrounds*/
+/*notebook*/
 .mod-root .workspace-tabs .workspace-leaf .notebook {
   background-image:  linear-gradient(rgba(var(--iris-rgb), 0.05) 2px, transparent 2px), linear-gradient(to right, rgba(var(--iris-rgb), 0.05) 2px, transparent 2px);
   background-size: 20px 20px;
@@ -1257,13 +1252,19 @@ body:not(.no-button) button {
   font-size: 120%;
 }
 
-/*no-embed - makes embeds seameless*/
+/*no-embed  (seameless embeds)*/
+.markdown-embed-link, .file-embed-link { /*Remove embed icon*/
+  display: none;
+}
 .no-embed .markdown-embed {
   --embed-padding: 0px;
   border-inline-start: none;
 }
+.no-embed .embed-title.markdown-embed-title {
+  display: none;
+}
 
-/*Cloze - hidden bold text, revealed on hover*/
+/*Cloze (hidden bold text, revealed on hover - reading view only)*/
 .cloze strong, .cloze strong em {
   background-color: var(--highlight-med);
   color: transparent !important;
@@ -1276,7 +1277,7 @@ body:not(.no-button) button {
   background-color: transparent;
 }
 
-/*====active line highlight======*/
+/*======= active line highlight ======*/
 body:not(.no-activeline) .cm-active.cm-line {
   background-color: rgb(var(--rose-rgb), 0.08);
   box-shadow: -25vw 0px rgb(var(--rose-rgb), 0.08), 25vw 0 rgb(var(--rose-rgb), 0.08);
@@ -1441,8 +1442,7 @@ input[data-task="e"]:checked, li[data-task="e"]>input:checked, li[data-task="e"]
   color: var(--color-orange);
   -webkit-mask-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224px%22%20viewBox%3D%220%20-960%20960%20960%22%20width%3D%2224px%22%20fill%3D%22%235f6368%22%3E%3Cpath%20d%3D%22M333.13-322H232.61q-37.65%200-54.41-33.02-16.77-33.02%204.06-63.55l352.7-508.91q12.13-17.26%2031.39-23.54%2019.26-6.29%2037.95%201.28%2019.27%207.56%2029.9%2025.04%2010.63%2017.48%208.06%2037.74l-36%20288.96h133.65q39.09%200%2055.57%2035.3%2016.48%2035.31-8.35%2065.27L402.87-32.78q-12.13%2015.69-31.39%2019.98-19.26%204.28-37.96-4.29-18.69-8-28.11-25.19-9.41-17.2-6.85-37.02L333.13-322Z%22%2F%3E%3C%2Fsvg%3E');
   mask-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224px%22%20viewBox%3D%220%20-960%20960%20960%22%20width%3D%2224px%22%20fill%3D%22%235f6368%22%3E%3Cpath%20d%3D%22M333.13-322H232.61q-37.65%200-54.41-33.02-16.77-33.02%204.06-63.55l352.7-508.91q12.13-17.26%2031.39-23.54%2019.26-6.29%2037.95%201.28%2019.27%207.56%2029.9%2025.04%2010.63%2017.48%208.06%2037.74l-36%20288.96h133.65q39.09%200%2055.57%2035.3%2016.48%2035.31-8.35%2065.27L402.87-32.78q-12.13%2015.69-31.39%2019.98-19.26%204.28-37.96-4.29-18.69-8-28.11-25.19-9.41-17.2-6.85-37.02L333.13-322Z%22%2F%3E%3C%2Fsvg%3E');
-}
-}
+}}
 
 /*unordered list styling
 author: sailKite
@@ -1461,8 +1461,7 @@ body {
 }
 .empty-state-container::before {
   content: var(--tab-img);
-}
-/*Styling*/
+}/*Styling*/
 .empty-state-container {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -1516,7 +1515,6 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   align-items: center;
   align-content: center;
 }
-
 body { /*moon*/
   --vault-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%235f6368'%3E%3Cpath d='M240-400q48 0 88 26t59 71l10 23h25q42 0 70 29.5t28 70.5q0 42-29 71t-71 29H240q-66 0-113-47T80-240q0-67 47-113.5T240-400Zm321-81q60 60 138.5 90.5T863-366q11-1 19.5 3t14.5 12q6 8 8 17t-1 19q-35 121-140.5 197T533-40q32-26 49.5-62.5T600-180q0-68-42.5-117.5T449-357q-32-57-87.5-90T240-480q-32 0-62.5 8T120-448q2-131 76.5-232T394-822q10-3 19.5-1t17.5 8q8 6 12.5 14.5T447-781q-5 86 24 162.5T561-481Z'/%3E%3C/svg%3E");
 }
@@ -1542,7 +1540,7 @@ body { /*moon*/
   --vault-icon: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAtOTYwIDk2MCA5NjAiIHdpZHRoPSIyNHB4IiBmaWxsPSIjNWY2MzY4Ij48cGF0aCBkPSJtMzUzLTQ4MCA1OS01OXExMi0xMiAxMi0yOHQtMTItMjhxLTEyLTEyLTI4LjUtMTJUMzU1LTU5NWwtODcgODdxLTYgNi04LjUgMTN0LTIuNSAxNXEwIDggMi41IDE1dDguNSAxM2w4NyA4N3ExMiAxMiAyOC41IDEydDI4LjUtMTJxMTItMTIgMTItMjh0LTEyLTI4bC01OS01OVptMjU0IDAtNTkgNTlxLTEyIDEyLTEyIDI4dDEyIDI4cTEyIDEyIDI4LjUgMTJ0MjguNS0xMmw4Ny04N3E2LTYgOC41LTEzdDIuNS0xNXEwLTgtMi41LTE1dC04LjUtMTNsLTg3LTg3cS02LTYtMTMuNS05dC0xNS0zcS03LjUgMC0xNSAzdC0xMy41IDlxLTEyIDEyLTEyIDI4dDEyIDI4bDU5IDU5Wk0yMDAtMTIwcS0zMyAwLTU2LjUtMjMuNVQxMjAtMjAwdi01NjBxMC0zMyAyMy41LTU2LjVUMjAwLTg0MGg1NjBxMzMgMCA1Ni41IDIzLjVUODQwLTc2MHY1NjBxMCAzMy0yMy41IDU2LjVUNzYwLTEyMEgyMDBaIi8+PC9zdmc+");
 }
 
-/*=========================================PLUGINS SUPPORT==============================================*/
+/*========================================= PLUGINS SUPPORT ==============================================*/
 /*MAKE.MD*/
 /*hide vault title*/
 body:not(.no-mk) .mk-main-menu-container {
@@ -1560,7 +1558,7 @@ body {
 }
 
 /*KANBAN*/
-/*columns color*/
+/*Styling 1 : colorful*/
 .kanban-plugin__lane-wrapper:nth-child(1)>div {
   background-color: rgba(var(--foam-rgb), 0.25);
 }
@@ -1610,7 +1608,7 @@ button.kanban-plugin__new-item-button {
   text-decoration-color: var(--text-muted);
   color: var(--text-muted);
 }
-/*Modern Kanban style*/
+/*2. Modern Kanban*/
 .kanban-modern .kanban-plugin__lane {
   background-color: var(--background-primary) !important;
 }
@@ -1803,7 +1801,7 @@ ul.todoist-task-list {
   --mb-border-width: 1px;
 }
 
-/*Note toolbar - fixes*/
+/*Note toolbar - fix*/
 .cg-note-toolbar-fab-container {
   top: calc(var(--cg-nt-fab-pos-y-desktop) - 6em);
 }
@@ -1836,6 +1834,7 @@ th.svelte-pcimu8 { /*Dataview calendar header*/
   border: 1px solid var(--table-border-color);
   font-size: var(--font-text-size);
 }
+/*dataview inline fields*/
 .dataview.inline-field-key {
   background-color: var(--base);
   color: var(--bold-color);
@@ -1902,13 +1901,11 @@ th.svelte-pcimu8 { /*Dataview calendar header*/
 @media print {
   body {
     --print-font-size: 14px;
-
     --text-normal: black;
     --bold-weight: 750;
     text-align: justify;
     font-size: var(--print-font-size) !important;
     --font-text-size: var(--print-font-size) !important;
-  
     --table-header-background: transparent !important;
     --table-header-color: var(--text-normal) !important;
     --table-row-alt-background: transparent !important;
@@ -1964,9 +1961,9 @@ th.svelte-pcimu8 { /*Dataview calendar header*/
     margin: 0 0px;
   }
   .markdown-source-view.mod-cm6 .cm-hmd-internal-link, .markdown-rendered .internal-link {
-  background-color: transparent !important;
-  padding: 0px !important;
-  border: 0px !important;
+    background-color: transparent !important;
+    padding: 0px !important;
+    border: 0px !important;
 }}
 
 /*========================Style settings options==========================*/
@@ -1980,18 +1977,18 @@ th.svelte-pcimu8 { /*Dataview calendar header*/
   margin-top: 14px;
 }
 
-/*Alternative callout styles*/
-.callout-solid {
+/*Alt callout styles*/
+.callout-solid, [data-callout-metadata="solid"], [data-callout="solid"] {
   --callout-border-width: 2px 6px 6px 2px;
 }
-.callout-outlined {
+.callout-outlined, [data-callout-metadata="outlined"], [data-callout="outlined"] {
   --callout-border-width: 1px;
   --callout-content-background: var(--background-primary);
   --callout-content-padding: 0px var(--size-4-6);
   --callout-padding: 0px;
   --callout-title-padding: 7px 15px;
 }
-.callout-math .callout {
+.callout-math .callout, [data-callout-metadata="math"], [data-callout="math"] {
   border-width: 2px;
   border-color: rgba(var(--callout-color));
   border-radius: 0px;
@@ -2056,13 +2053,17 @@ li[data-task]:not(li[data-task=" "], li[data-task="x"])>p>input:checked,
   &.workspace, .workspace-tabs, .workspace-split, .horizontal-main-container {
   background-color: transparent;
 }}
-.workspace-bg .mod-right-split, .workspace-bg .mod-left-split, .workspace-bg .workspace-leaf, .workspace-bg .workspace-sidedock-vault-profile  {
+.workspace-bg .mod-right-split, .workspace-bg .mod-left-split, .workspace-bg .workspace-leaf {
   --background-primary: rgba(var(--surface-rgb),var(--layout-opacity, 0.8));
   background-color: var(--background-primary);
+}
+.workspace-sidedock-vault-profile {
+  background-color: var(--background-primary) !important; 
 }
 .workspace-bg .workspace-split.mod-left-split, .workspace-bg .workspace-split.mod-right-split, .workspace-bg .workspace-split.mod-root .view-content, .workspace-bg .workspace-leaf.mod-active .view-header, .view-header {
   background-color: transparent;
 }
+
 
 /* @settings
 
