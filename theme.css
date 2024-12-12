@@ -2343,7 +2343,7 @@ settings:
         default: var(--iris)
         description: Doesn't apply to "minimal" table
     -
-        id: background-color
+        id: uw-background
         title: Workspace background color
         type: variable-text
         default: var(--overlay)
