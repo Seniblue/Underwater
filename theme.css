@@ -1749,40 +1749,30 @@ body:not(.no-widgets) .Countdown_Item {
 }
 
 /*Todoist sync styling*/
-ul.todoist-task-list {
-  padding-inline-start: 0px;
-}.markdown-source-view  ul.todoist-task-list > li.task-list-item {
-  margin-inline-start: 0
-}/*tasks description*/
-.task-metadata-item {
+/*tasks description*/
+.todoist-task-container .todoist-task .todoist-task-metadata {
   font-size: var(--font-smallest);
-  color: var(--text-muted)
+  color: var(--text-muted);
 }
-.task-metadata-item svg.svg-icon {
-  height: 14px;
-}/*remove "new task" button*/
-.markdown-reading-view .todoist-add-button {
-  display: none;
+/*remove "new task" button*/
+.todoist-query-header .todoist-query-controls .todoist-query-control-button {
+  border-radius: 50px;
+  background-color: var(--base);
+  &:hover {
+    border-color: var(--highlight-high);
+    color: var(--color-yellow);
+  }
 }
-.edit-block-button.todoist-refresh-button, .markdown-reading-view .todoist-refresh-button, .is-live-preview .todoist-refresh-button {
-  color: var(--color-yellow) !important;
-  cursor: pointer;
-  border-radius: 30px !important;
-  padding: var(--size-2-2) var(--size-2-3);
-}/*Sub-projects title styling*/
+.theme-dark, .theme-light {
+  --todoist-task-separator-color: var(--background-modifier-border);
+  --todoist-p4-border: var(--checkbox-border-color);
+  --todoist-p4-border-hover: var(--checkbox-border-color-hover);
+}
+/*Sub-projects title styling*/
 .todoist-group-title {
   color: var(--color-purple);
   font-variant: small-caps;
   font-size: var(--h3-size);
-}/*error message*/
-.todoist-error {
-  border-radius: 10px;
-  border: transparent;
-  padding: 5px 20px;
-  background-color: rgb(var(--background-modifier-error-rgb), 0.1);
-}/*No tasks*/
-.todoist-success.todoist-no-tasks {
-  color: var(--color-green);
 }
 
 /*IMPORTANT - ICONIZE v.2.12.1 fix*/
