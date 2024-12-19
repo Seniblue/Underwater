@@ -1752,9 +1752,8 @@ body:not(.no-widgets) .Countdown_Item {
 /*tasks description*/
 .todoist-task-container .todoist-task .todoist-task-metadata {
   font-size: var(--font-smallest);
-  color: var(--text-muted);
 }
-/*remove "new task" button*/
+/*new/refresh buttons styling*/
 .todoist-query-header .todoist-query-controls .todoist-query-control-button {
   border-radius: 50px;
   background-color: var(--base);
@@ -1816,8 +1815,8 @@ body:not(.no-widgets) .Countdown_Item {
 }
 
 /*Dataview*/
-th.svelte-pcimu8 { /*Dataview calendar header*/
-  color: var(--table-header-color) !important;
+.cm-html-embed thead tr > th, .markdown-rendered thead tr > th { /*Dataview calendar header*/
+  color: var(--table-header-color);
 }
 /*dataview tables like markdown tables */
 .seamless-dataview .dataview.table-view-table th, .seamless-dataview .dataview.table-view-table :is(td, th) {
