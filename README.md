@@ -86,6 +86,7 @@
 - [Wypst](https://github.com/0xpapercut/obsidian-wypst)
 - [Dataview](https://github.com/blacksmithgu/obsidian-dataview)
 - [Meta Bind](https://github.com/mProjectsCode/obsidian-meta-bind-plugin)
+- [Cardboard](https://github.com/roovo/obsidian-card-board)
 
 # Credit
 Credit to these themes for certain elements and inspiration!
@@ -99,3 +100,4 @@ Credit to these themes for certain elements and inspiration!
 - [x] Work on README
 - [x] Add custom color schemes
 - [x] 📱 Mobile support
+- [x] RTL support
