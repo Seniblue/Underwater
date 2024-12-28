@@ -199,7 +199,7 @@
   --background-modifier-error: var(--color-red);
   --background-modifier-form-field: var(--overlay);
   --divider-width: 0px;
-  --border-width: 0px;
+  --border-width: 1px;
 
   /*--tabs----*/
   --tab-background-active: var(--background-secondary);
@@ -895,7 +895,7 @@ body:not(.no-justify) .cm-s-obsidian, body:not(.no-justify) .markdown-preview-vi
   text-align: justify;
 }
 .markdown-source-view ol > li, .markdown-source-view ul > li, .markdown-preview-view ol > li, .markdown-preview-view ul > li, .cm-line.HyperMD-list-line {
-  text-align: left;
+  text-align: start;
 }
 
 /*Rounded Highlight style*/
@@ -994,6 +994,9 @@ body:not(.is-phone) div:has(>input.prompt-input) {
   margin-left: auto;
   margin-right: auto;
 }
+.mermaid line {
+  stroke: var(--highlight-low) !important;
+}
 
 /*Search and backlinks styling*/
 .search-result:not(.is-collapsed) .search-result-file-title {
@@ -1017,6 +1020,7 @@ body:not(.is-phone) div:has(>input.prompt-input) {
 
 /*-----------Rounded corners for tables--------*/
 /*By @FireIsGood : https://forum.obsidian.md/t/adding-rounded-corners-to-markdown-tables-with-snippets-a-clean-solution/60551 */
+body:not(.mod-rtl) {
 :root table {
   border-collapse: separate;
   border-spacing: 0;
@@ -1027,7 +1031,7 @@ tr:last-child td:first-child {border-bottom-left-radius: var(--table-border-radi
 tr:last-child td:last-child {border-bottom-right-radius: var(--table-border-radius)}
 :root :is(td, th) {
   border-width: 0 var(--table-border-width) var(--table-border-width) 0;
-}
+}}
 /*fix header color in source mode*/
 .cm-s-obsidian .HyperMD-table-row-0 {
   color: var(--text-normal);
@@ -1075,6 +1079,9 @@ th .MJX-TEX { /*no color for table headers*/
 }
 
 /*LINKS STYLING!*/
+a:focus-within {
+  box-shadow: none !important;
+}
 a, .external-link {
   transition: color 0.5s ease;
 }
@@ -1491,7 +1498,7 @@ body {
 /*Vault icon*/
 .workspace-drawer-vault-name::after {
   background-color: var(--iris);
-  margin-left: 10px;
+  margin-inline-start: 10px; /*GMC*/
   color: var(--iris);
   content: " ";
   display: inline-block;
@@ -1787,7 +1794,6 @@ body:not(.no-widgets) .Countdown_Item {
 /*Meta Bind*/
 .mb-card {
 	background-color: var(--overlay);
-  --mb-border-width: 1px;
 }
 
 /*Note toolbar - fix*/
@@ -1907,17 +1913,17 @@ body:not(.no-widgets) .Countdown_Item {
   }
   h2 {
     font-size: 17px;
-    margin-left: 15px;
+    margin-inline-start: 15px;
     page-break-after: avoid;
   }
   h3 {
     font-size: 16px;
-    margin-left: 30px;
+    margin-inline-start: 30px;
     page-break-after: avoid;
   }
   h4 {
     font-size: var(--print-font-size);
-    margin-left: 50px;
+    margin-inline-start: 50px;
     page-break-after: avoid;
   }
   h5 {
@@ -2538,7 +2544,7 @@ settings:
         default: false
     -
         id: no-justify
-        title: Left align text (disable justified text)
+        title: Disable justified text
         type: class-toggle
         default: false
     -
