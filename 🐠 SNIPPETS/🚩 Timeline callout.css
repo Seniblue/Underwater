@@ -22,7 +22,7 @@ body {
   --timeline-dot-offset-x: -9px;
   --timeline-dot-offset-y: -2px;
   --timeline-card-margin: 10px;
-  --timeline-card-background-color: var(--overlay);
+  --timeline-card-background-color: var(--background-primary-alt);
   --timeline-card-padding-x: 2px;
   --timeline-card-padding-y: 15px;
 }
@@ -38,7 +38,7 @@ body {
   --dot-offset: calc(var(--timeline-dot-offset-y) + var(--timeline-card-padding-y));
   .callout-title-inner {
     width: 100%;
-    text-align: right;
+    text-align: end;
     color: var(--timeline-title-color);
     font-size: var(--timeline-title-size);
     margin-top: var(--timeline-title-margin-top);
