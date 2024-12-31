@@ -1,5 +1,5 @@
 ![Version](https://img.shields.io/github/manifest-json/v/Seniblue/Underwater?style=for-the-badge&color=9ccfd8&labelColor=26233a)
-![Stars](https://img.shields.io/github/stars/Seniblue/Underwater?style=for-the-badge&color=c4a7e7&labelColor=26233a) <!---![Issues](https://img.shields.io/github/issues/Seniblue/Underwater?style=for-the-badge&color=ebbcba&labelColor=26233a)-->
+![Stars](https://img.shields.io/github/stars/Seniblue/Underwater?style=for-the-badge&color=c4a7e7&labelColor=26233a)
 ![Last update](https://img.shields.io/github/last-commit/Seniblue/Underwater?style=for-the-badge&color=ebbcba&labelColor=26233a)
 
 [✨ Theme updates](https://github.com/Seniblue/Underwater/releases)
