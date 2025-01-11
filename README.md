@@ -101,3 +101,7 @@ Credit to these themes for certain elements and inspiration!
 - [x] Add custom color schemes
 - [x] 📱 Mobile support
 - [x] RTL support
+
+---
+
+💫 Feel free to star the theme on github if you enjoy it!
