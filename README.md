@@ -42,7 +42,7 @@
 # Cssclasses
 
 - **`no-title`**: removes inline title
-- **`no-embed*`*: seamless embeds
+- **`no-embed`**: seamless embeds
 - **`notebook`**: adds notebook-like background to current note
 - **`write`**: monospace font + bigger first letter at the beginning of each paragraph
 - **`cloze`**: hidden bold text, revealed on hover (reading view only)
