@@ -1,7 +1,7 @@
 .theme-light, .theme-dark {
 /*Font*/
-  --font-text-theme: var(--font-text-override), "Lexend", "Inter", sans-serif;
-  --font-interface-theme: "Inter", "Lexend", sans-serif;
+  --font-text-theme: var(--font-text-override), "Lexend", "Inter", var(--font-default), sans-serif;
+  --font-interface-theme: "Inter", "Lexend", var(--font-default), sans-serif;
   
   /*COLORS*/
   --color-red: var(--rose);
@@ -208,8 +208,8 @@
   --tab-curve: 0px;
   --tab-container-background: transparent;
   --tab-divider-color: transparent;
-  --divider-color: transparent;
   --tab-max-width: 200px;
+  --tab-outline-color: transparent;
 
   /*Tags*/
   --tag-background: rgba(var(--rose-rgb), 0.1);
@@ -983,14 +983,13 @@ body:not(.is-phone) div:has(>input.prompt-input) {
 }
 
 /*smaller pinned tabs*/
-.workspace-tab-header:has(.mod-pinned) {
+body:not(.no-pin) .workspace-tab-header:has(.mod-pinned) {
   --tab-max-width: 55px;
 }
 
 /*Mermaid styling*/
 .mermaid svg {
   display: block;
-  font-family: var(--font-text-theme);
   font-size: 1em !important;
   margin-left: auto;
   margin-right: auto;
@@ -1287,6 +1286,7 @@ body:not(.no-button) button {
 .cloze strong:hover, .cloze strong em:hover  {
   color: var(--text-normal) !important;
   background-color: transparent;
+  cursor: pointer;
 }
 
 /*======= active line highlight ======*/
@@ -1419,6 +1419,11 @@ input[data-task="-"]:checked, li[data-task="-"]>input:checked, li[data-task="-"]
   color: var(--color-red);
   -webkit-mask-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224px%22%20viewBox%3D%220%20-960%20960%20960%22%20width%3D%2224px%22%20fill%3D%22%235f6368%22%3E%3Cpath%20d%3D%22M480-40.09q-91.34%200-171.59-34.58-80.25-34.59-139.7-94.32-59.45-59.73-94.04-140.27-34.58-80.53-34.58-171.87%200-90.77%2034.58-171.02%2034.59-80.26%2094.04-139.71t139.98-93.75q80.54-34.3%20171.31-34.3t171.31%2034.3q80.53%2034.3%20139.98%2093.75%2059.45%2059.45%2094.04%20139.71%2034.58%2080.25%2034.58%20171.02%200%2091.34-34.58%20171.87-34.59%2080.54-94.04%20140.27-59.45%2059.73-139.7%2094.32Q571.34-40.09%20480-40.09Zm0-122.95q47.61%200%2093-13.74t84.56-41.48L217.13-658.13q-26.61%2039.74-40.35%2084.85-13.74%2045.11-13.74%2092.15%200%20132.61%2092.46%20225.35%2092.46%2092.74%20224.5%2092.74Zm263.43-141.09q26.05-39.74%2039.79-84.85%2013.74-45.11%2013.74-92.15%200-131.48-92.46-223.65-92.46-92.18-224.5-92.18-47.04%200-91.87%2013.18-44.83%2013.17-84.56%2039.21l439.86%20440.44Z%22%2F%3E%3C%2Fsvg%3E');
   mask-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224px%22%20viewBox%3D%220%20-960%20960%20960%22%20width%3D%2224px%22%20fill%3D%22%235f6368%22%3E%3Cpath%20d%3D%22M480-40.09q-91.34%200-171.59-34.58-80.25-34.59-139.7-94.32-59.45-59.73-94.04-140.27-34.58-80.53-34.58-171.87%200-90.77%2034.58-171.02%2034.59-80.26%2094.04-139.71t139.98-93.75q80.54-34.3%20171.31-34.3t171.31%2034.3q80.53%2034.3%20139.98%2093.75%2059.45%2059.45%2094.04%20139.71%2034.58%2080.25%2034.58%20171.02%200%2091.34-34.58%20171.87-34.59%2080.54-94.04%20140.27-59.45%2059.73-139.7%2094.32Q571.34-40.09%20480-40.09Zm0-122.95q47.61%200%2093-13.74t84.56-41.48L217.13-658.13q-26.61%2039.74-40.35%2084.85-13.74%2045.11-13.74%2092.15%200%20132.61%2092.46%20225.35%2092.46%2092.74%20224.5%2092.74Zm263.43-141.09q26.05-39.74%2039.79-84.85%2013.74-45.11%2013.74-92.15%200-131.48-92.46-223.65-92.46-92.18-224.5-92.18-47.04%200-91.87%2013.18-44.83%2013.17-84.56%2039.21l439.86%20440.44Z%22%2F%3E%3C%2Fsvg%3E');
+}
+[data-task="-"] {
+  text-decoration: line-through;
+  text-decoration-color: var(--text-muted);
+  color: var(--text-muted);
 }
 input[data-task="<"]:checked, li[data-task="<"]>input:checked, li[data-task="<"]>p>input:checked {
   color: var(--foam);
@@ -2004,6 +2009,10 @@ body:not(.no-widgets) .Countdown_Item {
     background-color: transparent !important;
     padding: 0px !important;
     border: 0px !important;
+}
+  u {
+    text-decoration-style: solid;
+    text-underline-offset: 2px;
 }}
 
 /*========================Style settings options==========================*/
@@ -2590,6 +2599,11 @@ settings:
     -
         id: no-justify
         title: Disable justified text
+        type: class-toggle
+        default: false
+    -
+        id: no-pin
+        title: Disable smaller pinned tabs
         type: class-toggle
         default: false
     -
