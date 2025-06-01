@@ -1246,7 +1246,7 @@ code, pre {
 
 /*---center + radius for img and embeds---*/
 :is(:is(.markdown-source-view.mod-cm6) :is(.cm-content, .cm-line), .markdown-rendered) :is(img, .external-embed, .internal-embed audio, .internal-embed video, .iframe-external-embed) {
-  margin-inline: auto !important;
+  margin-inline: auto;
   display: block;
   border-radius: 10px;
 }
