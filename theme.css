@@ -830,7 +830,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 /*Mobile styling*/
 .mobile-navbar, .mobile-toolbar {
   background-color: var(--uw-background);
-  padding-bottom: 10px;
+  padding-bottom: var(--safe-area-inset-bottom);
   padding-top: 0px;
 }
 .is-mobile .workspace-tab-container {
