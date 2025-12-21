@@ -143,7 +143,7 @@
   --link-unresolved-color: var(--subtle);
 
   /*lists*/
-  --list-marker-color: var(--bold-color);
+  --list-marker-color: var(--text-muted);
   --list-bullet-size: 0.35em;
   --list-indent-editing: var(--list-indent-source);
 
@@ -830,7 +830,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 /*Mobile styling*/
 .mobile-navbar, .mobile-toolbar {
   background-color: var(--uw-background);
-  padding-bottom: 10px;
+  padding-bottom: var(--safe-area-inset-bottom);
   padding-top: 0px;
 }
 .is-mobile .workspace-tab-container {
@@ -838,7 +838,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   border-radius: 15px;
 }
 .workspace-tab-header-container {
-  background-color: var(--uw-background);
+  background-color: transparent;
 }
 .is-mobile, .is-tablet { 
   --mobile-sidebar-background: var(--uw-background) !important;
@@ -861,6 +861,9 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 /*Inputs radius*/
 input[type='text'], input[type='search'], input[type='email'], input[type='password'], input[type='number'] {
   border-radius: 30px;
+}
+.prompt-input-container > .prompt-input {
+  border-radius: 0px !important;
 }
 
 .menu-separator, .modal.mod-plugin-debug .startup-stat:not(:last-child) {
@@ -932,6 +935,7 @@ body:not(.no-justify) .cm-s-obsidian, body:not(.no-justify) .markdown-preview-vi
 }
 .sidebar-toggle-button {
   padding: 4px 10px;
+  margin-top: 3px;
 }
 
 /*popups, window styling*/
@@ -1314,9 +1318,6 @@ body:not(.no-button) button {
 }
 
 /*no-embed  (seameless embeds)*/
-.markdown-embed-link, .file-embed-link { /*Remove embed icon*/
-  display: none;
-}
 .no-embed .markdown-embed {
   --embed-padding: 0px;
   border-inline-start: none;
@@ -1364,6 +1365,7 @@ body:not(.no-activeline) .cm-active.cm-line {
 }}
 .tree-item .is-active {
   color: var(--surface) !important;
+  --icon-color: var(--surface);
 }
 /*File explorer editing content color fix*/
 .tree-item-inner[contenteditable="true"], .tree-item-inner-text[contenteditable="true"] {
@@ -1997,12 +1999,9 @@ body:not(.no-cardboard) {
 /*=============================PDF STYLING - WIP =====================================*/
 @media print {
   body {
-    --print-font-size: 0.9em;
     --text-normal: black;
     --bold-weight: 750;
     text-align: justify;
-    font-size: var(--print-font-size) !important;
-    --font-text-size: var(--print-font-size) !important;
     --table-header-background: transparent !important;
     --table-header-color: var(--text-normal) !important;
     --table-row-alt-background: transparent !important;
@@ -2035,20 +2034,19 @@ body:not(.no-cardboard) {
     page-break-after: avoid;
   }
   .callout {
-    border-width: 2px;
-    border-color: rgba(var(--callout-color));
-    background-color: transparent;
+    /* border-width: 2px;
+    border-color: rgba(var(--callout-color)); 
+    background-color: transparent;*/
     page-break-inside: avoid;
-    font-size: var(--print-font-size);
-    --callout-content-padding: 0px var(--size-4-6);
-    padding: 0px;
+    /* --callout-content-padding: 0px var(--size-4-6);
+    padding: 0px; */
   }
-  .callout-title {
+  /* .callout-title {
     padding: 7px 20px;
     border-bottom: 2px rgba(var(--callout-color)) solid;
     text-align: center !important;
     background-color: rgba(var(--callout-color), 0.1);
-  }
+  } */
   .callout-fold.is-collapsed .svg-icon {
     display: none;
   }
@@ -2114,6 +2112,21 @@ body:not(.no-cardboard) {
 /*Allow properties to be visible in reading mode*/
 .visible-properties {
 --metadata-display-reading: block;
+}
+/*Properties styling*/
+body:not(.no-properties) .metadata-container:not(.is-collapsed) {
+  --metadata-background: var(--base);
+  --metadata-border-radius: 10px;
+  --metadata-padding: 25px;
+  --metadata-border-width: 1px;
+  --metadata-border-color: var(--background-modifier-border);
+  --metadata-gap: 10px;
+}
+.theme-dark:not(.no-properties) .metadata-container:not(.is-collapsed) {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.theme-light:not(.no-properties) .metadata-container:not(.is-collapsed) {
+  box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 0px;
 }
 
 /* Disable click */
@@ -2425,7 +2438,7 @@ settings:
         id: list-marker-color
         title: List bullets
         type: variable-text
-        default: var(--bold-color)
+        default: var(--text-muted)
     -
         id: text-highlight-bg
         title: Highlight
@@ -2685,6 +2698,11 @@ settings:
     -
         id: no-pin
         title: Disable smaller pinned tabs
+        type: class-toggle
+        default: false
+    -
+        id: no-properties
+        title: Disable properties styling
         type: class-toggle
         default: false
     -
