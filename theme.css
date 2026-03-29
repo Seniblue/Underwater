@@ -840,12 +840,8 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 
 .is-floating-nav .mobile-toolbar {
   background-color: var(--uw-background);
-  /* box-shadow: 0 0 8px transparent !important; */
+  box-shadow: 0 0 8px transparent !important;
 }
-/* .mobile-toolbar-options-list-container.mod-raised {
-  background-color: var(--base);
-} */
-
 
 
 .is-mobile .workspace-tab-container {
