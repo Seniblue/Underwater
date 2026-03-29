@@ -840,11 +840,11 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 
 .is-floating-nav .mobile-toolbar {
   background-color: var(--uw-background);
-  box-shadow: 0 0 8px transparent !important;
+  /* box-shadow: 0 0 8px transparent !important; */
 }
-.mobile-toolbar-options-list-container.mod-raised {
+/* .mobile-toolbar-options-list-container.mod-raised {
   background-color: var(--base);
-}
+} */
 
 
 
@@ -1670,7 +1670,7 @@ body:not(.no-bases) {
   .workspace-leaf-content[data-type="bases"] .bases-view {
     border: 1px solid var(--highlight-med);
     margin: 0 20px 10px;
-    border-radius: calc(var(--bases-table-container-border-radius) + 1px) !important;
+    border-radius: calc(var(--bases-table-container-border-radius) + 1px);
     display: inline;
   }
   /*card view*/
