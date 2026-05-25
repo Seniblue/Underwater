@@ -2,18 +2,21 @@
 ![Stars](https://img.shields.io/github/stars/Seniblue/Underwater?style=for-the-badge&color=c4a7e7&labelColor=26233a)
 ![Last update](https://img.shields.io/github/last-commit/Seniblue/Underwater?style=for-the-badge&color=ebbcba&labelColor=26233a)
 
+↪️ [Updates](https://github.com/Seniblue/Underwater/releases)
+
+<br/>
+
+# Underwater for Obsidian
 _✨ Runner up in the Obsidian [Gems of the Year 2024](https://obsidian.md/blog/2024-goty-winners/) awards!_
 
-[↪️ Updates](https://github.com/Seniblue/Underwater/releases)
-
-![uw](img/thumbnail.png)
+<br/>
 
 > [!IMPORTANT]
 > 🐳 This theme works best with the **[Style Settings](https://github.com/mgmeyers/obsidian-style-settings) plugin** (color schemes, custom colors, customizations, features, background image...).<br>
 > _Although the plugin is not required for the theme to work._
 ---
 
-# 🎨 Color schemes
+## 🎨 Color schemes
 
 ![colorschemes](img/colorschemes.png)
 ### Popular color schemes
@@ -35,13 +38,13 @@ _✨ Runner up in the Obsidian [Gems of the Year 2024](https://obsidian.md/blog/
 | Seaweed    | Aqua    |
 | Sand       | Oyster  |
 
-# Formatting
+## Formatting
 **🪼 Recommended fonts:**
 - Text font: [Lexend](https://www.lexend.com/)
 - Interface font: [Inter](https://rsms.me/inter/)
 - Monospace font: [Recursive Monospace](https://www.recursive.design/) or [Recursive Monospace Casual](https://www.recursive.design/)
 
-# Cssclasses
+## Cssclasses
 
 - **`no-title`**: removes inline title
 - **`no-embed`**: seamless embeds
@@ -51,7 +54,7 @@ _✨ Runner up in the Obsidian [Gems of the Year 2024](https://obsidian.md/blog/
 
 ![](https://github.com/Seniblue/Underwater/blob/main/img/checkboxes.png)
 
-# ✨ Features
+## ✨ Features
 - Custom checkboxes
 - Custom callouts: `time`, `person`, `bookmark`, `media` and `box` + "`center`" metadata
 - Scrollbar on hover (credit to [Border](https://github.com/Akifyss/obsidian-border) theme)
@@ -67,14 +70,14 @@ _✨ Runner up in the Obsidian [Gems of the Year 2024](https://obsidian.md/blog/
 ![](https://github.com/Seniblue/Underwater/blob/main/img/ffmode.png)
 ![](https://github.com/Seniblue/Underwater/blob/main/img/bgimg.png)
 
-# Snippets
+## Snippets
 ![](https://github.com/Seniblue/Underwater/blob/main/img/snippets.png)
 
 [🐠 Snippets folder](https://github.com/Seniblue/Underwater/tree/main/%F0%9F%90%A0%20SNIPPETS) featuring:
 - [🌊 Minimal_cards](https://github.com/Seniblue/Underwater/blob/main/%F0%9F%90%A0%20SNIPPETS/%F0%9F%8C%8A%20Minimal_cards.css) (modified version of [@Kepano](https://github.com/kepano)'s minimal cards.)
 -   [🚩 Timeline callout](https://github.com/Seniblue/Underwater/blob/main/%F0%9F%90%A0%20SNIPPETS/%F0%9F%9A%A9%20Timeline%20callout.css) (tweaked from [@FireIsGood](https://discord.com/channels/686053708261228577/702656734631821413/1156868388249935883)'s timeline callout)
 
-# 🧩 Plugins support
+## 🧩 Plugins support
 ![](https://github.com/Seniblue/Underwater/blob/main/img/plugins.png)
 
 - [Kanban](https://github.com/mgmeyers/obsidian-kanban)
@@ -91,14 +94,14 @@ _✨ Runner up in the Obsidian [Gems of the Year 2024](https://obsidian.md/blog/
 - [Cardboard](https://github.com/roovo/obsidian-card-board)
 - [Task Genius](https://github.com/Quorafind/Obsidian-Task-Genius)
 
-# Credit
+## Credit
 Credit to these themes for some elements and inspiration!
 - [Border](https://github.com/Akifyss/obsidian-border) by [@Akifyss](https://github.com/Akifyss)
 - [AnuPpuccin](https://github.com/AnubisNekhet/AnuPpuccin) by [@Anubis](https://github.com/AnubisNekhet)
 - [Minimal](https://github.com/kepano/obsidian-minimal) by [@Kepano](https://github.com/kepano)
 - The Obsidian [Forum](https://forum.obsidian.md/)
 
-# Tasks
+## Tasks
 - [x] Add more settings
 - [x] Work on README
 - [x] Add custom color schemes
