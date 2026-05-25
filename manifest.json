@@ -3,9 +3,5 @@
 	"version": "1.6.61",
 	"minAppVersion": "1.6.3",
 	"author": "Seniblue",
-	"authorUrl": "https://github.com/Seniblue",
-	"repo": "Seniblue/Underwater",
- 	"screenshot": "uw.png",
-	"modes": ["dark", "light"]
-
+	"authorUrl": "https://github.com/Seniblue"
 }
