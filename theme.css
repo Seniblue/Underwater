@@ -994,10 +994,6 @@ body:not(.no-pin) .workspace-tab-header:has(.mod-pinned) {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  .internal-link {
-    padding: 0 !important;
-    border: transparent !important;
-  }
 }
 
 /*Search and backlinks styling*/
@@ -1299,7 +1295,7 @@ body:not(.no-button) button {
 /*no-title*/
 .no-title {
   .inline-title, .iconize-inline-title-wrapper, .iconic-title-wrapper {
-    display: none !important;
+    display: none;
 }}
 
 /*notebook*/
@@ -1939,16 +1935,6 @@ body:not(.no-todoist) {
 	background-color: var(--overlay);
 }
 
-/*Support for https://github.com/HandaArchitect/obsidian-banner-snippet*/
-/*Remove hover image animation from the banner*/
-.banner :is(:is(.markdown-source-view.mod-cm6) :is(.cm-content, .cm-line), .markdown-rendered) :is(img, .external-embed, .internal-embed audio, .internal-embed video, .iframe-external-embed), .banner.banner-fade.markdown-preview-view img[alt='banner']:first-child, .banner.banner-fade.is-live-preview img[alt='banner']:first-child, .banner.markdown-preview-view img[alt='banner']:first-child, .banner.is-live-preview img[alt='banner']:first-child  {
-  transition: none !important;
-  border-radius: 0px !important;
-}
-.banner img:hover {
-  transform: none !important;
-}
-
 /*Excalidraw*/
 .excalidraw-container {
   background-color: var(--surface) !important;
@@ -2038,11 +2024,6 @@ body:not(.no-cardboard) {
 /*Task genius*/
 .task-genius-container, .tg-fluent-container {
   border-top: none;
-
-  .full-calendar-container .calendar-event.is-completed,  
-  .full-calendar-container .calendar-event:has(input[data-task="-"]) {
-    background-color: var(--text-muted) !important;
-  }
 }
 .tg-calendar {
   background: transparent;
@@ -2136,15 +2117,7 @@ body:not(.no-cardboard) {
     border-color: rgba(var(--callout-color)); 
     background-color: transparent;*/
     page-break-inside: avoid;
-    /* --callout-content-padding: 0px var(--size-4-6);
-    padding: 0px; */
   }
-  /* .callout-title {
-    padding: 7px 20px;
-    border-bottom: 2px rgba(var(--callout-color)) solid;
-    text-align: center !important;
-    background-color: rgba(var(--callout-color), 0.1);
-  } */
   .callout-fold.is-collapsed .svg-icon {
     display: none;
   }
@@ -2169,7 +2142,7 @@ body:not(.no-cardboard) {
 /*Focus mode*/
 .focus-mode {
   .workspace-tab-header-container, .view-header, .status-bar, .metadata-properties-heading, ::-webkit-scrollbar {
-    display: none !important;
+    display: none;
 }}
 .focus-mode .workspace-tab-container {
   margin-top: 14px;
@@ -2282,7 +2255,7 @@ table, .table-wrapper {
   background-color: var(--background-primary);
 }
 .workspace-sidedock-vault-profile {
-  background-color: var(--background-primary) !important; 
+  background-color: var(--background-primary); 
 }
 .workspace-bg .workspace-split.mod-left-split, .workspace-bg .workspace-split.mod-right-split, .workspace-bg .workspace-split.mod-root .view-content, .workspace-bg .workspace-leaf.mod-active .view-header, .view-header {
   background-color: transparent;
