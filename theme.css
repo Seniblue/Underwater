@@ -1156,19 +1156,19 @@ a, .external-link {
 
 /*---- CUSTOM CALLOUTS ----*/
 .callout[data-callout="bookmark"] {
-  --callout-color: var(--color-pink-rgb);
+  --callout-color: var(--color-pink);
   --callout-icon: bookmark;
 }
 .callout[data-callout="time"] {
-  --callout-color: var(--color-purple-rgb);
+  --callout-color: var(--color-purple);
   --callout-icon: lucide-timer;
 }
 .callout[data-callout="person"] {
-  --callout-color: var(--color-cyan-rgb);
+  --callout-color: var(--color-cyan);
   --callout-icon: lucide-user-2;
 }
 .callout[data-callout="media"] {
-  --callout-color: var(--color-yellow-rgb);
+  --callout-color: var(--color-yellow);
   --callout-icon: lucide-image;
 }
 [data-callout-metadata~="center"] {
@@ -1187,7 +1187,7 @@ a, .external-link {
   --callout-icon: lucide-sticker;
 }
 .callout[data-callout="question"] {
-  --callout-color: var(--color-pink-rgb);
+  --callout-color: var(--color-pink);
   --callout-icon: lucide-badge-help;
 }
 .callout[data-callout="info"] {
