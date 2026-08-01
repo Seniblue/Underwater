@@ -2114,7 +2114,7 @@ body:not(.no-cardboard) {
   }
   .callout {
     /* border-width: 2px;
-    border-color: rgba(var(--callout-color)); 
+    border-color: var(--callout-color); 
     background-color: transparent;*/
     page-break-inside: avoid;
   }
@@ -2161,7 +2161,7 @@ body:not(.no-cardboard) {
 }
 .callout-math .callout, [data-callout-metadata~="math"], [data-callout="math"] {
   border-width: 2px;
-  border-color: rgba(var(--callout-color));
+  border-color: var(--callout-color);
   border-radius: 0px;
   background-color: transparent;
 }
