@@ -35,11 +35,11 @@
   --interactive-normal: rgba(var(--highlight-med-rgb), 0.5);
   --interactive-hover: var(--highlight-med);
   --interactive-accent: var(--rose);
-  --interactive-accent-hover: rgba(var(--rose-rgb), 0.8);
+  --interactive-accent-hover: color-mix(in srgb, var(--rose-rgb) 80%, transparent);
 
   /*--editor--*/
   --text-normal: var(--text);
-  --text-highlight-bg: rgba(var(--gold-rgb), 0.2);
+  --text-highlight-bg: color-mix(in srgb, var(--gold-rgb) 20%, transparent);
   --text-faint: var(--muted);
   --bold-color: var(--love);
   --italic-color: var(--foam);
@@ -132,12 +132,12 @@
 
   /*links*/
   --link-external-color: var(--pine);
-  --link-external-color-hover: rgba(var(--pine-rgb), 0.6);
+  --link-external-color-hover: color-mix(in srgb, var(--pine-rgb) 60%, transparent);
   --link-external-decoration: none;
   --link-external-decoration-hover: underline;
 
   --link-color: var(--rose);
-  --link-color-hover: rgba(var(--rose-rgb), 0.6);
+  --link-color-hover: color-mix(in srgb, var(--rose-rgb) 60%, transparent);
   --link-decoration: none;
   --link-decoration-hover: none;
   --link-unresolved-color: var(--subtle);
@@ -217,8 +217,8 @@
   --tab-stacked-pane-width: 90%;
 
   /*Tags*/
-  --tag-background: rgba(var(--rose-rgb), 0.1);
-  --tag-background-hover: rgba(var(--rose-rgb), 0.2);
+  --tag-background: color-mix(in srgb, var(--rose-rgb) 10%, transparent);
+  --tag-background-hover: color-mix(in srgb, var(--rose-rgb) 20%, transparent);
   --tag-color: var(--link-color);
 
   --file-header-border: 1px dashed var(--highlight-med);
@@ -233,12 +233,12 @@
   --slider-track-background: var(--highlight-med);
 
   /*Theme colors*/
-  --love: rgb(var(--love-rgb));
-  --gold: rgb(var(--gold-rgb));
-  --rose: rgb(var(--rose-rgb));
-  --pine: rgb(var(--pine-rgb));
-  --foam: rgb(var(--foam-rgb));
-  --iris: rgb(var(--iris-rgb));
+  --love: var(--love-rgb);
+  --gold: var(--gold-rgb);
+  --rose: var(--rose-rgb);
+  --pine: var(--pine-rgb);
+  --foam: var(--foam-rgb);
+  --iris: var(--iris-rgb);
   --highlight-med: rgb(var(--highlight-med-rgb));
   --surface: rgb(var(--surface-rgb));
   
@@ -246,12 +246,12 @@
 }
 
 .theme-light /*Rosé Pine dawn*/ {
-  --love-rgb: 180, 99, 122;
-  --gold-rgb: 234, 157, 52;
-  --rose-rgb: 215, 130, 126;
-  --pine-rgb: 40, 105, 131;
-  --foam-rgb: 86, 148, 159;
-  --iris-rgb: 144, 122, 169;
+  --love-rgb: rgb(180, 99, 122);
+  --gold-rgb: rgb(234, 157, 52);
+  --rose-rgb: rgb(215, 130, 126);
+  --pine-rgb: rgb(40, 105, 131);
+  --foam-rgb: rgb(86, 148, 159);
+  --iris-rgb: rgb(144, 122, 169);
 
   --base: #faf4ed;
   --surface-rgb: 255, 250, 243;
@@ -271,12 +271,12 @@
   --color-accent-hsl: 187, 30%, 45%;
 }
 .theme-light.nord-bright {
-  --love-rgb: 191, 97, 106; /*nord11*/
-  --gold-rgb: 208, 135, 112; /*nord12*/
-  --rose-rgb: 180, 142, 173;/*nord15*/
-  --pine-rgb: 129, 161, 193; /*nord9*/
-  --foam-rgb: 136, 192, 208; /*nord7*/
-  --iris-rgb: 94, 129, 172; /*nord10*/
+  --love-rgb: rgb(191, 97, 106); /*nord11*/
+  --gold-rgb: rgb(208, 135, 112); /*nord12*/
+  --rose-rgb: rgb(180, 142, 173);/*nord15*/
+  --pine-rgb: rgb(129, 161, 193); /*nord9*/
+  --foam-rgb: rgb(136, 192, 208); /*nord7*/
+  --iris-rgb: rgb(94, 129, 172); /*nord10*/
 
   --base: #E5E9F0; /*nord5*/
   --surface-rgb: 236, 239, 244; /*nord6*/
@@ -296,12 +296,12 @@
   --color-accent-hsl: 210, 34%, 63%; /*nord9*/
 }
 .theme-light.catppuccin-latte {
-  --love-rgb: 230, 69, 83;/*maroon*/
-  --gold-rgb: 223, 142, 29;/*yellow*/
-  --rose-rgb: 221, 120, 120;/*flamingo*/
-  --pine-rgb: 4, 165, 229;/*sky*/
-  --foam-rgb: 32, 159, 181;/*sapphire*/
-  --iris-rgb: 114, 135, 253;/*lavender*/
+  --love-rgb: rgb(230, 69, 83);/*maroon*/
+  --gold-rgb: rgb(223, 142, 29);/*yellow*/
+  --rose-rgb: rgb(221, 120, 120);/*flamingo*/
+  --pine-rgb: rgb(4, 165, 229);/*sky*/
+  --foam-rgb: rgb(32, 159, 181);/*sapphire*/
+  --iris-rgb: rgb(114, 135, 253);/*lavender*/
 
   --base: #e6e9ef; /*mantle*/
   --surface-rgb: 239, 241, 245; /*base*/
@@ -321,12 +321,12 @@
   --color-accent-hsl: 11, 59%, 67%; /*Rosewater*/
 }
 .theme-light.everforest-light {
-  --love-rgb: 248, 85, 82;/*statusline3*/
-  --gold-rgb: 223, 160, 0;/*yellow*/
-  --rose-rgb: 245, 125, 38;/*orange*/
-  --pine-rgb: 53, 167, 124;/*aqua*/
-  --foam-rgb: 58, 148, 197;/*blue*/
-  --iris-rgb: 223, 105, 186;/*purple*/
+  --love-rgb: rgb(248, 85, 82);/*statusline3*/
+  --gold-rgb: rgb(223, 160, 0);/*yellow*/
+  --rose-rgb: rgb(245, 125, 38);/*orange*/
+  --pine-rgb: rgb(53, 167, 124);/*aqua*/
+  --foam-rgb: rgb(58, 148, 197);/*blue*/
+  --iris-rgb: rgb(223, 105, 186);/*purple*/
 
   --base: #efebd4; /*bg_dim*/
   --surface-rgb: 253, 246, 227;/*bg0*/
@@ -346,12 +346,12 @@
   --color-accent-hsl: 97, 38%, 53%; /*green/statusline1*/
 }
 .theme-light.gruvbox-light {
-  --love-rgb: 204, 36, 29;/*red*/
-  --gold-rgb: 215, 153, 33;/*yellow*/
-  --rose-rgb: 152, 151, 26;/*green*/
-  --pine-rgb: 69, 133, 136; /*blue*/
-  --foam-rgb: 104, 157, 106;/*aqua*/
-  --iris-rgb: 177, 98, 134; /*purple*/
+  --love-rgb: rgb(204, 36, 29);/*red*/
+  --gold-rgb: rgb(215, 153, 33);/*yellow*/
+  --rose-rgb: rgb(152, 151, 26);/*green*/
+  --pine-rgb: rgb(69, 133, 136); /*blue*/
+  --foam-rgb: rgb(104, 157, 106);/*aqua*/
+  --iris-rgb: rgb(177, 98, 134); /*purple*/
 
   --base: #ebdbb2; /*bg1*/
   --surface-rgb: 251, 241, 199; /*bg*/
@@ -371,12 +371,12 @@
   --color-accent-hsl: 122, 22%, 51%; /*aqua*/
 }
 .theme-light.obsidian-light {
-  --love-rgb: 233, 49, 71; /*red*/
-  --gold-rgb: 224, 172, 0; /*yellow*/
-  --rose-rgb: 236, 117, 0; /*orange*/
-  --pine-rgb: 8, 109, 221	; /*blue*/
-  --foam-rgb: 8, 185, 78; /*green*/
-  --iris-rgb: 120, 82, 238; /*purple*/
+  --love-rgb: rgb(233, 49, 71); /*red*/
+  --gold-rgb: rgb(224, 172, 0); /*yellow*/
+  --rose-rgb: rgb(236, 117, 0); /*orange*/
+  --pine-rgb: rgb(8, 109, 221)	; /*blue*/
+  --foam-rgb: rgb(8, 185, 78); /*green*/
+  --iris-rgb: rgb(120, 82, 238); /*purple*/
 
   --base: #f6f6f6; /*color-base-20*/
   --surface-rgb: 255, 255, 255;/*color-base-00*/
@@ -396,12 +396,12 @@
   --color-accent-hsl: 258, 88%, 66%; /*default purple*/
 }
 .theme-light.uw-octopus {
-  --love-rgb: 205, 106, 94;
-  --gold-rgb: 230, 161, 73;
-  --rose-rgb: 127, 111, 134;
-  --pine-rgb: 86, 139, 187;
-  --foam-rgb: 106, 168, 149;
-  --iris-rgb: 204, 135, 90;
+  --love-rgb: rgb(205, 106, 94);
+  --gold-rgb: rgb(230, 161, 73);
+  --rose-rgb: rgb(127, 111, 134);
+  --pine-rgb: rgb(86, 139, 187);
+  --foam-rgb: rgb(106, 168, 149);
+  --iris-rgb: rgb(204, 135, 90);
 
   --base: #F2EDF4; 
   --surface-rgb: 252, 251, 250;
@@ -421,12 +421,12 @@
   --color-accent-hsl: 6, 53%, 59%; /*foam*/
 }
 .theme-light.uw-coral {
-  --love-rgb: 145, 121, 123;
-  --gold-rgb: 242, 154, 99;
-  --rose-rgb: 145, 166, 204;
-  --pine-rgb: 119, 166, 155;
-  --foam-rgb: 138, 182, 189;
-  --iris-rgb: 222, 152, 137;
+  --love-rgb: rgb(145, 121, 123);
+  --gold-rgb: rgb(242, 154, 99);
+  --rose-rgb: rgb(145, 166, 204);
+  --pine-rgb: rgb(119, 166, 155);
+  --foam-rgb: rgb(138, 182, 189);
+  --iris-rgb: rgb(222, 152, 137);
 
   --base: #F3E9E2; 
   --surface-rgb: 255, 244, 237;
@@ -446,12 +446,12 @@
   --color-accent-hsl: 11, 56%, 70%; /*iris*/
 }
 .theme-light.uw-aqua {
-  --love-rgb: 194, 105, 128;
-  --gold-rgb: 183, 195, 121;
-  --rose-rgb: 215, 131, 116;
-  --pine-rgb: 123, 168, 149;
-  --foam-rgb: 96, 161, 169;
-  --iris-rgb: 128, 127, 152;
+  --love-rgb: rgb(194, 105, 128);
+  --gold-rgb: rgb(183, 195, 121);
+  --rose-rgb: rgb(215, 131, 116);
+  --pine-rgb: rgb(123, 168, 149);
+  --foam-rgb: rgb(96, 161, 169);
+  --iris-rgb: rgb(128, 127, 152);
 
   --base: #f0efec; 
   --surface-rgb: 255, 251, 245;
@@ -471,12 +471,12 @@
   --color-accent-hsl: 187, 40%, 60%; /*foam*/
 }
 .theme-light.uw-oyster {
-  --love-rgb: 64, 45, 48;
-  --gold-rgb: 255, 150, 0;
-  --rose-rgb: 140, 35, 51;
-  --pine-rgb: 50, 111, 144;
-  --foam-rgb: 70, 102, 67;
-  --iris-rgb: 103, 67, 100;
+  --love-rgb: rgb(64, 45, 48);
+  --gold-rgb: rgb(255, 150, 0);
+  --rose-rgb: rgb(140, 35, 51);
+  --pine-rgb: rgb(50, 111, 144);
+  --foam-rgb: rgb(70, 102, 67);
+  --iris-rgb: rgb(103, 67, 100);
 
   --base: #EEE6E5; 
   --surface-rgb: 245, 239, 238;
@@ -496,12 +496,12 @@
   --color-accent-hsl: 201, 48%, 38%; /*pine*/
 }
 .theme-dark /*Rosé Pine*/ {
-  --love-rgb: 235, 111, 146;
-  --gold-rgb: 246, 193, 119;
-  --rose-rgb: 235, 188, 186;
-  --pine-rgb: 49, 116, 143;
-  --foam-rgb: 156, 207, 216;
-  --iris-rgb: 196, 167, 231;
+  --love-rgb: rgb(235, 111, 146);
+  --gold-rgb: rgb(246, 193, 119);
+  --rose-rgb: rgb(235, 188, 186);
+  --pine-rgb: rgb(49, 116, 143);
+  --foam-rgb: rgb(156, 207, 216);
+  --iris-rgb: rgb(196, 167, 231);
 
   --base: #191724;
   --surface-rgb: 31, 29, 46;
@@ -521,12 +521,12 @@
   --color-accent-hsl: 193, 46%, 75%;
 }
 .theme-dark.rose-pine-moon {
-  --love-rgb: 235, 111, 146;
-  --gold-rgb: 246, 193, 119;
-  --rose-rgb: 234, 154, 151;
-  --pine-rgb: 62, 143, 176;
-  --foam-rgb: 156, 207, 216;
-  --iris-rgb: 196, 167, 231;
+  --love-rgb: rgb(235, 111, 146);
+  --gold-rgb: rgb(246, 193, 119);
+  --rose-rgb: rgb(234, 154, 151);
+  --pine-rgb: rgb(62, 143, 176);
+  --foam-rgb: rgb(156, 207, 216);
+  --iris-rgb: rgb(196, 167, 231);
 
   --base: #232136;
   --surface-rgb: 42, 39, 63;
@@ -546,12 +546,12 @@
   --color-accent-hsl: 193, 46%, 75%;
 }
 .theme-dark.nord-dark {
-  --love-rgb: 191, 97, 106; /*nord11*/
-  --gold-rgb: 235, 203, 139; /*nord13*/
-  --rose-rgb: 208, 135, 112;/*nord12*/
-  --pine-rgb: 129, 161, 193; /*nord9*/
-  --foam-rgb: 143, 188, 187; /*nord7*/
-  --iris-rgb: 180, 142, 173;/*nord15*/
+  --love-rgb: rgb(191, 97, 106); /*nord11*/
+  --gold-rgb: rgb(235, 203, 139); /*nord13*/
+  --rose-rgb: rgb(208, 135, 112);/*nord12*/
+  --pine-rgb: rgb(129, 161, 193); /*nord9*/
+  --foam-rgb: rgb(143, 188, 187); /*nord7*/
+  --iris-rgb: rgb(180, 142, 173);/*nord15*/
 
   --base: #3B4252; /*nord1*/
   --surface-rgb: 46, 52, 64; /*nord0*/
@@ -571,12 +571,12 @@
   --color-accent-hsl: 210, 34%, 63%;
 }
 .theme-dark.catppuccin-mocha {
-  --love-rgb: 250, 179, 135;/*Peach*/
-  --gold-rgb: 249, 226, 175; /*Yellow*/
-  --rose-rgb: 235, 160, 172;/*Maroon*/
-  --foam-rgb: 137, 180, 250;/*Blue*/
-  --pine-rgb: 166, 227, 161;/*Green*/
-  --iris-rgb: 203, 166, 247;/*Mauve*/
+  --love-rgb: rgb(250, 179, 135);/*Peach*/
+  --gold-rgb: rgb(249, 226, 175); /*Yellow*/
+  --rose-rgb: rgb(235, 160, 172);/*Maroon*/
+  --foam-rgb: rgb(137, 180, 250);/*Blue*/
+  --pine-rgb: rgb(166, 227, 161);/*Green*/
+  --iris-rgb: rgb(203, 166, 247);/*Mauve*/
 
   --base: #181825; /*mantle*/
   --surface-rgb: 30, 30, 46; /*Base*/
@@ -596,12 +596,12 @@
   --color-accent-hsl: 232, 97%, 85%; /*Lavender*/
 }
 .theme-dark.everforest-dark {
-  --love-rgb: 230, 126, 128;/*red*/
-  --gold-rgb: 219, 188, 127;/*yellow*/
-  --rose-rgb: 230, 152, 117;/*orange*/
-  --pine-rgb: 131, 192, 146;/*aqua*/
-  --foam-rgb: 127, 187, 179;/*blue*/
-  --iris-rgb: 214, 153, 182; /*purple*/
+  --love-rgb: rgb(230, 126, 128);/*red*/
+  --gold-rgb: rgb(219, 188, 127);/*yellow*/
+  --rose-rgb: rgb(230, 152, 117);/*orange*/
+  --pine-rgb: rgb(131, 192, 146);/*aqua*/
+  --foam-rgb: rgb(127, 187, 179);/*blue*/
+  --iris-rgb: rgb(214, 153, 182); /*purple*/
 
   --base: #1E2326; /*bg_dim*/
   --surface-rgb: 39, 46, 51;/*bg0*/
@@ -621,12 +621,12 @@
   --color-accent-hsl: 90, 36%, 66%; /*green/statusline1*/
 }
 .theme-dark.biscuit-dark {
-  --love-rgb: 202, 63, 63;/*Persian Red*/
-  --gold-rgb: 227, 156, 69;/*Butterscotch*/
-  --rose-rgb: 228, 106, 58;/*Flame*/
-  --pine-rgb: 81, 120, 148; /*Steel Blue*/
-  --foam-rgb: 98, 147, 134;/*Viridian*/
-  --iris-rgb: 159, 86, 154; /*Purpureus*/
+  --love-rgb: rgb(202, 63, 63);/*Persian Red*/
+  --gold-rgb: rgb(227, 156, 69);/*Butterscotch*/
+  --rose-rgb: rgb(228, 106, 58);/*Flame*/
+  --pine-rgb: rgb(81, 120, 148); /*Steel Blue*/
+  --foam-rgb: rgb(98, 147, 134);/*Viridian*/
+  --iris-rgb: rgb(159, 86, 154); /*Purpureus*/
 
   --base: #181515; /*Night*/
   --surface-rgb: 34, 30, 30; /*Raisin Black*/
@@ -646,12 +646,12 @@
   --color-accent-hsl: 226, 31%, 42%; /*YinMn Blue*/
 }
 .theme-dark.obsidian-dark {
-  --love-rgb: 251, 70, 76; /*red*/
-  --gold-rgb: 224, 222, 113; /*yellow*/
-  --rose-rgb: 233, 151, 63; /*orange*/
-  --pine-rgb: 2, 122, 255  ; /*blue*/
-  --foam-rgb: 68, 207, 110; /*green*/
-  --iris-rgb: 168, 130, 255; /*purple*/
+  --love-rgb: rgb(251, 70, 76); /*red*/
+  --gold-rgb: rgb(224, 222, 113); /*yellow*/
+  --rose-rgb: rgb(233, 151, 63); /*orange*/
+  --pine-rgb: rgb(2, 122, 255)  ; /*blue*/
+  --foam-rgb: rgb(68, 207, 110); /*green*/
+  --iris-rgb: rgb(168, 130, 255); /*purple*/
 
   --base: #262626; /*color-base-20*/
   --surface-rgb: 30, 30, 30; /*color-base-00*/
@@ -671,12 +671,12 @@
   --color-accent-hsl: 258, 88%, 66%; /*default purple*/
 }
 .theme-dark.uw-deep {
-  --love-rgb: 215, 97, 76; /*goldfish*/
-  --gold-rgb: 217, 209, 89; /*Sand!*/
-  --rose-rgb: 229, 156, 88; /*Crab!*/
-  --pine-rgb: 105, 147, 194; /*Ocean!*/
-  --foam-rgb: 159, 195, 135; /*Seaweed!*/
-  --iris-rgb: 146, 135, 194; /*Jellyfish!*/
+  --love-rgb: rgb(215, 97, 76); /*goldfish*/
+  --gold-rgb: rgb(217, 209, 89); /*Sand!*/
+  --rose-rgb: rgb(229, 156, 88); /*Crab!*/
+  --pine-rgb: rgb(105, 147, 194); /*Ocean!*/
+  --foam-rgb: rgb(159, 195, 135); /*Seaweed!*/
+  --iris-rgb: rgb(146, 135, 194); /*Jellyfish!*/
   
   --base: #11121a;
   --surface-rgb: 21, 23, 29;
@@ -696,12 +696,12 @@
   --color-accent-hsl: 213, 49%, 61%; /*Ocean*/
 }
 .theme-dark.uw-ocean {
-  --love-rgb: 254, 114, 143;
-  --gold-rgb: 255, 225, 97;
-  --rose-rgb: 232, 177, 146;
-  --pine-rgb: 235, 98, 59;
-  --foam-rgb: 70, 201, 199;
-  --iris-rgb: 115, 104, 182;
+  --love-rgb: rgb(254, 114, 143);
+  --gold-rgb: rgb(255, 225, 97);
+  --rose-rgb: rgb(232, 177, 146);
+  --pine-rgb: rgb(235, 98, 59);
+  --foam-rgb: rgb(70, 201, 199);
+  --iris-rgb: rgb(115, 104, 182);
     
   --base: #081020;
   --surface-rgb: 8, 18, 43;
@@ -721,12 +721,12 @@
   --color-accent-hsl: 179, 63%, 51%;
 }
 .theme-dark.uw-seaweed {
-  --love-rgb: 255, 123, 123;
-  --gold-rgb: 242, 225, 95;
-  --rose-rgb: 216, 237, 141;
-  --pine-rgb: 109, 196, 120;
-  --foam-rgb: 191, 229, 222;
-  --iris-rgb: 95, 163, 162;
+  --love-rgb: rgb(255, 123, 123);
+  --gold-rgb: rgb(242, 225, 95);
+  --rose-rgb: rgb(216, 237, 141);
+  --pine-rgb: rgb(109, 196, 120);
+  --foam-rgb: rgb(191, 229, 222);
+  --iris-rgb: rgb(95, 163, 162);
     
   --base: #193233;
   --surface-rgb: 25, 57, 58;
@@ -746,12 +746,12 @@
   --color-accent-hsl: 169, 42%, 82%; /*foam*/
 }
 .theme-dark.uw-sand {
-  --love-rgb: 232, 157, 149;
-  --gold-rgb: 246, 173, 119;
-  --rose-rgb: 187, 163, 121;
-  --pine-rgb: 121, 166, 222;
-  --foam-rgb: 195, 230, 148;
-  --iris-rgb: 145, 145, 188;
+  --love-rgb: rgb(232, 157, 149);
+  --gold-rgb: rgb(246, 173, 119);
+  --rose-rgb: rgb(187, 163, 121);
+  --pine-rgb: rgb(121, 166, 222);
+  --foam-rgb: rgb(195, 230, 148);
+  --iris-rgb: rgb(145, 145, 188);
     
   --base: #151527;
   --surface-rgb: 25, 25, 46;
@@ -1093,7 +1093,7 @@ a, .external-link {
 /*Modern*/
 .markdown-source-view.mod-cm6 .cm-hmd-internal-link,
 .markdown-rendered .internal-link {
-  background-color: rgba(var(--rose-rgb), 0.1);
+  background-color: color-mix(in srgb, var(--rose-rgb) 10%, transparent);
   border-radius: 6px;
   padding-left: 5px;
   padding-right: 5px;
@@ -1101,7 +1101,7 @@ a, .external-link {
   box-decoration-break: clone;
 
   &:hover {
-      background-color: rgba(var(--rose-rgb), 0.3);
+      background-color: color-mix(in srgb, var(--rose-rgb) 30%, transparent);
       color: var(--link-color);
   }
 }
@@ -1300,7 +1300,7 @@ body:not(.no-button) button {
 
 /*notebook*/
 .mod-root .workspace-tabs .workspace-leaf .notebook {
-  background-image:  linear-gradient(rgba(var(--iris-rgb), 0.05) 2px, transparent 2px), linear-gradient(to right, rgba(var(--iris-rgb), 0.05) 2px, transparent 2px);
+  background-image:  linear-gradient(color-mix(in srgb, var(--iris-rgb) 5%, transparent) 2px, transparent 2px), linear-gradient(to right, color-mix(in srgb, var(--iris-rgb) 5%, transparent) 2px, transparent 2px);
   background-size: 20px 20px;
 }
 
@@ -1351,8 +1351,8 @@ body:not(.no-button) button {
 
 /*======= active line highlight ======*/
 body:not(.no-activeline) .cm-active.cm-line {
-  background-color: rgb(var(--rose-rgb), 0.08);
-  box-shadow: -25vw 0px rgb(var(--rose-rgb), 0.08), 25vw 0 rgb(var(--rose-rgb), 0.08);
+  background-color: color-mix(in srgb, var(--rose-rgb) 8%, transparent);
+  box-shadow: -25vw 0px color-mix(in srgb, var(--rose-rgb) 8%, transparent), 25vw 0 color-mix(in srgb, var(--rose-rgb) 8%, transparent);
 }
 
 /*Outline pane styling*/
@@ -1715,22 +1715,22 @@ body {
 /*KANBAN*/
 /*Styling 1 : colorful*/
 .kanban-plugin__lane-wrapper:nth-child(1)>div {
-  background-color: rgba(var(--foam-rgb), 0.25);
+  background-color: color-mix(in srgb, var(--foam-rgb) 25%, transparent);
 }
 .kanban-plugin__lane-wrapper:nth-child(2)>div {
-  background-color: rgba(var(--rose-rgb), 0.25);
+  background-color: color-mix(in srgb, var(--rose-rgb) 25%, transparent);
 }
 .kanban-plugin__lane-wrapper:nth-child(3)>div {
-  background-color: rgba(var(--gold-rgb), 0.25);
+  background-color: color-mix(in srgb, var(--gold-rgb) 25%, transparent);
 }
 .kanban-plugin__lane-wrapper:nth-child(4)>div {
-  background-color: rgba(var(--iris-rgb), 0.25);
+  background-color: color-mix(in srgb, var(--iris-rgb) 25%, transparent);
 }
 .kanban-plugin__lane-wrapper:nth-child(5)>div {
-  background-color: rgba(var(--love-rgb), 0.25);
+  background-color: color-mix(in srgb, var(--love-rgb) 25%, transparent);
 }
 .kanban-plugin__lane {
-  background-color: rgba(var(--foam-rgb), 0.25);
+  background-color: color-mix(in srgb, var(--foam-rgb) 25%, transparent);
   border: 1px var(--pine);
 }/*cards styling*/
 .kanban-plugin__item-title-wrapper {
@@ -2514,7 +2514,7 @@ settings:
         id: text-highlight-bg
         title: Highlight
         type: variable-text
-        default: rgba(var(--gold-rgb), 0.2)
+        default: color-mix(in srgb, var(--gold-rgb) 20%, transparent)
     -
         id: underline-color
         title: Underline
