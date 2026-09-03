@@ -159,12 +159,12 @@
 
   /*canvas*/
   --canvas-dot-pattern: var(--text-faint);
-  --canvas-color-6: var(--gold-rgb);
-  --canvas-color-5: var(--rose-rgb);
-  --canvas-color-4: var(--love-rgb);
-  --canvas-color-3: var(--iris-rgb);
-  --canvas-color-2: var(--foam-rgb);
-  --canvas-color-1: var(--pine-rgb);
+  --canvas-color-6: rgb(var(--gold-rgb));
+  --canvas-color-5: rgb(var(--rose-rgb));
+  --canvas-color-4: rgb(var(--love-rgb));
+  --canvas-color-3: rgb(var(--iris-rgb));
+  --canvas-color-2: rgb(var(--foam-rgb));
+  --canvas-color-1: rgb(var(--pine-rgb));
 
   /*graph*/
   --graph-line: var(--highlight-med);
