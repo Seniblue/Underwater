@@ -1259,7 +1259,7 @@ table, .table-wrapper {
   margin-inline: auto;
 }}
 
-/*hover image animation !*/
+/*hover image animation*/
 body:not(.no-animation) img {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -1270,7 +1270,14 @@ body:not(.no-button) button {
   transition: all 0.5s ease-out;
   &:hover {
     transform: scale(1.04);
-}}
+}}/* no animation when clicking on an img */
+body:not(.no-animation) .lightbox .media-wrapper img {
+  transition: none;
+}
+body:not(.no-animation) .lightbox .media-wrapper img:hover {
+  transform: none;
+}
+
 
 /*VIM MODE*/
 .cm-vimMode {
