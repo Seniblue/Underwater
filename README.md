@@ -110,4 +110,4 @@ Credit to these themes for some elements and inspiration!
 
 ---
 
-💫 Feel free to star the theme on github if you enjoy it!
+💫 Feel free to star to give the theme a star!
