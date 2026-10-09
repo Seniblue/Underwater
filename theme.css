@@ -242,13 +242,6 @@
   --iris: rgb(var(--iris-rgb));
   --highlight-med: rgb(var(--highlight-med-rgb));
   --surface: rgb(var(--surface-rgb));
-  
-
---tooltip: red;
---notice: green; 
---hotkey: blue;
- --tab-inner: maroon;
- --tab-container: aqua;
 
   --color-base-00: var(--base); --color-base-05: var(--base); --color-base-10: var(--surface); --color-base-20: var(--surface); --color-base-25: var(--overlay); --color-base-30: var(--highlight-high); --color-base-35: var(--background-modifier-border); --color-base-40: var(--highlight-med); --color-base-50: var(--highlight-low); --color-base-60: var(--muted); --color-base-70: var(--subtle); --color-base-100: var(--text);
 }
@@ -1085,10 +1078,10 @@ del, .cm-strikethrough {
 .theme-dark {
   --latex-color: var(--gold);
 }
-.MJX-TEX {
+mjx-math, .MJX-TEX {
   color: var(--latex-color);
 }
-th .MJX-TEX { /*no color inside of table headers*/
+th mjx-math, th .MJX-TEX { /*no color inside of table headers*/
   color: var(--table-header-color);
 }
 
@@ -1965,7 +1958,7 @@ body:not(.no-todoist) {
 }/*dataview tables like markdown tables */
 .seamless-dataview .dataview.table-view-table th, .seamless-dataview .dataview.table-view-table :is(td, th) {
   border: 1px solid var(--table-border-color);
-  font-size: var(--font-text-size);
+  font-size: var(--font-preferred-size);
 }/*inline fields*/
 .dataview.inline-field-key {
   background-color: var(--base);
